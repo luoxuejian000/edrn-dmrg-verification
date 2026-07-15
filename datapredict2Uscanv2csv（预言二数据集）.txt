@@ -1,0 +1,741 @@
+Microsoft Windows [版本 10.0.26200.8655]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\Lenovo>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python spin_structure_factor.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[审计] 自旋结构因子标度检验
+[审计] 时间戳: 2026-07-14T09:39:02
+[审计] L 序列: [20, 40, 60, 80, 100]
+[审计] U/t = 4.0, chi_max = 100
+[审计] 理论预言：S(q) ∼ q^-0.5，即 log S(q) vs log q 斜率 = -0.5
+============================================================
+
+[计算] L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  基态能量: -11.112183
+  q=0.3142, S(q)=0.028665, log q=-1.1579, log S(q)=-3.5521
+  q=0.6283, S(q)=0.058650, log q=-0.4647, log S(q)=-2.8362
+  q=0.9425, S(q)=0.089907, log q=-0.0592, log S(q)=-2.4090
+  q=1.2566, S(q)=0.123086, log q=0.2284, log S(q)=-2.0949
+  q=1.5708, S(q)=0.159269, log q=0.4516, log S(q)=-1.8372
+  q=1.8850, S(q)=0.200469, log q=0.6339, log S(q)=-1.6071
+  q=2.1991, S(q)=0.250659, log q=0.7881, log S(q)=-1.3837
+  q=2.5133, S(q)=0.319254, log q=0.9216, log S(q)=-1.1418
+  q=2.8274, S(q)=0.438138, log q=1.0394, log S(q)=-0.8252
+  q=3.1416, S(q)=0.694473, log q=1.1447, log S(q)=-0.3646
+[完成] L=20, 耗时=13.3s
+
+[计算] L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  基态能量: -22.583571
+  q=0.1571, S(q)=0.013840, log q=-1.8510, log S(q)=-4.2802
+  q=0.3142, S(q)=0.028260, log q=-1.1579, log S(q)=-3.5663
+  q=0.4712, S(q)=0.042974, log q=-0.7524, log S(q)=-3.1472
+  q=0.6283, S(q)=0.057931, log q=-0.4647, log S(q)=-2.8485
+  q=0.7854, S(q)=0.073219, log q=-0.2416, log S(q)=-2.6143
+  q=0.9425, S(q)=0.088887, log q=-0.0592, log S(q)=-2.4204
+  q=1.0996, S(q)=0.105005, log q=0.0949, log S(q)=-2.2537
+  q=1.2566, S(q)=0.121684, log q=0.2284, log S(q)=-2.1063
+  q=1.4137, S(q)=0.139082, log q=0.3462, log S(q)=-1.9727
+  q=1.5708, S(q)=0.157401, log q=0.4516, log S(q)=-1.8490
+  q=1.7279, S(q)=0.176917, log q=0.5469, log S(q)=-1.7321
+  q=1.8850, S(q)=0.198003, log q=0.6339, log S(q)=-1.6195
+  q=2.0420, S(q)=0.221197, log q=0.7139, log S(q)=-1.5087
+  q=2.1991, S(q)=0.247305, log q=0.7881, log S(q)=-1.3971
+  q=2.3562, S(q)=0.277623, log q=0.8570, log S(q)=-1.2815
+  q=2.5133, S(q)=0.314399, log q=0.9216, log S(q)=-1.1571
+  q=2.6704, S(q)=0.362038, log q=0.9822, log S(q)=-1.0160
+  q=2.8274, S(q)=0.430788, log q=1.0394, log S(q)=-0.8421
+  q=2.9845, S(q)=0.553977, log q=1.0934, log S(q)=-0.5906
+  q=3.1416, S(q)=0.807460, log q=1.1447, log S(q)=-0.2139
+[完成] L=40, 耗时=86.7s
+
+[计算] L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  基态能量: -34.056974
+  q=0.1047, S(q)=0.009091, log q=-2.2565, log S(q)=-4.7005
+  q=0.2094, S(q)=0.018507, log q=-1.5633, log S(q)=-3.9896
+  q=0.3142, S(q)=0.028174, log q=-1.1579, log S(q)=-3.5693
+  q=0.4189, S(q)=0.037894, log q=-0.8702, log S(q)=-3.2730
+  q=0.5236, S(q)=0.047720, log q=-0.6470, log S(q)=-3.0424
+  q=0.6283, S(q)=0.057693, log q=-0.4647, log S(q)=-2.8526
+  q=0.7330, S(q)=0.067820, log q=-0.3106, log S(q)=-2.6909
+  q=0.8378, S(q)=0.078102, log q=-0.1770, log S(q)=-2.5497
+  q=0.9425, S(q)=0.088553, log q=-0.0592, log S(q)=-2.4242
+  q=1.0472, S(q)=0.099195, log q=0.0461, log S(q)=-2.3107
+  q=1.1519, S(q)=0.110062, log q=0.1414, log S(q)=-2.2067
+  q=1.2566, S(q)=0.121197, log q=0.2284, log S(q)=-2.1103
+  q=1.3614, S(q)=0.132650, log q=0.3085, log S(q)=-2.0200
+  q=1.4661, S(q)=0.144479, log q=0.3826, log S(q)=-1.9346
+  q=1.5708, S(q)=0.156753, log q=0.4516, log S(q)=-1.8531
+  q=1.6755, S(q)=0.169552, log q=0.5161, log S(q)=-1.7746
+  q=1.7802, S(q)=0.182978, log q=0.5767, log S(q)=-1.6984
+  q=1.8850, S(q)=0.197158, log q=0.6339, log S(q)=-1.6238
+  q=1.9897, S(q)=0.212255, log q=0.6880, log S(q)=-1.5500
+  q=2.0944, S(q)=0.228485, log q=0.7393, log S(q)=-1.4763
+  q=2.1991, S(q)=0.246139, log q=0.7881, log S(q)=-1.4019
+  q=2.3038, S(q)=0.265623, log q=0.8346, log S(q)=-1.3257
+  q=2.4086, S(q)=0.287515, log q=0.8790, log S(q)=-1.2465
+  q=2.5133, S(q)=0.312679, log q=0.9216, log S(q)=-1.1626
+  q=2.6180, S(q)=0.342494, log q=0.9624, log S(q)=-1.0715
+  q=2.7227, S(q)=0.379345, log q=1.0016, log S(q)=-0.9693
+  q=2.8274, S(q)=0.427839, log q=1.0394, log S(q)=-0.8490
+  q=2.9322, S(q)=0.498420, log q=1.0757, log S(q)=-0.6963
+  q=3.0369, S(q)=0.625699, log q=1.1108, log S(q)=-0.4689
+  q=3.1416, S(q)=0.878090, log q=1.1447, log S(q)=-0.1300
+[完成] L=60, 耗时=145.4s
+
+[计算] L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  基态能量: -45.530881
+  q=0.0785, S(q)=0.006772, log q=-2.5441, log S(q)=-4.9950
+  q=0.1571, S(q)=0.013707, log q=-1.8510, log S(q)=-4.2898
+  q=0.2356, S(q)=0.020907, log q=-1.4455, log S(q)=-3.8677
+  q=0.3142, S(q)=0.028136, log q=-1.1579, log S(q)=-3.5707
+  q=0.3927, S(q)=0.035384, log q=-0.9347, log S(q)=-3.3415
+  q=0.4712, S(q)=0.042694, log q=-0.7524, log S(q)=-3.1537
+  q=0.5498, S(q)=0.050091, log q=-0.5982, log S(q)=-2.9939
+  q=0.6283, S(q)=0.057578, log q=-0.4647, log S(q)=-2.8546
+  q=0.7069, S(q)=0.065151, log q=-0.3469, log S(q)=-2.7310
+  q=0.7854, S(q)=0.072808, log q=-0.2416, log S(q)=-2.6199
+  q=0.8639, S(q)=0.080551, log q=-0.1463, log S(q)=-2.5189
+  q=0.9425, S(q)=0.088387, log q=-0.0592, log S(q)=-2.4260
+  q=1.0210, S(q)=0.096329, log q=0.0208, log S(q)=-2.3400
+  q=1.0996, S(q)=0.104390, log q=0.0949, log S(q)=-2.2596
+  q=1.1781, S(q)=0.112589, log q=0.1639, log S(q)=-2.1840
+  q=1.2566, S(q)=0.120946, log q=0.2284, log S(q)=-2.1124
+  q=1.3352, S(q)=0.129482, log q=0.2891, log S(q)=-2.0442
+  q=1.4137, S(q)=0.138222, log q=0.3462, log S(q)=-1.9789
+  q=1.4923, S(q)=0.147192, log q=0.4003, log S(q)=-1.9160
+  q=1.5708, S(q)=0.156423, log q=0.4516, log S(q)=-1.8552
+  q=1.6493, S(q)=0.165948, log q=0.5004, log S(q)=-1.7961
+  q=1.7279, S(q)=0.175808, log q=0.5469, log S(q)=-1.7384
+  q=1.8064, S(q)=0.186051, log q=0.5913, log S(q)=-1.6817
+  q=1.8850, S(q)=0.196735, log q=0.6339, log S(q)=-1.6259
+  q=1.9635, S(q)=0.207929, log q=0.6747, log S(q)=-1.5706
+  q=2.0420, S(q)=0.219719, log q=0.7139, log S(q)=-1.5154
+  q=2.1206, S(q)=0.232215, log q=0.7517, log S(q)=-1.4601
+  q=2.1991, S(q)=0.245553, log q=0.7881, log S(q)=-1.4042
+  q=2.2777, S(q)=0.259909, log q=0.8231, log S(q)=-1.3474
+  q=2.3562, S(q)=0.275512, log q=0.8570, log S(q)=-1.2891
+  q=2.4347, S(q)=0.292670, log q=0.8898, log S(q)=-1.2287
+  q=2.5133, S(q)=0.311804, log q=0.9216, log S(q)=-1.1654
+  q=2.5918, S(q)=0.333514, log q=0.9524, log S(q)=-1.0981
+  q=2.6704, S(q)=0.358698, log q=0.9822, log S(q)=-1.0253
+  q=2.7489, S(q)=0.388792, log q=1.0112, log S(q)=-0.9447
+  q=2.8274, S(q)=0.426269, log q=1.0394, log S(q)=-0.8527
+  q=2.9060, S(q)=0.475827, log q=1.0668, log S(q)=-0.7427
+  q=2.9845, S(q)=0.547924, log q=1.0934, log S(q)=-0.6016
+  q=3.0631, S(q)=0.678981, log q=1.1194, log S(q)=-0.3872
+  q=3.1416, S(q)=0.928707, log q=1.1447, log S(q)=-0.0740
+[完成] L=80, 耗时=396.1s
+
+[计算] L=100 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.01e-05
+  基态能量: -57.004965
+  q=0.0628, S(q)=0.005401, log q=-2.7673, log S(q)=-5.2212
+  q=0.1257, S(q)=0.010868, log q=-2.0741, log S(q)=-4.5220
+  q=0.1885, S(q)=0.016578, log q=-1.6687, log S(q)=-4.0997
+  q=0.2513, S(q)=0.022351, log q=-1.3810, log S(q)=-3.8009
+  q=0.3142, S(q)=0.028114, log q=-1.1579, log S(q)=-3.5715
+  q=0.3770, S(q)=0.033888, log q=-0.9755, log S(q)=-3.3847
+  q=0.4398, S(q)=0.039705, log q=-0.8214, log S(q)=-3.2263
+  q=0.5027, S(q)=0.045580, log q=-0.6879, log S(q)=-3.0883
+  q=0.5655, S(q)=0.051516, log q=-0.5701, log S(q)=-2.9659
+  q=0.6283, S(q)=0.057510, log q=-0.4647, log S(q)=-2.8558
+  q=0.6912, S(q)=0.063560, log q=-0.3694, log S(q)=-2.7558
+  q=0.7540, S(q)=0.069661, log q=-0.2824, log S(q)=-2.6641
+  q=0.8168, S(q)=0.075814, log q=-0.2023, log S(q)=-2.5795
+  q=0.8796, S(q)=0.082022, log q=-0.1282, log S(q)=-2.5008
+  q=0.9425, S(q)=0.088289, log q=-0.0592, log S(q)=-2.4271
+  q=1.0053, S(q)=0.094622, log q=0.0053, log S(q)=-2.3579
+  q=1.0681, S(q)=0.101030, log q=0.0659, log S(q)=-2.2923
+  q=1.1310, S(q)=0.107521, log q=0.1231, log S(q)=-2.2301
+  q=1.1938, S(q)=0.114105, log q=0.1771, log S(q)=-2.1706
+  q=1.2566, S(q)=0.120792, log q=0.2284, log S(q)=-2.1137
+  q=1.3195, S(q)=0.127596, log q=0.2772, log S(q)=-2.0589
+  q=1.3823, S(q)=0.134527, log q=0.3237, log S(q)=-2.0060
+  q=1.4451, S(q)=0.141598, log q=0.3682, log S(q)=-1.9548
+  q=1.5080, S(q)=0.148825, log q=0.4108, log S(q)=-1.9050
+  q=1.5708, S(q)=0.156222, log q=0.4516, log S(q)=-1.8565
+  q=1.6336, S(q)=0.163808, log q=0.4908, log S(q)=-1.8091
+  q=1.6965, S(q)=0.171602, log q=0.5285, log S(q)=-1.7626
+  q=1.7593, S(q)=0.179628, log q=0.5649, log S(q)=-1.7169
+  q=1.8221, S(q)=0.187911, log q=0.6000, log S(q)=-1.6718
+  q=1.8850, S(q)=0.196482, log q=0.6339, log S(q)=-1.6272
+  q=1.9478, S(q)=0.205378, log q=0.6667, log S(q)=-1.5829
+  q=2.0106, S(q)=0.214641, log q=0.6984, log S(q)=-1.5388
+  q=2.0735, S(q)=0.224323, log q=0.7292, log S(q)=-1.4947
+  q=2.1363, S(q)=0.234486, log q=0.7591, log S(q)=-1.4504
+  q=2.1991, S(q)=0.245203, log q=0.7881, log S(q)=-1.4057
+  q=2.2619, S(q)=0.256568, log q=0.8162, log S(q)=-1.3604
+  q=2.3248, S(q)=0.268693, log q=0.8436, log S(q)=-1.3142
+  q=2.3876, S(q)=0.281722, log q=0.8703, log S(q)=-1.2668
+  q=2.4504, S(q)=0.295837, log q=0.8963, log S(q)=-1.2179
+  q=2.5133, S(q)=0.311273, log q=0.9216, log S(q)=-1.1671
+  q=2.5761, S(q)=0.328344, log q=0.9463, log S(q)=-1.1137
+  q=2.6389, S(q)=0.347484, log q=0.9704, log S(q)=-1.0570
+  q=2.7018, S(q)=0.369312, log q=0.9939, log S(q)=-0.9961
+  q=2.7646, S(q)=0.394759, log q=1.0169, log S(q)=-0.9295
+  q=2.8274, S(q)=0.425307, log q=1.0394, log S(q)=-0.8549
+  q=2.8903, S(q)=0.463475, log q=1.0613, log S(q)=-0.7690
+  q=2.9531, S(q)=0.513957, log q=1.0829, log S(q)=-0.6656
+  q=3.0159, S(q)=0.587198, log q=1.1039, log S(q)=-0.5324
+  q=3.0788, S(q)=0.722068, log q=1.1245, log S(q)=-0.3256
+  q=3.1416, S(q)=0.967264, log q=1.1447, log S(q)=-0.0333
+[完成] L=100, 耗时=279.8s
+
+============================================================
+[审计] 实验完成
+[审计] 数据保存至: D:\luoxuejian000\wulihuaxue\data\spin_structure_factor.csv
+
+[分析提示]
+1. 对每个L，提取小q区域的 log S(q) vs log q 斜率
+2. 若斜率 ≈ -0.5，则 η=1/4 在自旋扇区获得动量空间验证
+3. 若斜率偏离 -0.5，诚实记录偏差，分析可能原因
+4. 不选择性报告数据——所有q值的结果全部呈现
+============================================================
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python analyze_S_pi.py
+============================================================
+[审计] S(π) 标度分析
+[审计] 时间戳: 2026-07-14T10:19:46
+[审计] 数据源: data/spin_structure_factor.csv
+[审计] 理论预言：log S(π) vs log L 斜率 = 0.75
+============================================================
+
+[数据] 检测到链长序列: [20, 40, 60, 80, 100]
+
+L= 20: q=3.1416 (离π偏差=0.0000), S(q)=0.694473, log L=2.9957, log S(q)=-0.3646
+      次近邻: q=2.8274, S(q)=0.438138
+L= 40: q=3.1416 (离π偏差=0.0000), S(q)=0.807460, log L=3.6889, log S(q)=-0.2139
+      次近邻: q=2.9845, S(q)=0.553977
+L= 60: q=3.1416 (离π偏差=0.0000), S(q)=0.878090, log L=4.0943, log S(q)=-0.1300
+      次近邻: q=3.0369, S(q)=0.625699
+L= 80: q=3.1416 (离π偏差=0.0000), S(q)=0.928707, log L=4.3820, log S(q)=-0.0740
+      次近邻: q=3.0631, S(q)=0.678981
+L=100: q=3.1416 (离π偏差=0.0000), S(q)=0.967264, log L=4.6052, log S(q)=-0.0333
+      次近邻: q=3.1416, S(q)=0.967264
+
+============================================================
+[拟合] log S(π) vs log L 线性回归
+============================================================
+拟合斜率 (1-η): 0.2067
+标准误差: ±0.0037
+截距: -0.9802
+R²: 0.9990
+
+理论预言 1-η = 0.75
+实测值      = 0.2067 ± 0.0037
+偏差        = 0.5433
+
+============================================================
+[诊断] 基于数据，不做预设结论
+============================================================
+❌ 实测斜率与理论预言 0.75 存在显著偏差
+   实测值 0.2067，理论值 0.75，偏差 0.5433
+   可能原因：
+   1. 开边界条件改变了q=π处的标度行为
+   2. χ_max=100不够大，对q=π处S(q)的精度不足
+   3. 需要更大的L值序列来确认趋势
+
+   [元反思] 此结果不否定η=1/4的实空间验证（Δ_s ~ 1/L, α=-1.05±0.03）
+   动量空间的验证需要在周期性边界条件下重新进行。
+
+============================================================
+[审计] 分析完成
+[审计] 完整数据文件: D:\luoxuejian000\wulihuaxue\data\spin_structure_factor.csv
+[审计] 分析时间: 2026-07-14T10:19:46
+============================================================
+
+[反"对齐"声明]
+本次分析严格遵循"只看病，不开方"原则。
+数据呈现全部五个L值的结果，不做选择性报告。
+无论结果如何，数据本身是诚实的——理论根据数据修正，而非数据被理论强制"对齐"。
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python analyze_S_pi.py
+============================================================
+[审计] S(π) 标度分析
+[审计] 时间戳: 2026-07-14T10:20:36
+[审计] 数据源: data/spin_structure_factor.csv
+[审计] 理论预言：log S(π) vs log L 斜率 = 0.75
+============================================================
+
+[数据] 检测到链长序列: [20, 40, 60, 80, 100]
+
+L= 20: q=3.1416 (离π偏差=0.0000), S(q)=0.694473, log L=2.9957, log S(q)=-0.3646
+      次近邻: q=2.8274, S(q)=0.438138
+L= 40: q=3.1416 (离π偏差=0.0000), S(q)=0.807460, log L=3.6889, log S(q)=-0.2139
+      次近邻: q=2.9845, S(q)=0.553977
+L= 60: q=3.1416 (离π偏差=0.0000), S(q)=0.878090, log L=4.0943, log S(q)=-0.1300
+      次近邻: q=3.0369, S(q)=0.625699
+L= 80: q=3.1416 (离π偏差=0.0000), S(q)=0.928707, log L=4.3820, log S(q)=-0.0740
+      次近邻: q=3.0631, S(q)=0.678981
+L=100: q=3.1416 (离π偏差=0.0000), S(q)=0.967264, log L=4.6052, log S(q)=-0.0333
+      次近邻: q=3.1416, S(q)=0.967264
+
+============================================================
+[拟合] log S(π) vs log L 线性回归
+============================================================
+拟合斜率 (1-η): 0.2067
+标准误差: ±0.0037
+截距: -0.9802
+R²: 0.9990
+
+理论预言 1-η = 0.75
+实测值      = 0.2067 ± 0.0037
+偏差        = 0.5433
+
+============================================================
+[诊断] 基于数据，不做预设结论
+============================================================
+❌ 实测斜率与理论预言 0.75 存在显著偏差
+   实测值 0.2067，理论值 0.75，偏差 0.5433
+   可能原因：
+   1. 开边界条件改变了q=π处的标度行为
+   2. χ_max=100不够大，对q=π处S(q)的精度不足
+   3. 需要更大的L值序列来确认趋势
+
+   [元反思] 此结果不否定η=1/4的实空间验证（Δ_s ~ 1/L, α=-1.05±0.03）
+   动量空间的验证需要在周期性边界条件下重新进行。
+
+============================================================
+[审计] 分析完成
+[审计] 完整数据文件: D:\luoxuejian000\wulihuaxue\data\spin_structure_factor.csv
+[审计] 分析时间: 2026-07-14T10:20:36
+============================================================
+
+[反"对齐"声明]
+本次分析严格遵循"只看病，不开方"原则。
+数据呈现全部五个L值的结果，不做选择性报告。
+无论结果如何，数据本身是诚实的——理论根据数据修正，而非数据被理论强制"对齐"。
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python predict2_U_scan.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[预言二] 有效临界U值扫描：电荷与自旋标度行为
+[审计] 时间戳: 2026-07-14T13:57:59
+[审计] U/t 序列: [0.5, 1.0, 2.0]
+[审计] L 序列: [20, 40, 60, 80]
+[审计] chi_max = 100, svd_min = 1e-10
+============================================================
+[方法论声明]
+  1. 所有U值和L值使用统一的DMRG参数，不因收敛困难单独调整。
+  2. 本实验不预设标度交换一定存在，只看数据说什么。
+  3. 若某数据点无法收敛，记录哨兵值-999并标注原因，不强行修复。
+============================================================
+
+[计算] U/t=0.5, L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  电荷: E(N-1)=-22.4549, E(N)=-22.3592, gap=0.0957, chi_c=10.454149
+  自旋: Δ_s=0.267712
+  当前估算: α_c≈-999.000, α_s≈-999.000
+  状态: OK, 耗时=170s
+
+[计算] U/t=0.5, L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.53e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.34e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=3.76e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.93e-05
+  电荷: E(N-1)=-45.5666, E(N)=-45.3961, gap=0.1704, chi_c=5.868078
+  自旋: Δ_s=0.137436
+  当前估算: α_c≈-0.833, α_s≈-0.962
+  状态: OK, 耗时=457s
+
+[计算] U/t=0.5, L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.65e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.57e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.10e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.66e-05
+  电荷: E(N-1)=-68.6355, E(N)=-68.4391, gap=0.1964, chi_c=5.092294
+  自旋: Δ_s=0.092075
+  当前估算: α_c≈-0.674, α_s≈-0.970
+  状态: OK, 耗时=952s
+
+[计算] U/t=0.5, L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.98e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.08e-04
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.06e-04
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.33e-05
+  电荷: E(N-1)=-91.6925, E(N)=-91.4829, gap=0.2096, chi_c=4.771610
+  自旋: Δ_s=0.068897
+  当前估算: α_c≈-0.576, α_s≈-0.978
+  状态: OK, 耗时=1314s
+
+[计算] U/t=1.0, L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  电荷: E(N-1)=-20.4797, E(N)=-20.1504, gap=0.3293, chi_c=3.036434
+  自旋: Δ_s=0.243034
+  当前估算: α_c≈-999.000, α_s≈-999.000
+  状态: OK, 耗时=89s
+
+[计算] U/t=1.0, L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.18e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.74e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.75e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.21e-05
+  电荷: E(N-1)=-41.3558, E(N)=-40.9467, gap=0.4091, chi_c=2.444572
+  自旋: Δ_s=0.125558
+  当前估算: α_c≈-0.313, α_s≈-0.953
+  状态: OK, 耗时=440s
+
+[计算] U/t=1.0, L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.48e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.63e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.54e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.78e-05
+  电荷: E(N-1)=-62.1854, E(N)=-61.7485, gap=0.4369, chi_c=2.288661
+  自旋: Δ_s=0.084434
+  当前估算: α_c≈-0.263, α_s≈-0.961
+  状态: OK, 耗时=775s
+
+[计算] U/t=1.0, L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\linalg\np_conserved.py:4970: UserWarning: SVD with lapack_driver 'gesdd' failed. Use backup 'gesvd'
+  U_b, S_b, VH_b = svd_flat(block, full_matrices, True, overwrite_a, check_finite=True)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.78e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=7.85e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=7.59e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.36e-05
+  电荷: E(N-1)=-83.0019, E(N)=-82.5509, gap=0.4510, chi_c=2.217347
+  自旋: Δ_s=0.063289
+  当前估算: α_c≈-0.231, α_s≈-0.969
+  状态: OK, 耗时=1493s
+Traceback (most recent call last):
+  File "D:\luoxuejian000\wulihuaxue\predict2_U_scan.py", line 173, in <module>
+    with open(OUTPUT_FILE, "a") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'data\\predict2_U_scan.csv'
+
+D:\luoxuejian000\wulihuaxue>tasklist | findstr python
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python predict2_U_scan.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[预言二] 有效临界U值扫描：电荷与自旋标度行为
+[审计] 时间戳: 2026-07-15T08:21:42
+[审计] U/t 序列: [0.5, 1.0, 2.0]
+[审计] L 序列: [20, 40, 60, 80]
+[审计] chi_max = 100, svd_min = 1e-10
+============================================================
+[方法论声明]
+  1. 所有U值和L值使用统一的DMRG参数，不因收敛困难单独调整。
+  2. 本实验不预设标度交换一定存在，只看数据说什么。
+  3. 若某数据点无法收敛，记录哨兵值-999并标注原因，不强行修复。
+============================================================
+
+[计算] U/t=0.5, L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  电荷: E(N-1)=-22.4549, E(N)=-22.3592, gap=0.0957, chi_c=10.454149
+  自旋: Δ_s=0.267712
+  当前估算: α_c≈-999.000, α_s≈-999.000
+  状态: OK, 耗时=175s
+
+[计算] U/t=0.5, L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.53e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.34e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=3.76e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.93e-05
+  电荷: E(N-1)=-45.5666, E(N)=-45.3961, gap=0.1704, chi_c=5.868078
+  自旋: Δ_s=0.137436
+  当前估算: α_c≈-0.833, α_s≈-0.962
+  状态: OK, 耗时=453s
+
+[计算] U/t=0.5, L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.65e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.57e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.10e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.66e-05
+  电荷: E(N-1)=-68.6355, E(N)=-68.4391, gap=0.1964, chi_c=5.092294
+  自旋: Δ_s=0.092075
+  当前估算: α_c≈-0.674, α_s≈-0.970
+  状态: OK, 耗时=931s
+
+[计算] U/t=0.5, L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.98e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.08e-04
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.06e-04
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=8.33e-05
+  电荷: E(N-1)=-91.6925, E(N)=-91.4829, gap=0.2096, chi_c=4.771610
+  自旋: Δ_s=0.068897
+  当前估算: α_c≈-0.576, α_s≈-0.978
+  状态: OK, 耗时=1274s
+
+[计算] U/t=1.0, L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  电荷: E(N-1)=-20.4797, E(N)=-20.1504, gap=0.3293, chi_c=3.036434
+  自旋: Δ_s=0.243034
+  当前估算: α_c≈-999.000, α_s≈-999.000
+  状态: OK, 耗时=89s
+
+[计算] U/t=1.0, L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.18e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.74e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.75e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.21e-05
+  电荷: E(N-1)=-41.3558, E(N)=-40.9467, gap=0.4091, chi_c=2.444572
+  自旋: Δ_s=0.125558
+  当前估算: α_c≈-0.313, α_s≈-0.953
+  状态: OK, 耗时=468s
+
+[计算] U/t=1.0, L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.48e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.63e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=5.54e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.78e-05
+  电荷: E(N-1)=-62.1854, E(N)=-61.7485, gap=0.4369, chi_c=2.288661
+  自旋: Δ_s=0.084434
+  当前估算: α_c≈-0.263, α_s≈-0.961
+  状态: OK, 耗时=792s
+
+[计算] U/t=1.0, L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\linalg\np_conserved.py:4970: UserWarning: SVD with lapack_driver 'gesdd' failed. Use backup 'gesvd'
+  U_b, S_b, VH_b = svd_flat(block, full_matrices, True, overwrite_a, check_finite=True)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.78e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=7.85e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=7.59e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.36e-05
+  电荷: E(N-1)=-83.0019, E(N)=-82.5509, gap=0.4510, chi_c=2.217347
+  自旋: Δ_s=0.063289
+  当前估算: α_c≈-0.231, α_s≈-0.969
+  状态: OK, 耗时=1516s
+
+[计算] U/t=2.0, L=20 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  电荷: E(N-1)=-17.0829, E(N)=-16.3416, gap=0.7413, chi_c=1.348944
+  自旋: Δ_s=0.203717
+  当前估算: α_c≈-999.000, α_s≈-999.000
+  状态: OK, 耗时=126s
+
+[计算] U/t=2.0, L=40 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.11e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.36e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.21e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.06e-05
+  电荷: E(N-1)=-34.0547, E(N)=-33.2237, gap=0.8310, chi_c=1.203320
+  自旋: Δ_s=0.106603
+  当前估算: α_c≈-0.165, α_s≈-0.934
+  状态: OK, 耗时=453s
+
+[计算] U/t=2.0, L=60 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=4.76e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.25e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.25e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.31e-05
+  电荷: E(N-1)=-50.9697, E(N)=-50.1088, gap=0.8609, chi_c=1.161534
+  自旋: Δ_s=0.072343
+  当前估算: α_c≈-0.139, α_s≈-0.942
+  状态: OK, 耗时=838s
+
+[计算] U/t=2.0, L=80 开始...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=6.72e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=3.44e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=3.48e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=3.36e-05
+  电荷: E(N-1)=-67.8690, E(N)=-66.9944, gap=0.8746, chi_c=1.143348
+  自旋: Δ_s=0.054760
+  当前估算: α_c≈-0.122, α_s≈-0.947
+  状态: OK, 耗时=948s
+
+============================================================
+[预言二] 扫描完成
+[审计] 数据已保存至: D:\luoxuejian000\wulihuaxue\data\predict2_U_scan_v2.csv
+============================================================
+
+[汇总] 各U值下的标度指数（基于当前L序列的实时估算）:
+U/t      α_charge     α_spin       物理状态
+----------------------------------------------------
+0.5      -0.5758      -0.9779      绝缘体
+1.0      -0.2306      -0.9692      绝缘体
+2.0      -0.1215      -0.9469      绝缘体
+
+[判决指南]
+  若α_charge从正值(U=0.5)单调下降到零或负值(U=4)，且α_spin始终保持≈-1：
+    → 支持预言二：存在有效临界U，电荷与自旋标度行为发生交换。
+  若α_charge在所有U值下都趋近零：
+    → 否定预言二：电荷从未显示金属标度，或Mott能隙在所有U>0下已打开。
+  若α_spin随U显著变化：
+    → 修正预言二：自旋临界性的普适范围需要重新界定。
+
+[方法论提醒]
+  以上只是基于4个L值的实时估算，不是最终标度指数。
+  每个U值的精确标度指数需要单独做log-log拟合。
+  不做选择性报告。不做数据对齐。只看病，不开方。
+============================================================
+
+D:\luoxuejian000\wulihuaxue>
+
