@@ -1,0 +1,16 @@
+[游戏一] 预言一尝鲜版 - 单键缺陷点探测
+参数: L=40, U=4.0, 缺陷强度=0.8t
+DMRG: chi_max=100
+============================================================
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+
+缺陷强度: 0.8t
+自旋能隙 Δ_s = 0.109164
+前置因子 A = Δ_s × L = 4.3666
+拓扑指数 C = 0.478021
+结果已追加到 data\game1_log.csv
+
+D:\luoxuejian000\wulihuaxue>

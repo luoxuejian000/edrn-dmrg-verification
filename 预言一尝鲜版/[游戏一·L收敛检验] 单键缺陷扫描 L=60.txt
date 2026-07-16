@@ -1,0 +1,34 @@
+[游戏一·L收敛检验] 单键缺陷扫描 L=60
+参数: L=60, U=4.0
+缺陷强度序列: [0.5, 1.5]
+DMRG: chi_max=100
+============================================================
+
+[运行] 缺陷强度 = 0.5t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=0.5t: Δ_s=0.095642, A=5.7385, C=0.479309, 耗时=351s
+
+[运行] 缺陷强度 = 1.5t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=2.78e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.5t: Δ_s=0.013796, A=0.8277, C=0.482635, 耗时=151s
+
+============================================================
+[游戏一·L收敛检验] 全部完成
+数据已保存至: D:\luoxuejian000\wulihuaxue\data\game1_L60_log.csv
+============================================================
+
+L收敛性分析:
+  缺陷 0.5t: L=40时 A=5.47 | L=60时 A=?
+  缺陷 1.5t: L=40时 A=0.97 | L=60时 A=?
+
+如果L=60的A值与L=40接近，菜单一接近成功。
+如果L=60的A值回归均匀链值，菜单一是有限尺寸瞬态。
+
+D:\luoxuejian000\wulihuaxue>
