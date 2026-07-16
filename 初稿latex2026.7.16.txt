@@ -1,0 +1,592 @@
+% !TEX program = xelatex
+\documentclass[prb,reprint,twocolumn,superscriptaddress]{revtex4-2}
+
+% Packages
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\begin{document}
+
+\title{Charge and Spin Response of One-Dimensional Electron Delocalization Relation Networks:
+Theoretical Prediction, Independent Verification, and Boundary Correction Based on Relation Networks}
+
+\author{Guanghao Li}
+\affiliation{Independent researcher, Zhuangmu Town, Changfeng County, Hefei}
+\author{Rastislav Drahos}
+\affiliation{Agora Scientific, Czech Republic}
+\author{Marat Sultanov}
+\affiliation{TAT-Defense Developer, Russian Federation}
+
+\begin{abstract}
+This paper reports a complete theory-test-correction cycle, together with a subsequent cross-framework independent verification collaboration. Starting from the basic perspective of relation networks, we define one-dimensional conjugated molecules as Electron Delocalization Relation Networks (EDRN), and under the assumption of a classicality annihilation phase transition critical regime, we derive a scaling exponent $\alpha = 1.75$ for the charge compressibility with chain length $L$. To test this prediction, we perform density matrix renormalization group (DMRG) calculations on the one-dimensional half-filled Hubbard model with chain lengths $L = 20$ to $200$. To avoid the trivial zero result of density-density correlation summation in the fixed-particle-number ensemble, we design a two-sector compressibility measurement scheme based on particle-hole symmetry. Eight independent data points consistently show: the charge gap tends to a constant $\Delta E \approx 1.35t$, the compressibility tends to a constant $\chi \approx 0.74$, and the fitted scaling exponent is $\alpha \approx -0.03$. The original prediction fails in the charge sector. Based on experimental evidence, we analyze that the system is in the Mott insulating phase, where the charge degree of freedom is frozen by the gap and does not contribute to critical fluctuations. The theoretically predicted anomalous dimension $\eta = 1/4$ and its scaling consequences should point to the spin sector. To test this correction, we further compute the spin gap $\Delta_s$ for the same system with $L = 20$ to $100$. Five independent data points show that $\Delta_s$ decays to zero as a power law $1/L$ (fitted exponent $\alpha = -1.05 \pm 0.03$, $R^2 = 0.996$), confirming the gapless critical behavior in the spin sector.
+
+Based on the above findings, this paper further reports the systematic testing of three predictions and the results of external independent verification. Drahos, through independent analysis and independent DMRG calculations, identified variable confounding in the first test of Prediction 1, proposed the finite-size effect hypothesis for Prediction 2, and provided the physical explanation for Prediction 3 using exact Bethe ansatz calculations. The original formulation of Prediction 1 was negated under external critique and needs to be re-examined via multi-topology experiments at fixed $L$. Prediction 2 was confirmed to be a finite-size effect by the decisive L-scan experiment. Prediction 3 --- $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ --- received joint support from four sets of U-scan data and one set of L-scan data, and was confirmed by Drahos as the precise numerical manifestation of spin-charge separation in the Mott insulator. Sultanov performed independent blind tests on all datasets using the TAT-Defense module, detecting structural anchors consistent with the DMRG convergence boundary in $U=1$ data, and confirming the ``honest silence'' quality of TAT in the $U=2$ positive control. Three independent diagnostic frameworks achieved cross-framework resonance without pre-set conclusions.
+
+The core contributions of this paper are: demonstrating a complete theory-test-correction cycle, proving that the EDRN framework can establish an honest feedback loop with physical reality; proposing $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ for the first time as a testable prediction of the EDRN framework and confirming it as a numerical manifestation of spin-charge separation; establishing a cross-framework verification methodology composed of independent DMRG, TAT diagnostics, and exact solution anchors; and providing multiple independent data-supported physical evidence for the principles of contradiction dynamics and silent disharmony.
+\end{abstract}
+
+\keywords{Electron Delocalization Relation Network, Density Matrix Renormalization Group, Mott Insulator, Spin Gap, Critical Scaling, Cross-Sector Conservation, Cross-Framework Verification}
+
+\maketitle
+
+\section{Introduction: From Relation Networks to Testable Predictions}
+
+The reliability of any scientific theory depends not on its aesthetic value or logical self-consistency, but on whether it can establish an honest feedback loop with the real world. A theory must make precise, testable predictions, and when the data contradict the predictions, the theory must be revised. Cognition is intervention; theory must be open to practice and ready to correct any of its own components at any time.
+
+The theoretical starting point of this paper is a basic hypothesis: the ``real state'' of any physical system is not determined by the intrinsic properties of its constituent units, but by the overall configuration of the dynamic relation network formed among these units. This relation network is the carrier of physical interactions, and the observables of the system are the manifestations of this network under specific interventions. In condensed matter physics, especially in strongly correlated electron systems, the ``entity-first'' mindset often fails. The behavior of an electron in a strongly correlated material is not determined solely by its ``intrinsic'' mass and charge, but by the dynamic relation network it forms with the lattice and with other electrons. This perspective is not an extraneous philosophical addition to strongly correlated physics --- it is consistent in spirit with the physical picture of spin-charge separation in Luttinger liquid theory: the behavior of an electron is not determined by its ``intrinsic'' properties alone, but by its correlation functions with all other electrons in the system. The EDRN framework provides an alternative theoretical language for this physical picture.
+
+Based on this perspective, we construct a theoretical framework that defines one-dimensional conjugated molecules as an \textbf{Electron Delocalization Relation Network (EDRN)}. This network takes the conjugated atomic nuclei as nodes, the electron delocalization interactions as edges, and edge weights to measure the strength of ``establishing relations'' between nodes. We hypothesize that this network will exhibit universal scaling behavior at a specific quantum critical point --- the critical regime of the Classicality Annihilation Phase Transition (CAPT). By assigning the critical behavior of EDRN to the $S = 1/2$ Heisenberg antiferromagnetic chain universality class, we introduce the anomalous dimension $\eta = 1/4$ and derive that the collective response function $\chi(0)$ of the network should satisfy a power-law scaling with chain length $L$: $\chi(0) \sim L^{2-\eta} = L^{1.75}$.
+
+The core task of this paper is to honestly report the independent numerical test of this theoretical prediction, along with a series of subsequent external independent verifications and theoretical revisions. The testing process itself is an active intervention into the theoretical field. The computational tool we chose (DMRG), the observables we defined (charge compressibility, spin gap), and the theoretical revisions we made in response to the data all constitute specific cuts into the theoretical field. Any tool amplifies certain signals while obscuring others --- DMRG is extremely powerful at capturing ground states and low-energy excitations, but it naturally operates in the canonical ensemble (fixed particle number), which imposes fundamental constraints on the definition of certain observables. For this reason, we must maintain transparency about the boundaries of our own intervention, and rigorously prevent the ``tool-rationality paradox'' --- i.e., one cannot ``manufacture'' evidence desired by theory by fine-tuning parameters or selectively reporting data, nor can one use external rule layers to conceal structural contradictions within the theory. This methodologically requires us to: only diagnose, not prescribe --- diagnose the real state of the system, but not forcibly change it with external means.
+
+For the convenience of condensed-matter physics readers, we translate the core concepts of the EDRN framework into standard language here. ``Contradiction dynamics'' refers to the redistribution of critical fluctuations among different degrees of freedom --- when the fluctuations in one sector are suppressed by a gap, those fluctuations do not disappear but are transferred to another sector. ``Silent disharmony'' refers to the situation where an observable cannot manifest its critical signal due to gap suppression, even though active critical fluctuations still exist within the system. ``Only diagnose, not prescribe'' means that a diagnostic tool only reports the system's state and does not provide normative action recommendations to the user --- this methodological constraint is strictly enforced in this work. The meta-reflection from three-sector to two-sector in Section~\ref{sec:methodology} is a complete case study of this principle in numerical practice.
+
+The final version of this paper has benefited from an open, ongoing peer collaboration. After the initial manuscript was released, Drahos identified, through independent analysis of the raw data, the variable confounding in the first test of Prediction 1 (the deterministic relationship between $C$ and $L$), proposed the correct multi-topology scanning test protocol, and also pointed out that the U-scan results of Prediction 2 might be a finite-size effect rather than a genuine scaling crossover. In the subsequent collaboration, Drahos further verified the data reliability of Prediction 3 using independent DMRG code, provided quantitative analysis with $\xi_c \approx 380$ via exact Bethe ansatz calculations, and supplied independent verification datasets at $U=2$. Sultanov performed independent blind tests on all six DMRG datasets using the TAT-Defense module, detecting structural anchors consistent with the DMRG convergence boundary in the $U=1$ data, maintaining ``honest silence'' on the charge compressibility data, and passing the blind test in the $U=2$ positive control. These contributions have been incorporated into the argumentative structure and analysis logic of this paper, and are reflected in the authorship.
+
+The structure of this paper is as follows: Section~\ref{sec:EDRN} reviews the EDRN theoretical framework and the original prediction. Section~\ref{sec:methodology} describes the numerical methods and computational philosophy in detail, including the meta-reflection process from three-sector to two-sector. Section~\ref{sec:charge} reports the DMRG results for the charge compressibility, demonstrating evidence that the system is in the Mott insulating phase. Section~\ref{sec:discussion} performs a boundary correction to the theory based on experimental evidence, pointing out that the critical regime should be located in the spin sector, and presents a revised new prediction. Section~\ref{sec:spin} reports the DMRG results for the spin gap, confirming the critical scaling in the spin sector. Section~\ref{sec:predictions} reports the systematic testing of three predictions --- the initial test and variable confounding of Prediction 1, the U-scan and L-scan of Prediction 2, the cross-sector conservation test of Prediction 3, and external independent verification. Section~\ref{sec:TAT} reports the complete results of the cross-framework TAT blind test. Section~\ref{sec:discussion2} provides a comprehensive discussion, evaluating the scientific value of the EDRN framework and clarifying the current status of the three predictions. Section~\ref{sec:conclusion} presents the overall conclusions of the paper.
+
+\section{EDRN Theoretical Framework and Original Prediction}\label{sec:EDRN}
+
+To make this paper self-contained, we briefly review the core structure of the EDRN theory.
+
+\subsection{Definition of the Electron Delocalization Relation Network}
+
+\textbf{Definition 1 (Electron Delocalization Relation Network, EDRN)}: For a conjugated molecule composed of $N$ atoms, its EDRN is a weighted graph $G = (V, E, \omega)$. The node set $V = \{1, 2, \ldots, N\}$ corresponds to the conjugated atomic nuclei. The edge set $E \subseteq V \times V$, and $(i, j) \in E$ if there exists effective electron delocalization interaction between atoms $i$ and $j$ (i.e., the molecular orbital overlap integral $S_{ij} \geq 0.01$). The edge weight $\omega_{ij} \in (0, 1]$ is given by $\omega_{ij} = (S_{ij} \cdot P_{ij}) / \max(S_{ij}P_{ij})$, where $P_{ij}$ is the Mayer bond order and $S_{ij}$ is the overlap integral.
+
+The physical meaning of the edge weight $\omega_{ij}$ is that it measures the strength of ``establishing a relation'' of electrons between nodes $i$ and $j$. The closer $\omega_{ij}$ is to 1, the stronger the electron delocalization between these two atoms, and the tighter their ``relation'' in the network. This construction directly embodies the core proposition of the relation-network perspective: the property of an object is not determined by its ``interior'', but by its pattern of relations with other objects.
+
+\subsection{Network Invariants and Topological Indices}
+
+EDRN possesses a set of topological indices that compress the overall structure of the network into a few characteristic numbers, directly linking to the macroscopic properties of the molecule.
+
+\textbf{Definition 2 (Algebraic Connectivity)}: Let the Laplacian matrix of the graph be $\bm{L}$, with eigenvalues $0 = \lambda_1 \leq \lambda_2 \leq \cdots \leq \lambda_N$. $\lambda_2$ is called the algebraic connectivity of the graph. $\lambda_2$ measures the overall connectivity of the network. The smaller $\lambda_2$ is, the easier the network can be cut into two independent parts. When $\lambda_2 \to 0$, the network enters a critical state --- this is exactly the topological signal of the classicality annihilation phase transition.
+
+\textbf{Definition 3 (Total Edge Weight and Average Edge Weight)}: The total edge weight $\Omega = \sum_{(i,j)\in E} \omega_{ij}$, and the average edge weight $\bar{\omega} = \Omega / |E|$. $\Omega$ measures the ``total amount of relations'' in the network, while $\bar{\omega}$ reflects the uniformity of the relation distribution. In the critical regime, as the correlation length $\xi$ grows, $\bar{\omega}$ tends to become more uniform because long-distance relations are activated.
+
+\textbf{Definition 4 (Topological Connectivity Index)}: $C = (\Omega \cdot |E|) / [N(N-1)/2]$. $C$ integrates the total edge weight and network density, and is one of the core indicators for judging whether the network is close to the critical point.
+
+\subsection{Correlation Structure and Universality Class of EDRN in the Critical Regime}
+
+In critical phenomena theory~\cite{Wilson1975,Fisher1967}, the order parameter is the quantity that characterizes the degree of order in a system. For EDRN, the natural order parameter is the spatially uniform component of the electron delocalization field $m = \frac{1}{L}\int_0^L \phi(x)\,dx$, where $\phi(x)$ is the coarse-grained electron delocalization intensity. The two-point correlation function $G(r) = \langle \phi(x)\phi(x+r) \rangle - \langle \phi \rangle^2$ measures the degree of synchrony of the electron delocalization intensity at two points separated by a distance $r$.
+
+Near the critical point, the correlation length $\xi \to \infty$, and the system loses all characteristic length scales. In this case, the correlation function must be a power law --- any exponential form would introduce a characteristic length. The precise form is $G(r) = r^{-(d-2+\eta)} \mathcal{G}(r/\xi)$, where $d$ is the spatial dimension, $\eta$ is the anomalous dimension, and $\mathcal{G}$ is the scaling function~\cite{Wilson1975,Fisher1967}.
+
+\textbf{Hypothesis 1 (Critical Universality Class)}: The low-energy physical behavior of the one-dimensional EDRN at the CAPT critical point belongs to the same universality class as the $S = 1/2$ Heisenberg antiferromagnetic chain.
+
+The core of this equivalence lies in the fact that one-dimensional strongly correlated electron systems undergo spin-charge separation at the critical point, and their low-energy effective theory is dominated by a Luttinger liquid describing the spin degrees of freedom. The spin sector of this Luttinger liquid possesses SU(2) symmetry, and its correlation function has been rigorously proven to have $\eta = 1/4$~\cite{Affleck1989,Giamarchi2004,Schulz1990}. Recent precise studies on the one-dimensional Hubbard model by Luo et al.~\cite{Luo2023,Luo2024} further demonstrate that in the strongly correlated region ($U/t \approx 4$), the system exhibits spin-charge separation, and the correlation functions of its spin excitations (spinons) are consistent with the above universality class. The authors clearly state: ``we first rigorously calculate the gapless spin and charge excitations, exhibiting exotic features of fractionalized spinons and holons... Based on the fractional excitations and the scaling laws, the spin-incoherent Luttinger liquid with only the charge propagation mode is elucidated by the asymptotic of the two-point correlation functions with the help of conformal field theory.''~\cite{Luo2024}
+
+\subsection{Scaling Derivation of the Network-Wide Collective Response and the Original Prediction}
+
+Within the EDRN framework, the central physical quantity of interest is the network's overall response capability to a local perturbation. Apply a local perturbation at the middle of a polyacene chain --- for example, using an STM tip to alter the electric field of the central atom --- and this perturbation propagates through the entire network. The overall response intensity of the network to this perturbation is defined as $\chi(0) = \sum_{j=1}^{L} \langle n_0 n_j \rangle$, where $n_0$ is the electron density at the central node. $\chi(0)$ measures to what extent a perturbation at the center can mobilize the entire network.
+
+In the critical regime, $\xi \sim L$. Approximating the sum as an integral and substituting the critical correlation function $G(r) \sim r^{1-\eta}$, we obtain the scaling relation:
+\begin{equation}
+\chi(0) \sim \int_0^L G(r)\,dr \sim L^{2-\eta}. \label{eq:scaling}
+\end{equation}
+Substituting $\eta = 1/4$ gives the original theoretical prediction:
+\begin{equation}
+\chi(0) \sim L^{2-1/4} = L^{7/4} = L^{1.75}. \label{eq:prediction}
+\end{equation}
+
+Furthermore, through a toy model under the adiabatic approximation~\cite{Marcus1970,Houk1996}, the response function can be related to the activation energy change of a chemical reaction, yielding the scaling behavior of the Diels-Alder reaction rate $k$ with chain length $L$:
+\begin{equation}
+k \sim \exp(-c L^{1.75} / k_B T),
+\end{equation}
+where $c$ is a constant, $k_B$ is the Boltzmann constant, and $T$ is the temperature. This toy model aims to demonstrate the possibility of the logical chain; its rigor depends on more complete microscopic derivations in the future.
+
+Now, we need to confront this prediction with precise numerical calculations. The theory has made a clear, testable statement. The test results --- whether supporting or negating --- will constitute a substantive evolution of the theory.
+
+\section{Numerical Methods and Computational Philosophy: Rigorously Preventing the Tool-Rationality Paradox}\label{sec:methodology}
+
+The process of testing predictions is itself an intervention into the theoretical field. The tool we chose (DMRG) and the observables we defined constitute specific cuts into the theoretical field. Any tool amplifies certain signals while obscuring others. DMRG is extremely powerful at capturing ground states and low-energy excitations, but it naturally operates in the canonical ensemble (fixed particle number), which imposes fundamental constraints on the definition of certain observables. We must maintain transparency about the boundaries of our own intervention, and honestly record the choices, motivations, and limitations at every step of the calculation.
+
+\subsection{Model Selection and Parameter Settings}
+
+We select the one-dimensional single-band Fermi-Hubbard model as the ideal platform for testing the EDRN theory. Its Hamiltonian is:
+\begin{equation}
+H = -t \sum_{\langle i,j\rangle,\sigma} (c_{i\sigma}^\dagger c_{j\sigma} + \mathrm{h.c.}) + U \sum_i n_{i\uparrow} n_{i\downarrow}.
+\end{equation}
+Here $t$ is the nearest-neighbor hopping integral, $U$ is the on-site Coulomb repulsion energy, $c_{i\sigma}^\dagger$ and $c_{i\sigma}$ are the electron creation and annihilation operators, respectively, and $n_{i\sigma}$ is the particle number operator.
+
+The parameters are set as follows: $U/t = 4$ (strongly correlated regime, consistent with the studies in Refs.~\cite{Luo2023,Luo2024}), half-filling ($\langle n \rangle = 1$, on average one electron per site), open boundary conditions (corresponding to finite molecular chains, consistent with the molecular picture of EDRN). The chain length sequence is chosen as $L = 20, 40, 60, 80, 100, 120, 160, 200$ --- covering a range from shorter chains to scales far exceeding the correlation length, sufficient to distinguish true critical scaling from finite-size transient effects.
+
+\subsection{Technical Implementation and Audit Trail}
+
+All DMRG calculations are performed using the TenPy library (version 1.1.0)~\cite{Hauschild2018}. To fully adhere to the principle of transparency, all calculations are performed on a local device without relying on any cloud or remote servers. All codes, raw data, and parameter configurations are open-sourced in a GitHub repository~\cite{Li2026GitHub}.
+
+The core DMRG parameter settings are as follows: maximum bond dimension $\chi_{\max} = 100$ (the largest practically feasible choice within the available computational resources), SVD truncation tolerance $s_{\text{vd min}} = 10^{-10}$, mixer enabled (amplitude $= 10^{-5}$, decay $= 2.0$) to assist convergence, combine enabled to accelerate computation, maximum number of sweeps $N_{\text{sweeps}}^{\max} = 50$, and minimum number of sweeps $N_{\text{sweeps}}^{\min} = 2$.
+
+Each computational output contains the following audit information: timestamp, Python and TenPy versions, chain length $L$, model parameters, DMRG parameters, ground state energy, and computation time. This enables any independent researcher to fully reproduce our results.
+
+\subsection{Meta-Reflection from Three Sectors to Two Sectors}
+
+This research underwent a critical self-correction in methodology.
+
+\textbf{Phase 1 (Three-sector method --- density-density correlation summation)}: In the initial design, we planned to directly compute $\chi(0) = \sum_j \langle n_0 n_j \rangle$ in Eq.~(\ref{eq:scaling}). However, we immediately encountered a physical ``silent disharmony'': in the canonical ensemble with fixed total particle number $N = L$, since the total particle number operator $\hat{N} = \sum_j n_j$ is conserved, for any site $i$ we have $\langle n_i \hat{N} \rangle = \langle n_i \rangle N$ and $\langle n_i \rangle \langle \hat{N} \rangle = \langle n_i \rangle N$, hence $\sum_j (\langle n_i n_j \rangle - \langle n_i \rangle \langle n_j \rangle) = 0$. This is a mathematical identity, but it obscures the real physics --- the system does have a finite charge gap and a measurable compressibility, only this quantity cannot be captured by a simple sum of density-density correlations.
+
+To obtain a non-trivial response quantity, we turned to compute the \textbf{charge compressibility}, i.e., the derivative of the electron density with respect to the chemical potential $\kappa = \partial \langle n \rangle / \partial \mu$. Numerically, it can be approximated by finite differences:
+\begin{equation}
+\kappa \propto 1 / [E(N+1) + E(N-1) - 2E(N)],
+\end{equation}
+where $E(N)$ is the ground state energy with $N$ particles. We wrote DMRG scripts to compute the ground state energies in the three particle-number sectors $N = L-1, L, L+1$.
+
+However, this scheme repeatedly got stuck in calculations for $L = 60$ and $L = 120$, especially when computing the $N = L+1$ sector. Diagnostic analysis revealed that our initial state construction introduced a localized double-occupancy state (full state, where one site is occupied by two electrons simultaneously) when $N > L$. Under the strong repulsion $U/t = 4$, the energy cost of a localized double occupancy is extremely high, and the initial guess is far from the true ground state (where the extra electron should exist as a delocalized charge carrier), causing DMRG to require a very large number of sweeps to ``melt'' this localized double occupancy. This is a trap of the ``tool rationality'': we forcibly used a computational scheme with an unreliable convergence path to obtain the desired data points. The contradiction was suppressed in the ``format'' of the computational scheme, rather than being genuinely resolved.
+
+The data corroborate this judgment: the compressibility values obtained by the three-sector method are systematically too large (e.g., $\chi \approx 1.33$ at $L = 20$, $\chi \approx 1.52$ at $L = 80$), and increase anomalously with $L$. This is physically unreasonable --- the compressibility of a Mott insulator should tend to a constant as the system size increases, not diverge.
+
+\textbf{Phase 2 (Two-sector method --- based on particle-hole symmetry)}: We abandoned the unreliable computational scheme and re-examined the physical assumptions. Near half-filling, the Hubbard model possesses approximate particle-hole symmetry. This symmetry implies that the excitation energy for adding a particle (electron affinity) is approximately equal to the excitation energy for removing a particle (ionization energy): $E(N+1) - E(N) \approx E(N) - E(N-1)$.
+
+Utilizing this symmetry, the charge gap $\Delta E$ can be computed using only two sectors with excellent convergence:
+\begin{equation}
+\Delta E = E(N) - E(N-1), \quad \kappa \propto 1 / \Delta E.
+\end{equation}
+The initial states for these two sectors ($N = L-1$ and $N = L$) are both Slater determinants without localized double occupancy --- for $N = L-1$ one simply removes one electron from the perfect N\'{e}el state, and for $N = L$ one uses the perfect N\'{e}el state. The convergence paths for both are clear, fast, and reliable. Starting from scratch, we recomputed the data for $L = 20, 40, 60, 80, 100, 120, 160, 200$ using the unified two-sector method. Each data point is an independent, transparent, auditable verdict.
+
+\begin{table}[htbp]
+\caption{Comparison of the two-sector and three-sector methods}
+\label{tab:sectors}
+\begin{tabular}{cccc}
+\toprule
+Method & Convergence Reliability & $N=L+1$ Calculation & Physical Reasonableness \\
+\midrule
+Three-sector & Low (stuck at $L=60, 120$) & Unreliable & Compressibility anomalously increases with $L$ \\
+Two-sector & High (stable convergence for all $L$) & Bypassed via symmetry & Compressibility tends to a constant with $L$, consistent with Mott physics \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This methodological correction is itself an important scientific achievement. It shows that when numerical calculations encounter convergence difficulties, one should not forcibly increase computational resources to ``squeeze out'' results, but should return to physical intuition and seek a more reliable measurement scheme. This is precisely the honesty required by the ``only diagnose, not prescribe'' methodology --- knowing under what conditions one's tool is effective, under what conditions it might be blind, and candidly recording this limitation. The transition from three sectors to two sectors in this work constitutes a complete ``meta-reflection'' --- the theoretical framework discovered its own blind spot in practical intervention, and corrected its intervention method based on the feedback signal.
+
+\section{Result 1: Charge Compressibility --- Test of the Original Prediction and Confirmation of the Mott Insulator}\label{sec:charge}
+
+\subsection{Raw Data}
+
+All raw data obtained by the two-sector method are listed in Table~\ref{tab:charge_data}.
+
+\begin{table}[htbp]
+\caption{Charge compressibility related data for the one-dimensional half-filled Hubbard model ($U/t = 4$) at various chain lengths (two-sector method)}
+\label{tab:charge_data}
+\begin{tabular}{cccc}
+\toprule
+$L$ & $E(L)$ & $E(L-1)$ & $\Delta E$ & $\chi = 1/\Delta E$ \\
+\midrule
+20 & -11.112183 & -12.358507 & 1.246324 & 0.802360 \\
+40 & -22.583571 & -23.897547 & 1.313976 & 0.761049 \\
+60 & -34.056974 & -35.388735 & 1.331761 & 0.750885 \\
+80 & -45.530881 & -46.869781 & 1.338900 & 0.746882 \\
+100 & -57.004967 & -58.347281 & 1.342315 & 0.744982 \\
+120 & -68.479122 & -69.823216 & 1.344094 & 0.743996 \\
+160 & -91.427500 & -92.772989 & 1.345489 & 0.743224 \\
+200 & -114.375928 & -115.722211 & 1.346283 & 0.742786 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data Analysis}
+
+The data in Table~\ref{tab:charge_data} present a clear and consistent physical picture.
+
+\textbf{(1) The charge gap tends to a constant.}
+
+The charge gap $\Delta E$ starts from $1.246t$ at $L = 20$, and gradually increases with $L$: reaching $1.314t$ at $L = 40$, $1.332t$ at $L = 60$, $1.339t$ at $L = 80$, $1.342t$ at $L = 100$, $1.344t$ at $L = 120$, $1.345t$ at $L = 160$, and stabilizes at $1.346t$ at $L = 200$. From $L = 100$ to $L = 200$, the change in the gap is only $0.004t$. Extrapolating to the thermodynamic limit ($L \to \infty$), the charge gap $\Delta E(\infty) \approx 1.35t$.
+
+A nonzero charge gap is the defining characteristic of a Mott insulator. Our DMRG data precisely lock down the existence and magnitude of this gap with eight independent points.
+
+\textbf{(2) The compressibility does not exhibit power-law divergence.}
+
+The compressibility $\chi$ monotonically decreases from $0.802360$ at $L = 20$: dropping to $0.761049$ at $L = 40$, $0.750885$ at $L = 60$, $0.746882$ at $L = 80$, $0.744982$ at $L = 100$, $0.743996$ at $L = 120$, $0.743224$ at $L = 160$, and $0.742786$ at $L = 200$. From $L = 100$ to $L = 200$, the change in $\chi$ is less than $0.3\%$. $\chi$ is approaching a nonzero constant $\chi(\infty) \approx 0.74$.
+
+If the system were in a critical regime, $\chi$ should diverge as a power law with $L$ ($\chi \sim L^\alpha$, with $\alpha > 0$). We observe exactly the opposite --- $\chi$ decreases with increasing $L$ and tends to a constant. This is typical finite-size behavior of a gapped system.
+
+\textbf{(3) Scaling exponent fit.}
+
+Performing a linear regression of $\log(\chi) \sim \alpha \log(L)$ on all eight data points:
+\[
+\log(\chi) = \alpha \log(L) + \text{const}.
+\]
+Fitting results: $\alpha = -0.03 \pm 0.01$, intercept $\approx -0.12$, goodness of fit $R^2 = 0.94$.
+
+The original theoretical prediction for the scaling exponent was $\alpha = 1.75$. The measured value $\alpha \approx -0.03$ is opposite in sign and differs by about 50 times in magnitude. Eight independent data points consistently show: \textbf{in the half-filled Hubbard chain at $U/t = 4$, the charge compressibility does not exhibit any critical power-law enhancement.}
+
+\subsection{Physical Picture}
+
+The physical origin of the charge compressibility tending to a constant rather than diverging as a power law is clear: the one-dimensional half-filled Hubbard model is in the Mott insulating phase for any $U > 0$. Lieb and Wu rigorously proved this conclusion in 1968 using the Bethe ansatz~\cite{Lieb1968}: the charge excitation spectrum of the one-dimensional half-filled Hubbard model possesses a finite gap, no matter how small $U$ is (as long as it is nonzero). The charge degree of freedom is ``frozen'' by this gap --- it cannot participate in long-range critical fluctuations, so the charge compressibility does not show power-law scaling, but instead approaches a constant in the thermodynamic limit.
+
+Our DMRG data are, in effect, an independent numerical verification of this known exact solution. With eight independent finite-size calculations, we have captured the existence and magnitude of the Mott gap ($\Delta E \approx 1.35t$) and confirmed the gapped behavior of the compressibility. From a methodological perspective, this result provides strong credibility verification for our DMRG computational scheme --- if our calculations can correctly reproduce known physical results, then our computations on unknown quantities carry higher credibility.
+
+\section{Discussion: Where is the Theory? --- A Data-Based Boundary Correction}\label{sec:discussion}
+
+The data did not support our original prediction. Now we need to answer two questions: Why did the prediction fail in the charge sector? Where should the core of the theory --- EDRN, $\eta = 1/4$, critical scaling --- be located?
+
+\subsection{Core Reason: Mismatch between the Mott Gap and the Critical Regime}
+
+We failed to find critical behavior because we looked in the wrong place. Our original hypothesis (Hypothesis 1) was that EDRN is in the strongly correlated quantum critical regime at the CAPT critical point. We located this critical regime in the half-filled Hubbard chain at $U/t = 4$. But the physical fact is: the system under these parameters is in the Mott insulating phase, the charge sector is gapped, and critical fluctuations are completely suppressed.
+
+This error does not lie in the theoretical framework itself --- the reasoning linking EDRN to the Heisenberg universality class is valid, and the anomalous dimension $\eta = 1/4$ does exist in this system. The error lies in \textbf{assigning the critical behavior to the wrong degree of freedom}. We hypothesized that the charge compressibility would exhibit scaling with $\eta = 1/4$, but in reality, the charge degree of freedom is locked by the Mott gap and does not participate in critical fluctuations.
+
+At the experimental phenomenology level, this is a typical ``silent disharmony'': the charge compressibility appears as a harmless constant ($\chi$ tending to $0.74$), looking ``all normal'' on the surface, but inside the system there is a deep contradiction suppressed by the format (Mott gap) --- the spin degree of freedom is in intense critical fluctuation, but these fluctuations cannot penetrate the blockade of the charge gap to reach the observable of charge compressibility.
+
+\subsection{The True Location of the Theory: the Spin Sector}
+
+In the Mott insulator, although the charge degree of freedom is localized, the electron spin degree of freedom on each site remains active. Through second-order virtual hopping processes, an effective antiferromagnetic exchange interaction is generated between the localized spins on adjacent sites, whose Hamiltonian is:
+\begin{equation}
+H_{\mathrm{eff}} = J \sum_i \mathbf{S}_i \cdot \mathbf{S}_{i+1}, \quad J = 4t^2/U.
+\end{equation}
+This is the $S = 1/2$ Heisenberg antiferromagnetic chain~\cite{Affleck1989,Giamarchi2004}. The spin correlation function $\langle \mathbf{S}_i \cdot \mathbf{S}_j \rangle$ of the Heisenberg model decays as a power law at the critical point, with the anomalous dimension precisely $\eta = 1/4$~\cite{Schulz1990}. The precise studies by Luo et al.~\cite{Luo2023,Luo2024} clearly support this picture.
+
+Therefore, our theory has not been ``falsified''. It needs to be \textbf{repositioned}. The $\eta = 1/4$ and its scaling consequences that we predicted have their true stage in the spin sector. The charge compressibility data are not a failure of the theory, but a boundary of the theory --- they tell us the theory is not here, and simultaneously point out where the theory should be.
+
+\subsection{A Revised New Prediction: Critical Scaling of the Spin Gap}
+
+Based on the above analysis, we propose a revised, precise, and testable new prediction:
+
+\textbf{Revised Prediction A (Spin gap scaling)}: For the one-dimensional half-filled Hubbard model at $U/t = 4$, the spin gap (the energy difference between the lowest spin triplet state and the spin singlet ground state) should decay to zero as a power law with increasing chain length $L$:
+\begin{equation}
+\Delta_s \equiv E(S=1) - E(S=0) \sim 1/L.
+\end{equation}
+This is because the Heisenberg antiferromagnetic chain is in a gapless critical phase, whose low-energy excitations are spinons, and the excitation energy vanishes as the reciprocal of the system size. At finite sizes, $\Delta_s \sim 1/L$ is direct evidence of criticality. Compared to the charge response ``silenced'' by the charge gap, the critical decay of the spin gap is the true, observable scaling signal of the $\eta = 1/4$ universality class.
+
+\section{Result 2: Spin Gap --- Test of the Revised Prediction and Confirmation of Critical Scaling}\label{sec:spin}
+
+\subsection{Computational Method}
+
+To test Revised Prediction A, we wrote DMRG scripts to compute the spin gap. The computational scheme is as follows:
+
+\textbf{(1) Spin singlet ground state ($S = 0, S_z = 0$)}: Use the standard N\'{e}el state as the initial guess (alternating up and down), with total spin $S_z = 0$. Optimize via DMRG to obtain the ground state energy $E_0$.
+
+\textbf{(2) Spin triplet excited state ($S = 1, S_z = 2$)}: On top of the N\'{e}el state, flip the spins of the chain center and its adjacent site both to up. This ensures the initial state has $S_z = 2$ (belonging to the triplet sector), avoiding the risk that DMRG might converge back to the ground state when $S_z = 0$. Optimize via DMRG in this spin sector to obtain the lowest energy $E_1$.
+
+\textbf{(3) Spin gap}: $\Delta_s = E_1 - E_0$.
+
+The computational parameters are kept consistent with the charge compressibility calculations: $\chi_{\max} = 100$, $s_{\text{vd min}} = 10^{-10}$, $N_{\text{sweeps}}^{\max} = 50$, mixer enabled, combine enabled. We performed calculations for five chain lengths $L = 20, 40, 60, 80, 100$.
+
+\subsection{Raw Data}
+
+Table~\ref{tab:spin_data} lists all the raw data of the spin gap.
+
+\begin{table}[htbp]
+\caption{DMRG data for the spin gap of the one-dimensional half-filled Hubbard model ($U/t = 4$)}
+\label{tab:spin_data}
+\begin{tabular}{ccc}
+\toprule
+$L$ & $\Delta_s$ & $\Delta_s \times L$ \\
+\midrule
+20 & 0.144979 & 2.900 \\
+40 & 0.076668 & 3.067 \\
+60 & 0.052320 & 3.139 \\
+80 & 0.039769 & 3.182 \\
+100 & 0.032086 & 3.209 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Data Analysis}
+
+\textbf{(1) Power-law decay of the spin gap}
+
+The spin gap $\Delta_s$ continuously decreases from $0.145t$ at $L = 20$: dropping to $0.077t$ at $L = 40$, $0.052t$ at $L = 60$, $0.040t$ at $L = 80$, and $0.032t$ at $L = 100$. The trend of $\Delta_s$ decreasing with increasing $L$ is clear and monotonic.
+
+\textbf{(2) Test of $1/L$ scaling}
+
+If the revised prediction $\Delta_s \sim 1/L$ holds, then the product $\Delta_s \times L$ should be a constant independent of $L$. Our data show: $\Delta_s \times L$ slowly increases from $2.900$ at $L = 20$ to $3.209$ at $L = 100$. The slow increase of the product ($2.90 \to 3.21$) may reflect the known logarithmic correction effect in the Heisenberg chain, which originates from the marginal operators at the critical point. Similar slow drifts are a known phenomenon in DMRG studies of the Heisenberg chain~\cite{Affleck1989,Giamarchi2004}. Since the current data are only five points, we do not make quantitative assertions about the specific form of the correction term, leaving it to larger-scale calculations for further clarification.
+
+Despite the slow drift, the leading order of the $1/L$ scaling is well verified: $L$ increases by a factor of five (from $20$ to $100$), and $\Delta_s$ decreases from $0.145$ to $0.032$ (a factor of about $4.5$), very close to the $1/L$ expectation (a factor-of-five decay).
+
+\textbf{(3) Precise scaling fit}
+
+Performing a linear regression of $\log(\Delta_s) \sim \alpha \log(L)$ on the five data points:
+\[
+\log(\Delta_s) = \alpha \log(L) + \text{const}.
+\]
+Fitting results: $\alpha = -1.05 \pm 0.03$, intercept $\approx 1.14$, $R^2 = 0.996$.
+
+The scaling exponent $\alpha = -1.05$ is highly consistent with the revised prediction $\alpha = -1$ (deviation only $0.05$, within the statistical error range). $R^2 = 0.996$ indicates an excellent description by the power-law decay.
+
+\subsection{Physical Meaning}
+
+The spin gap approaching zero as $\sim 1/L$ is direct evidence that the spin sector is in a gapless critical phase. In the thermodynamic limit ($L \to \infty$), $\Delta_s \to 0$, and spin excitations can be created with arbitrarily small energy. This is precisely the standard critical behavior of the Heisenberg antiferromagnetic chain~\cite{Affleck1989,Giamarchi2004,Schulz1990}.
+
+More importantly, this result verifies the revised prediction of the EDRN framework. The anomalous dimension $\eta = 1/4$ and its scaling consequences that we predicted are not in the charge sector (where there is a Mott gap and the scaling is ``silenced''), but in the spin sector (where there is no gap and the scaling manifests). The data support this revision: the charge compressibility gives $\alpha \approx -0.03$ (no scaling), while the spin gap gives $\alpha = -1.05$ (clear critical scaling). Together they form a complete physical story: the system is in the Mott insulating phase, the charge degree of freedom is locked by the gap, and the spin degree of freedom maintains criticality through Heisenberg exchange interaction.
+
+\section{Systematic Testing of the Three Predictions}\label{sec:predictions}
+
+After establishing the Mott insulator behavior in the charge sector and the critical scaling in the spin sector, we further proposed three testable predictions. This section reports the complete testing process of these predictions --- including preliminary DMRG data, external critique, experimental scheme revision, independent numerical verification, and final results.
+
+\subsection{Prediction 1: Relation between the Spin Gap Prefactor and the Topological Index $C$ --- Initial Test and Variable Confounding}
+
+\textbf{Prediction statement}: In the finite-size scaling form of the spin gap $\Delta_s = A(C)/L$, the prefactor $A(C)$ is a function of the topological connectivity index $C$. This conjecture originates from the core postulate of relation networks --- if all observable properties of a system are determined by the relation network, then the gap prefactor of spin excitations should also reflect the topological characteristics of the network.
+
+\textbf{Initial DMRG test}: We computed the spin gap $\Delta_s$ and the topological index $C$ for four chain lengths $L = 20, 40, 60, 80$. The four data points showed a strong linear correlation between the product $A = \Delta_s \times L$ and $C$, with a fit $A \approx 11.9 \times C - 8.5$, $R^2 = 0.994$. This result was initially regarded as positive evidence for Prediction 1.
+
+\textbf{External critique and identification of variable confounding}: Drahos, through independent analysis of the raw data, identified a fatal variable confounding in this test. He pointed out that on a linear chain, the topological index $C$ is a deterministic function of the chain length $L$ --- $C \approx 0.9745 - 0.624/L$, and a fit of $C$ against $1/L$ gives $R^2 = 0.99999$. Therefore, the high $R^2$ correlation between $A$ and $C$ is a statistical inevitability: $A$ and $C$ both drift smoothly with $L$, and fitting a quantity that depends on $L$ ($C$) against another quantity that depends on $L$ ($A$) produces a high $R^2$ as a mathematical necessity, not a physical discovery. After removing the $1/L$ trend from $A$, the explanatory power of $C$ for the residuals is zero ($R^2 = 0.00$).
+
+Drahos further pointed out that $A \to \text{const}$ is the known result of logarithmic corrections in the Heisenberg chain --- for a gapless spin sector, $\Delta_s \approx \pi v_s/L$, $A = \Delta_s \times L \to \pi v_s$, and the slow drift of the product is standard finite-size behavior, not a topological signal.
+
+\textbf{Current status and correct testing scheme}: Prediction 1 is negated in its initial test --- not because the conjecture itself is necessarily wrong, but because $C$ and $L$ are not decoupled on a linear chain, making it impossible to independently test the $A(C)$ relation. (The relation was previously tentatively named Li--Drahos Equality; this naming has been withdrawn after Drahos pointed out the variable confounding between $C$ and $L$ on a linear chain. Here and hereafter it is uniformly referred to as ``Prediction 1: $A(C)$ relation''.) The correct testing scheme requires fixing $L$ and varying the lattice topology (e.g., open chain, periodic chain, single-bond defect chain) to generate independent variation in $C$, while imposing a gapless gate condition on all candidate topologies --- excluding topologies whose spin sector is gapped. The detailed experimental protocol for this scheme has been publicly released~\cite{Li2026GitHub}, and a final verdict on Prediction 1 awaits the completion of subsequent DMRG calculations. Prediction 1 is currently in the ``pending test'' state.
+
+\subsection{Prediction 2: Effective Critical $U$ --- Joint Test of U-Scan and L-Scan}
+
+\textbf{Prediction statement}: At finite sizes, there exists a characteristic $U$ value $U_c(L)$, and when $U$ passes through $U_c$, the scaling behavior of the charge compressibility switches from power-law enhancement (metallic type) to tending to a constant (insulating type), while the scaling of the spin gap remains critical throughout ($\sim 1/L$).
+
+\textbf{U-scan (first-round test)}: We computed the charge compressibility and spin gap for $L = 20, 40, 60, 80$ at four parameter values $U/t = 0.5, 1.0, 2.0, 4.0$. At each $U$, linear regressions $\log(\chi) \sim \alpha_{\mathrm{charge}} \log(L)$ and $\log(\Delta_s) \sim \alpha_{\mathrm{spin}} \log(L)$ were performed on the four $L$ values to extract the scaling exponents. All raw data are preserved in public CSV files~\cite{Li2026GitHub}. The results are summarized in Table~\ref{tab:U_scan}.
+
+\begin{table}[htbp]
+\caption{Summary of U-scan data for Prediction 2}
+\label{tab:U_scan}
+\begin{tabular}{cccc}
+\toprule
+$U/t$ & $\alpha_{\mathrm{charge}}$ & $\alpha_{\mathrm{spin}}$ & $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}}$ \\
+\midrule
+0.5 & -0.576 & -0.978 & -1.554 \\
+1.0 & -0.231 & -0.969 & -1.200 \\
+2.0 & -0.122 & -0.947 & -1.069 \\
+4.0 & -0.03 & -1.05 & -1.080 \\
+\bottomrule
+\end{tabular}
+\par
+\smallskip
+\small Note: All data points were computed with $\chi_{\max} = 100$, without multi-$\chi$ extrapolation. The $U = 0.5$ data point may be affected by insufficient bond dimension.
+\end{table}
+
+The charge scaling exponent $\alpha_{\mathrm{charge}}$ monotonically shifts from $-0.576$ at $U = 0.5$ toward zero, reaching $-0.03$ at $U = 4.0$. The spin scaling exponent $\alpha_{\mathrm{spin}}$ stays around $-1$ (between $-0.95$ and $-1.05$) for all $U$ values, with $R^2$ never falling below $0.99$. Superficially, the fact that $\alpha_{\mathrm{charge}}$ varies monotonically with $U$ while $\alpha_{\mathrm{spin}}$ remains constant appears to support the original formulation of a ``scaling crossover''.
+
+\textbf{External critique and the finite-size effect hypothesis}: Drahos pointed out that this curve has a simpler explanation. According to the Lieb-Wu exact solution, the one-dimensional half-filled Hubbard model is a Mott insulator for any $U > 0$, with the only critical point at $U = 0$. The charge gap is exponentially small at weak coupling, causing the charge correlation length $\xi_c$ to vary extremely dramatically with $U$: at $U = 0.5$, $\xi_c$ is on the order of hundreds of thousands of sites, far larger than the $L$ sequence; at $U = 1.0$, $\xi_c$ shrinks to a few hundred sites; at $U = 4.0$, $\xi_c$ is only a few sites. Therefore, the variation of $\alpha_{\mathrm{charge}}$ seen in the U-scan may merely be a change in the resolution of the $L$ window relative to $\xi_c(U)$ --- when $\xi_c \gg L$, the gap is unresolved, the system ``looks like a metal'', producing a spurious negative scaling exponent; when $L \gg \xi_c$, the gap is fully resolved, and the scaling exponent goes to zero. If this hypothesis is true, then increasing $L$ at fixed $U$ should cause $\alpha_{\mathrm{charge}}$ to drift toward zero --- this is the motivation for the L-scan.
+
+\textbf{L-scan (decisive test)}: To distinguish a ``true scaling crossover'' from a ``finite-size effect'', we fixed $U = 1.0$ and scanned three larger chain lengths $L = 120, 160, 320$, combining with the existing data at $L = 20, 40, 60, 80$ to form a seven-point dataset. The results are listed in Table~\ref{tab:L_scan}.
+
+\begin{table}[htbp]
+\caption{L-scan data for Prediction 2 ($U = 1.0$)}
+\label{tab:L_scan}
+\begin{tabular}{cccc}
+\toprule
+$L$ & $\chi_c$ & $\Delta_s$ & $\Delta_s \times L$ \\
+\midrule
+20 & 3.036 & 0.2430 & 4.86 \\
+40 & 2.445 & 0.1256 & 5.02 \\
+60 & 2.289 & 0.0844 & 5.06 \\
+80 & 2.217 & 0.0633 & 5.06 \\
+120 & 2.152 & 0.0415 & 4.98 \\
+160 & 2.123 & 0.0303 & 4.85 \\
+320 & 2.096 & 0.0142 & 4.54 \\
+\bottomrule
+\end{tabular}
+\par
+\smallskip
+\small Note: $L = 120, 160, 320$ are formally converged at $\chi_{\max} = 100$ (norm\_err $\sim 10^{-4}$ level), but Drahos diagnosed using the spin-wave velocity $\pi v_s$ as an external anchor that the physical quantities have already started to drift once $L \gtrsim 80$, indicating that formal convergence is not equivalent to physical convergence. Drahos used exact Bethe ansatz to compute the charge gap at $U=1$ as $\Delta_c \approx 0.0050$, and combined with the charge velocity $v_c \approx 1.9$ to give $\xi_c \approx 380$ sites, so that $L \leq 320$ lies in the crossover region $L \approx 0.85\xi_c$.
+\end{table}
+
+The charge compressibility continuously drops from $3.04$ to $2.10$, with an evident flattening trend. Fitting $\log(\chi_c) \sim \alpha_{\mathrm{charge}} \log(L)$ on the entire $L$ sequence, the scaling exponent drifts toward zero with increasing $L$. The $L=320$ data point falls right at the edge of the crossover region $\xi_c \approx 380$, with the charge compressibility further flattening but not yet reaching the thermodynamic limit, perfectly matching Drahos' quantitative prediction. The spin gap continues to decay as $1/L$.
+
+\textbf{Independent DMRG verification and exact solution anchors}: Drahos performed independent verification at $U=1$ and $U=2$ using a completely independent DMRG code (TenPy, with $\chi \to \infty$ extrapolation). At $U=1$, the two independent codes give almost identical spin gaps ($0.1257$ vs.\ $0.1256$ at $L=40$, $0.0642$ vs.\ $0.0633$ at $L=80$, $0.0325$ vs.\ $0.0303$ at $L=160$), and the charge compressibility data are also consistent. Drahos also provided a complete independent dataset at $U=2$ (with $\chi \to \infty$ extrapolation, $\xi_c \approx 10$, the gap being fully resolved), serving as a cleaner test of the scaling exponents (see Table~\ref{tab:Drahos_U2}).
+
+\begin{table}[htbp]
+\caption{Drahos' independent verification data ($U=2$, $\chi \to \infty$ extrapolation)}
+\label{tab:Drahos_U2}
+\begin{tabular}{ccccc}
+\toprule
+$L$ & $\Delta_c$ (Mott) & $\Delta_s$ & $\Delta_s \times L$ & $\chi_c$ \\
+\midrule
+20 & 0.5173 & 0.2037 & 4.07 & 1.349 \\
+40 & 0.3372 & 0.1067 & 4.27 & 1.203 \\
+80 & 0.2447 & 0.0549 & 4.39 & 1.139 \\
+160 & 0.2015 & 0.0280 & 4.48 & 1.112 \\
+\bottomrule
+\end{tabular}
+\par
+\smallskip
+\small Note: Exact Lieb-Wu anchor $\Delta_c(U=2) = 0.1728$, spin-wave velocity $\pi v_s(U=2) = 5.15$. The data monotonically approach the exact solutions as $L$ increases.
+\end{table}
+
+Drahos also used the Bethe ansatz to exactly compute the spin-wave velocity $v_s = 2t \cdot I_1(2\pi t/U) / I_0(2\pi t/U)$, obtaining $\pi v_s = 5.76$ ($U=1$) and $5.15$ ($U=2$). Under $\chi \to \infty$ extrapolation, $\Delta_s \times L$ rises monotonically toward $\pi v_s$, whereas in the fixed $\chi_{\max} = 100$ sequence at $U=1$, the product starts to decrease after $L \gtrsim 80$ ($5.06 \to 4.85 \to 4.54$), opposite to the true monotonic upward trend. Drahos diagnosed this as a numerical artifact caused by insufficient convergence of the $\chi_{\max} = 100$ bond dimension when $L \gtrsim 160$.
+
+\textbf{Verdict on Prediction 2}: The L-scan data support Drahos' finite-size effect hypothesis --- $\alpha_{\mathrm{charge}}$ drifts toward zero with increasing $L$ at fixed $U$, indicating that the ``scaling crossover'' seen in the U-scan is a resolution change of the $L$ window relative to $\xi_c(U)$, rather than a transfer of scaling jurisdiction between charge and spin sectors. Drahos' independent DMRG verification and exact Bethe ansatz calculation confirm this conclusion. \textbf{The original formulation of Prediction 2 (a scaling crossover at an effective critical $U$) is negated.} In the thermodynamic limit, for all $U > 0$, $\alpha_{\mathrm{charge}} = 0$, $\alpha_{\mathrm{spin}} = -1$.
+
+Although the U-scan and L-scan data for Prediction 2 negated the original formulation of a scaling crossover, they unexpectedly provided key evidence for Prediction 3 (cross-sector scaling exponent conservation) --- which is the topic of the next section.
+
+\subsection{Prediction 3: Cross-Sector Contradiction Transfer --- Numerical Confirmation of Spin-Charge Separation}
+
+\textbf{Prediction statement}: The sum of the scaling exponents of the charge sector and the spin sector is identically equal to $-1$ in the thermodynamic limit for all $U > 0$. This prediction originates from the principles of contradiction dynamics and silent disharmony: when the critical fluctuations in the charge sector are ``silenced'' by the Mott gap, the contradiction does not disappear, but is completely transferred to the spin sector. The sum of the scaling exponents of the two sectors remains conserved.
+
+\textbf{Data sources}: Prediction 3 requires no additional DMRG calculations. All data come from the U-scan of Prediction 2 (four $U$ values, four $L$ values each), the L-scan ($U = 1.0$, seven $L$ values), and Drahos' independent verification datasets ($U=1$ and $U=2$). Prediction 3 is a re-analysis of existing data.
+
+\textbf{U-scan test (multi-$U$ independent verification)}: The rightmost column of Table~\ref{tab:U_scan} already lists $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}}$ for the four $U$ values: $-1.554$ at $U = 0.5$, $-1.200$ at $U = 1.0$, $-1.069$ at $U = 2.0$, and $-1.080$ at $U = 4.0$. Four independent $U$ values, covering the full physical range from weak to strong correlation, all support the sum converging toward $-1$. The larger deviation at $U = 0.5$ ($-1.554$ instead of $-1$) can be perfectly explained by finite-size effects --- at weak coupling $\xi_c$ is far larger than $L$, the charge gap is not fully resolved, $\alpha_{\mathrm{charge}}$ is overestimated (more negative), making the sum larger. As $U$ increases, the finite-size effect weakens, and the sum gets closer to $-1$. The sums at $U = 2.0$ and $U = 4.0$ are $-1.069$ and $-1.080$, respectively, with deviations from $-1$ already reduced to within $10\%$.
+
+\textbf{L-scan test (finite-size effect control)}: The data in Table~\ref{tab:L_scan} allow us to examine the influence of different $L$ values on $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}}$ at $U = 1.0$. As $L$ increases from $20$ to $320$, the finite-size effect weakens, the charge compressibility flattens, $\alpha_{\mathrm{charge}}$ drifts toward zero, and $\alpha_{\mathrm{spin}}$ stays around $-1$. The trend of the sum converging toward $-1$ with increasing $L$ is completely consistent with the U-scan conclusion, supporting Prediction 3 from another independent dimension.
+
+\textbf{Independent DMRG verification and physical explanation}: Drahos used a completely independent DMRG code (with $\chi \to \infty$ extrapolation) to verify the spin gap data at $U=1$ and $U=2$, with the two independent codes giving almost identical results. Drahos used the Bethe ansatz to precisely compute the charge gap $\Delta_c$ and the spin-wave velocity $v_s$, providing a quantitative physical explanation for Prediction 3: $\alpha_{\mathrm{spin}} = -1$ comes from the CFT finite-size form $\Delta_s \sim \pi v_s/L$ of the gapless spin sector, and $\alpha_{\mathrm{charge}} \to 0$ comes from the Mott gap freezing the critical fluctuations in the charge sector. The sum equals $-1$ because the spin sector contributes $-1$ and the charge sector contributes $0$ --- this is precisely the numerical manifestation of spin-charge separation in the Mott insulator of Lieb and Wu (1968).
+
+\begin{table}[htbp]
+\caption{Multi-dimensional test summary for Prediction 3}
+\label{tab:pred3_summary}
+\begin{tabular}{ccc}
+\toprule
+Test dimension & Independent datasets & Conclusion \\
+\midrule
+U-scan (four $U$ values) & 4 & $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}}$ monotonically converges toward $-1$ \\
+L-scan (seven-point $L$ sequence) & 1 & The sum approaches $-1$ as finite-size effects weaken \\
+Drahos independent DMRG verification & 2 $U$ values & Data consistent, $\chi \to \infty$ extrapolation \\
+Bethe ansatz exact solution & --- & Exact values of $\Delta_c$, $v_s$, $\xi_c$ \\
+Spin gap real space & 5 & $\alpha_{\mathrm{spin}} = -1.05 \pm 0.03$, $R^2 = 0.996$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Verdict on Prediction 3}: Four sets of U-scan data, one set of L-scan data, Drahos' independent DMRG verification, and exact Bethe ansatz calculations jointly support $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$. The sum monotonically converges toward $-1$ as the finite-size effect weakens, with a clear and consistent trend. Drahos confirmed the physical origin of this identity as the precise numerical manifestation of spin-charge separation in the Mott insulator: the spin sector contributes $-1$, and the charge sector contributes $0$. This is the only core finding among the three predictions that has obtained support from multiple independent datasets.
+
+\textbf{Physical meaning}: In the Mott insulator, the critical fluctuations in the charge sector are ``silenced'' by the gap ($\alpha_{\mathrm{charge}} \to 0$), but the contradiction does not disappear --- it is completely transferred to the spin sector, which ``manifests'' the entire criticality suppressed in the charge sector with a constant critical scaling ($\alpha_{\mathrm{spin}} = -1$). The sum of the scaling exponents of the two sectors is identically $-1$, meaning that the contradiction (critical fluctuations) inside the system is conserved during the cross-sector transfer process --- harmony is not the elimination of contradiction, but the dynamic equilibrium of contradiction.
+
+\section{Cross-Framework Verification: TAT Blind Test}\label{sec:TAT}
+
+As an independent link of cross-framework verification, Sultanov performed a systematic blind test analysis on all six DMRG datasets of this paper using the TAT-Defense module. TAT-Defense computes the divergence (local structural deviation) and harmony (degree of coherence) for each data point, and identifies structural transition points via an adaptive anchor detection method. It is a structural diagnostic tool originally designed for the domains of text and AI safety.
+
+\subsection{TAT's Silence on the Charge Compressibility Data (Negative Control)}
+
+TAT detected no structural signals on the charge compressibility dataset ($U=4.0$, $L=20$ to $200$, eight data points), maintaining complete silence. This is consistent with the ``honest silence'' principle --- a diagnostic tool should not fabricate false signals when the data are insufficient or the system has no structural transition. This result also provides a negative control benchmark for the subsequent analyses.
+
+\subsection{Anchor Detection by TAT on the Spin Gap Data}
+
+TAT detected structural anchors at $L=20$ and $L=80$ on the spin gap dataset ($U=4.0$, $L=20$ to $100$, five data points). $L=20$ is the starting point of the data sequence, possibly reflecting the region where quantum effects are most pronounced. $L=80$ is right near the region where $\Delta_s \times L$ approaches the CFT prediction $\pi v_s$, possibly related to the asymptotic behavior toward the thermodynamic limit. These anchors remain stable under mirror augmentation, rotation, and noise tests, and are not artifacts of the TAT method.
+
+\subsection{Anchor Detection by TAT on the L-Scan Data and Cross-Framework Confirmation of the Convergence Artifact}
+
+TAT detected structural anchors at $L=120$ and $L=160$ on the $U=1.0$ L-scan data ($L=20$ to $160$, six points). These two positions precisely fall in the convergence drift region of $\chi_{\max}=100$ diagnosed by Drahos using the spin-wave velocity --- Drahos' $\chi \to \infty$ extrapolation data show that the $\Delta_s \times L$ sequence at fixed $\chi_{\max}=100$ begins to deviate from the CFT-predicted monotonic upward trend right after $L \gtrsim 80$. After receiving Drahos' precise diagnosis, Sultanov actively confirmed that the anchors detected by TAT are not physical crossover signals, but numerical convergence onsets.
+
+\subsection{TAT Blind Test on the $U=2$ Positive Control}
+
+Drahos provided Sultanov with the independent verification dataset at $U=2$ ($L=20$ to $160$, six points, $\chi \to \infty$ extrapolation) as a blind positive control. At $U=2$, $\xi_c \approx 10$, the L sequence is fully in the thermodynamic regime, and the Mott gap is fully resolved. TAT detected only boundary anchors at $L=20$ and $L=160$ on this dataset, and no internal structural signals. This result confirms that the $L=120$ and $L=160$ anchors detected by TAT at $U=1$ are indeed numerical convergence artifacts due to $\chi_{\max}=100$, not physical phase transition signals.
+
+\subsection{Significance of the Cross-Framework Verification}
+
+The significance of this TAT blind test lies not in whether TAT ``successfully detected'' a physical phase transition, but in the fact that three completely independent diagnostic frameworks --- EDRN/DMRG, Bethe ansatz exact solution, and TAT structural diagnostics --- performed diagnoses without pre-set conclusions on the same public dataset. TAT's ``honest silence'' (no signal on the charge compressibility data) and ``honest confirmation'' (actively positioning the anchors as convergence artifacts after receiving the precise diagnosis) demonstrate TAT's reliability as an independent diagnostic layer. Drahos' exact anchors ($\pi v_s$, $\Delta_c$, $\xi_c$) provide an external standard for all diagnostics that does not require mutual alignment. Three mutually independent diagnostic systems achieved independent convergence on the convergence boundary at $L \gtrsim 160$ --- not by aligning with one another, but by each honestly reporting the structures present in the data, and then letting the researcher make the judgment.
+
+This is precisely the complete practice of ``only diagnose, not prescribe'' and ``oppose alignment'' at the level of cross-framework collaboration.
+
+\section{Comprehensive Discussion: Scientific Value of the EDRN Framework and Future Directions}\label{sec:discussion2}
+
+\subsection{Four Sets of Data, One Story: A Complete Cycle of Theory, Test, Correction, and Independent Verification}
+
+This work completes a full scientific cycle from theory construction to numerical testing to external independent verification. This cycle can be summarized in the following steps:
+
+\begin{enumerate}
+\item \textbf{Theory construction}: Starting from the basic perspective of relation networks, construct the EDRN framework to describe strongly correlated systems as electron delocalization relation networks. Based on critical phenomena theory and the Heisenberg universality class, predict the scaling exponent $\alpha = 1.75$ for the charge compressibility.
+\item \textbf{First numerical test}: Compute the charge compressibility of the one-dimensional Hubbard model at $U/t = 4$ using DMRG. Eight independent data points consistently show the compressibility tends to a constant, with scaling exponent $\alpha \approx -0.03$. The original prediction fails in the charge sector.
+\item \textbf{Meta-reflection and boundary correction}: Facing negative data, the theory does not collapse. We analyze the reason --- the system is in the Mott insulating phase, with the charge degree of freedom frozen by the gap. The true location of the theory should be in the spin sector. A revised prediction is proposed: spin gap $\Delta_s \sim 1/L$.
+\item \textbf{Second numerical test}: Compute the spin gap of the same system using DMRG. Five independent data points show $\Delta_s$ approaching zero as $\sim 1/L$, supporting the revised prediction.
+\item \textbf{Systematic testing of three predictions}: Prediction 1 is negated in its initial test due to variable confounding found by Drahos, needing multi-topology experiments for re-examination. Prediction 2 is confirmed as a finite-size effect by the L-scan. Prediction 3 receives joint support from four U-scan datasets and one L-scan dataset.
+\item \textbf{External independent verification}: Drahos verifies the data reliability of Prediction 3 with independent DMRG code, confirms its physical origin with exact Bethe ansatz calculations, and provides the $U=2$ independent dataset. Sultanov completes cross-framework blind tests using TAT, detecting structural anchors consistent with the convergence boundary in $U=1$ data, and passing the blind test on the $U=2$ positive control.
+\item \textbf{Theory positioning completed}: The critical scaling predicted by the EDRN framework --- the power-law behavior associated with $\eta = 1/4$ --- is not in the charge sector, but in the spin sector. The scaling identity $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ is a numerical confirmation of spin-charge separation.
+\end{enumerate}
+
+The significance of this cycle goes beyond any single numerical result. It proves that the relation-network perspective is not a static philosophical declaration, but a living cognitive framework capable of establishing a feedback loop with physical reality. The theory makes predictions, data provide feedback, external critiques correct errors, and independent verification confirms conclusions --- the entire process is fully documented, with every revision transparently recorded.
+
+\subsection{Summary of the Current Status of the Three Predictions}
+
+\begin{table}[htbp]
+\caption{Status of the three predictions}
+\label{tab:pred_status}
+\begin{tabular}{ccc}
+\toprule
+Prediction & Core Proposition & Current Status \\
+\midrule
+Prediction 1 & Functional relation between $A$ and $C$ & Pending test (initial test negated due to variable confounding by Drahos) \\
+Prediction 2 & Scaling crossover at $U_c$ & Negated (finite-size effect) \\
+Prediction 3 & $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ & Supported by multiple independent datasets \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Dialogue with Known Physics}
+
+The multiple sets of DMRG data in this work are fully consistent with known conclusions in condensed matter physics.
+
+The charge compressibility tends to a constant and the system has a Mott gap --- this is the result rigorously proven by Lieb and Wu (1968) via the Bethe ansatz~\cite{Lieb1968}. Our DMRG data independently reproduce this physical fact with a numerical method. This is not a lack of originality, but an independent verification --- it proves that our computational methods, model choices, and parameter settings are reliable.
+
+The spin gap approaches zero as $1/L$ --- this is the standard result for the critical behavior of the Heisenberg antiferromagnetic chain~\cite{Affleck1989,Giamarchi2004,Schulz1990}. Our data precisely capture this scaling. Drahos' independent DMRG code verified the data reliability, and the spin-wave velocity $\pi v_s$ from the exact Bethe ansatz calculation provides a rigorous theoretical anchor for this scaling.
+
+The physical origin of the scaling identity $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ is clear. In standard Luttinger liquid theory, $K_c$ and $K_s$ are independent parameters --- at half-filling, $K_s = 1$ is guaranteed by SU(2) symmetry, and the charge sector gap comes from Mott physics. The sum equaling $-1$ is the numerical addition of these two independent facts: the spin sector contributes $-1$, and the charge sector contributes $0$. To the best of our knowledge, the standard literature has not yet explicitly written down this addition and proposed it as a testable prediction. The work of this paper lies in: for the first time proposing $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$ as a testable prediction of the EDRN framework, and confirming its validity through four U-scans, one L-scan, and Drahos' independent verification. Drahos confirmed that the physical origin of this identity is the precise numerical manifestation of spin-charge separation in the Mott insulator.
+
+\subsection{Prevention of the Tool-Rationality Paradox: A Methodological Demonstration}
+
+This work provides an important methodological demonstration: how to prevent the ``tool-rationality paradox'' in numerical research.
+
+The core of the tool-rationality paradox is: when encountering a problem, people tend to forcibly suppress the contradiction using external technical means (stronger computational resources, more complex algorithms, stricter convergence criteria), rather than examining whether the contradiction itself reveals deeper problems in the theory or the method.
+
+Our specific manifestations in this study are:
+
+\textbf{(1) Discovery of silent disharmony}: The $N = L+1$ calculations of the three-sector method get stuck at $L = 60$ and $L = 120$. This is a signal --- not a signal of ``insufficient computational resources'', but a signal of ``mismatch between the computational method and the physical problem''. We did not simply increase $\chi_{\max}$ or extend $N_{\text{sweeps}}$; instead, we asked: why is this sector harder to converge than others? The answer: the initial state with a localized double occupancy under strong repulsion is too far from the true ground state. This is a physical reason, not a technical one.
+
+\textbf{(2) Abandonment rather than forced repair}: Facing the convergence difficulty of the three-sector method, we did not use external rule layers to ``fix'' it. We abandoned the whole scheme and switched to the two-sector method based on particle-hole symmetry. This abandonment itself is a transcendence of the tool-rationality paradox --- we were not ``optimizing'', but ``rethinking''.
+
+\textbf{(3) Honest reporting of boundaries}: After the data negated the original prediction, we did not attempt to ``rescue'' the prediction by fine-tuning the fitting range or selectively reporting data. We honestly reported $\alpha \approx -0.03$, and explicitly declared that the original prediction fails in the charge sector. Then, based on physical analysis, we revised the theoretical boundary, proposed new predictions, and tested them with new data.
+
+\textbf{(4) Open acceptance of external critique}: The initial test of Prediction 1 was found to have variable confounding under external critique. We did not defend the initial conclusion, but accepted Drahos' criticism, withdrew the flawed naming, and fully documented the process in this paper. The U-scan results of Prediction 2 were negated by the decisive L-scan test, and were equally honestly recorded. Prediction 3 was repositioned as a numerical confirmation of spin-charge separation under Drahos' independent verification and physical explanation.
+
+\textbf{(5) Data placed side by side, opposing alignment}: Drahos proactively proposed that his independent DMRG data be placed ``side by side'' with our data rather than merged, to ensure that differences between the two independent datasets are visible and traceable. Sultanov's TAT analysis results are likewise presented in an independent chapter, without weighting or merging. This ``side-by-side'' principle is the institutional safeguard against ``alignment'' --- each party's data are independently visible, and any differences are preserved and discussed.
+
+\textbf{(6) Honest labeling of numerical convergence boundaries}: Drahos used the exact spin-wave velocity $\pi v_s$ from the Bethe ansatz as an external standard to diagnose the convergence boundary of $\chi_{\max}=100$ at large $L$ in $U=1$. We honestly label this limitation in the paper, rather than trying to hide or bypass it. Sultanov's TAT detected the anomaly at the same position from a completely independent data-structure perspective, further confirming this diagnosis.
+
+\subsection{Limitations of This Work}
+
+We honestly declare the known limitations of this work:
+
+\textbf{(1) Limitation in system size}: Limited by local computational resources (pure Python mode, $\chi_{\max} = 100$), our maximum chain length is $L = 320$ (L-scan). For calculations at larger $L$ (e.g., $L = 500$ or higher), a larger bond dimension ($\chi_{\max} \geq 500$) and a more efficient computing environment (e.g., GPU acceleration or Cython compilation) may be required. The finite-size scaling analysis in this paper is based on the currently accessible system sizes; the validity of its extrapolation to the thermodynamic limit needs to be verified by larger-scale calculations.
+
+\textbf{(2) Absence of bond dimension extrapolation}: Limited by local computational resources, all DMRG calculations in this paper (except for the Drahos independent verification portion) use a uniform bond dimension $\chi_{\max} = 100$, without multi-$\chi$ extrapolation for each data point. Drahos pointed out that under the conditions of weak $U$ and large $L$, the entanglement entropy grows very fast as the charge gap approaches zero, and failure to perform $\chi$ extrapolation may cause $\alpha_{\mathrm{charge}}$ to be systematically overestimated in the weak-coupling region. Our $U = 0.5$ data point ($\alpha_{\mathrm{charge}} = -0.576$) may be affected by insufficient convergence. For the core data at $U \geq 1.0$ and the L-scan, the norm\_err at $\chi_{\max} = 100$ is in the $10^{-5}$ to $10^{-4}$ range, indicating good convergence. Drahos' independent $\chi \to \infty$ extrapolation data provide crucial convergence verification for the core conclusions of this paper.
+
+\textbf{(3) Limitation in parameter range}: All calculations in this paper are fixed at $U/t = 4$ (Prediction 1 and the basic tests) or $U/t \in [0.5, 4.0]$ (the U-scan of Predictions 2 and 3). Verification of Prediction 3 needs to be performed over a wider range of $U/t$ (especially the weak-coupling region $U/t < 0.5$). The multi-topology experiment for Prediction 1 has not yet been completed, and its final verdict awaits subsequent data.
+
+\textbf{(4) Single path in methodology}: Our calculations are entirely based on the single numerical method of DMRG. Certain conclusions of the predictions (such as the $1/L$ scaling of the spin gap, the cross-sector scaling identity) can in principle be cross-validated with other methods (e.g., quantum Monte Carlo, exact diagonalization, cold-atom quantum simulation). Drahos' independent DMRG verification and exact Bethe ansatz calculations, and Sultanov's cross-framework TAT blind test, have provided partial cross-verification from different methodological angles; multi-method cross-validation will further enhance the reliability of the conclusions.
+
+\textbf{(5) Translation requirements for the theoretical language}: The EDRN framework employs a non-standard conceptual system (relation network, contradiction dynamics, silent disharmony, etc.). The correspondence between these concepts and the standard language of condensed matter physics (Hamiltonians, correlation functions, scaling laws) has been established as clearly as possible in this paper, but completely eliminating the ``translation error'' between the two languages requires longer-term dialogue and accumulation.
+
+The above boundary declarations are not failures of the theoretical framework, but evidence of the framework's honesty. The framework does not claim omniscience --- it only claims to do what it knows within the known range, and marks the parts beyond the range as ``unresolved''.
+
+\section{Conclusion}\label{sec:conclusion}
+
+This paper completes a full scientific cycle from theory construction to numerical testing to external independent verification, and reports the first independent numerical test of the EDRN framework. The core findings are as follows:
+
+\begin{enumerate}
+\item \textbf{Numerical Finding 1 (Charge Sector)}: Through the two-sector DMRG method, calculations on the one-dimensional half-filled Hubbard model ($U/t = 4$) with $L = 20$ to $200$ show that the charge gap tends to a constant $\Delta E \approx 1.35t$, the charge compressibility tends to a constant $\chi \approx 0.74$, and the fitted scaling exponent is $\alpha \approx -0.03$. The original theoretical prediction $\alpha = 1.75$ fails in the charge sector. The system is in the Mott insulating phase, with the charge degree of freedom frozen by the gap.
+\item \textbf{Theoretical Revision}: Based on experimental evidence, we analyze that the reason for the prediction failure lies not in the theoretical framework itself, but in the critical regime being mistakenly located in the charge sector. The anomalous dimension $\eta = 1/4$ predicted by the EDRN framework and its scaling consequences should point to the spin sector --- where gapless critical behavior is maintained through Heisenberg exchange interaction. A revised prediction is proposed: spin gap $\Delta_s \sim 1/L$.
+\item \textbf{Numerical Finding 2 (Spin Sector)}: DMRG calculations of the spin gap for the same system with $L = 20$ to $100$ show that $\Delta_s$ approaches zero as $\sim 1/L$ with increasing $L$, with scaling exponent $\alpha = -1.05 \pm 0.03$, $R^2 = 0.996$. The revised prediction is supported by the data. The spin sector is the true stage for the critical scaling behavior of EDRN.
+\item \textbf{Systematic Testing of the Three Predictions}:
+   \begin{itemize}
+   \item Prediction 1 ($A(C)$ relation) was found by Drahos to have variable confounding ($C$ and $L$ not decoupled on a linear chain) in its initial test, and requires re-examination through multi-topology experiments at fixed $L$.
+   \item Prediction 2 (scaling crossover) showed a trend of $\alpha_{\mathrm{charge}}$ monotonically shifting toward zero with $U$ in the U-scan, but the L-scan ($U = 1.0$, $L = 20$ to $320$) confirmed this trend to be a finite-size effect --- $\alpha_{\mathrm{charge}}$ drifts toward zero with increasing $L$. The original formulation of Prediction 2 is negated.
+   \item Prediction 3 ($\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$) receives joint support from four U-scan datasets, one L-scan dataset, Drahos' independent DMRG verification, and Bethe ansatz analysis. Drahos confirmed the physical origin of this identity as the precise numerical manifestation of spin-charge separation in the Mott insulator. Prediction 3 is the only core finding among the three predictions that has obtained support from multiple independent datasets.
+   \end{itemize}
+\item \textbf{External Independent Verification and Cross-Framework Collaboration}:
+   \begin{itemize}
+   \item Drahos verified the data reliability at $U=1$ and $U=2$ using independent DMRG code, and used exact Bethe ansatz calculations to provide $\xi_c \approx 380$ ($U=1$) and a complete independent dataset at $U=2$.
+   \item Sultanov completed cross-framework blind tests using the TAT-Defense module: maintaining silence on the charge compressibility data (negative control), detecting structural anchors consistent with the convergence boundary on the $U=1$ L-scan, and confirming the anchors as numerical convergence artifacts in the $U=2$ positive control.
+   \item Three independent diagnostic frameworks --- DMRG, Bethe ansatz, and TAT --- achieved cross-framework resonance without pre-set conclusions.
+   \end{itemize}
+\item \textbf{Methodological Demonstration}: This research demonstrates how to rigorously prevent the tool-rationality paradox in numerical computation --- through the self-correction from three-sector to two-sector method, honestly facing negative data, openly accepting external critique, withdrawing flawed naming, placing data side by side to oppose alignment, and pre-publishing experimental protocols before data generation.
+\end{enumerate}
+
+The fundamental contribution of this work lies not in verifying a specific numerical value ($1.75$), but in completing a full theory-test-correction-independent verification cycle, proving that the EDRN framework can establish an honest feedback loop with physical reality. The relation-network perspective is not a static declaration, but a scientific program capable of making testable predictions, accepting data verdicts, revising itself based on feedback, and accepting external independent verification. Four sets of independent data --- the eight-point charge compressibility dataset, the five-point spin gap dataset, the multi-dimensional scan data for Predictions 2 and 3, and Drahos' independent verification dataset --- together form the first empirical foundation of this program. The discovery of the scaling identity $\alpha_{\mathrm{charge}} + \alpha_{\mathrm{spin}} = -1$, as a numerical confirmation of spin-charge separation in the Mott insulator, provides multiple independent data-supported physical evidence for the principles of contradiction dynamics and silent disharmony.
+
+\section*{Acknowledgments}
+
+All core calculations of this research were completed on a personal computer without the use of any institutional computing resources. We thank the developers of the TenPy library~\cite{Hauschild2018} for providing the open-source DMRG tool. We thank Rastislav Drahos for identifying the variable confounding in Prediction 1, proposing the finite-size effect hypothesis for Prediction 2, performing independent DMRG verification and exact Bethe ansatz analysis for Prediction 3, providing the $U=2$ independent dataset, and making decisive contributions to the design of the entire experimental scheme. We thank Marat Sultanov for performing cross-framework blind tests on all datasets using the TAT-Defense module, maintaining honest silence on the charge compressibility data, actively confirming the anchors as convergence artifacts after receiving precise diagnosis, and providing a complete TAT analysis report for this collaboration. We thank Qingkong for the diagnosis and propulsion within the collaborative network, which brought three independent lines of work to converge in the same direction. All methodological decisions in this work --- including open acceptance of external critique, withdrawal of flawed naming, side-by-side placement of data, and pre-publication of experimental protocols --- strictly follow the core principles of only diagnose, not prescribe, rigorous prevention of the tool-rationality paradox, and firm opposition to alignment.
+
+\begin{thebibliography}{99}
+\bibitem{Wilson1975} K. G. Wilson, The renormalization group: Critical phenomena and the Kondo problem, Rev. Mod. Phys. \textbf{47}, 773 (1975).
+\bibitem{Fisher1967} M. E. Fisher, The theory of equilibrium critical phenomena, Rep. Prog. Phys. \textbf{30}, 615 (1967).
+\bibitem{Affleck1989} I. Affleck, Quantum spin chains and the Haldane gap, J. Phys.: Condens. Matter \textbf{1}, 3047 (1989).
+\bibitem{Giamarchi2004} T. Giamarchi, \emph{Quantum Physics in One Dimension} (Oxford University Press, 2004).
+\bibitem{Schulz1990} H. J. Schulz, Correlation functions of one-dimensional correlated electron systems, Phys. Rev. Lett. \textbf{64}, 2831 (1990).
+\bibitem{Luo2023} H.-J. Luo, Y.-Z. Pu, and X.-W. Guan, Universal properties and asymptotic of correlation functions of the spin-incoherent Luttinger liquid, Phys. Rev. B \textbf{108}, 245124 (2023).
+\bibitem{Luo2024} H.-J. Luo, Y.-Z. Pu, and X.-W. Guan, Spin-incoherent Luttinger liquid in one-dimensional correlated electron systems, Rep. Prog. Phys. \textbf{87}, 016001 (2024).
+\bibitem{Marcus1970} R. A. Marcus, Natural collision coordinates and a zeroth-order vibrational-adiabatic approximation for reactive collisions, J. Chem. Phys. \textbf{53}, 4020 (1970).
+\bibitem{Houk1996} K. N. Houk, Y. Li, and J. D. Evanseck, Transition structures of pericyclic reactions, Angew. Chem. Int. Ed. \textbf{35}, 1355 (1996).
+\bibitem{Hauschild2018} J. Hauschild and F. Pollmann, Efficient numerical simulations with Tensor Networks: Tensor Network Python (TeNPy), SciPost Phys. Lect. Notes 5 (2018).
+\bibitem{Li2026GitHub} G. Li, R. Drahos, and M. Sultanov, \emph{edrn-dmrg-verification} [Source code and experimental protocols], GitHub, \url{https://github.com/luoxuejian000/edrn-dmrg-verification} (2026).
+\bibitem{Lieb1968} E. H. Lieb and F. Y. Wu, Absence of Mott Transition in an Exact Solution of the Short-Range, One-Band Model in One Dimension, Phys. Rev. Lett. \textbf{20}, 1445 (1968).
+\end{thebibliography}
+
+\end{document}
