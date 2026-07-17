@@ -1,0 +1,105 @@
+[游戏一] 预言一尝鲜版 - 单键缺陷点探测
+参数: L=40, U=4.0, 缺陷强度=0.8t
+DMRG: chi_max=100
+============================================================
+[注意] 当前TenPy版本不支持直接修改H_MPO.terms
+       将使用标准均匀链进行计算
+计算自旋能隙...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+计算拓扑指数...
+
+============================================================
+[游戏一] 结果
+缺陷强度: 0.8t
+自旋能隙 Δ_s = 0.000000
+前置因子 A = Δ_s × L = 0.0000
+拓扑指数 C = 0.958885
+============================================================
+结果已追加到 game1_log.csv
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python game1_defect_scan.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[游戏一] 预言一尝鲜版 - 单键缺陷点探测
+参数: L=40, U=4.0, 缺陷强度=0.8t
+DMRG: chi_max=100
+============================================================
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+
+缺陷强度: 0.8t
+自旋能隙 Δ_s = 0.109164
+前置因子 A = Δ_s × L = 4.3666
+拓扑指数 C = 0.478021
+结果已追加到 data\game1_log.csv
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python game1_batch.py
+python: can't open file 'D:\\luoxuejian000\\wulihuaxue\\game1_batch.py': [Errno 2] No such file or directory
+
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python game1_defect_scan.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[游戏一·批量版] 预言一尝鲜 - 单键缺陷多点扫描
+参数: L=40, U=4.0
+缺陷强度序列: [0.5, 1.0, 1.2, 1.5]
+DMRG: chi_max=100
+============================================================
+
+[运行] 缺陷强度 = 0.5t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=0.5t: Δ_s=0.136747, A=5.4699, C=0.475369, 耗时=121s
+
+[运行] 缺陷强度 = 1.0t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.0t: Δ_s=0.076668, A=3.0667, C=0.479442, 耗时=136s
+
+[运行] 缺陷强度 = 1.2t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.2t: Δ_s=0.047754, A=1.9102, C=0.480129, 耗时=261s
+
+[运行] 缺陷强度 = 1.5t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+final DMRG state not in canonical form up to norm_tol=1.00e-05: norm_err=1.26e-05
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.5t: Δ_s=0.024137, A=0.9655, C=0.480227, 耗时=91s
+
+============================================================
+[游戏一·批量版] 全部完成
+数据已保存至: D:\luoxuejian000\wulihuaxue\data\game1_log.csv
+============================================================
+
+待收集的数据点:
+  均匀开链（基准）: A≈3.067, C≈0.959
+  缺陷 0.8t:        A=4.367,  C=0.478
+  缺陷 0.5t:        ?
+  缺陷 1.0t:        ?
+  缺陷 1.2t:        ?
+  缺陷 1.5t:        ?
+
+画散点图 (C vs A)，看是否单调。
+
+D:\luoxuejian000\wulihuaxue>

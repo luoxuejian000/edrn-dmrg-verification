@@ -1,0 +1,46 @@
+D:\luoxuejian000\wulihuaxue>cd /d D:\luoxuejian000\wulihuaxue
+
+D:\luoxuejian000\wulihuaxue>python game1_L60_fill.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+============================================================
+[游戏一·L60补全] 单键缺陷多点扫描
+参数: L=60, U=4.0
+缺陷强度序列: [0.8, 1.0, 1.2]
+DMRG: chi_max=100
+============================================================
+
+[运行] 缺陷强度 = 0.8t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=0.8t: Δ_s=0.077372, A=4.6423, C=0.481096, 耗时=273s
+
+[运行] 缺陷强度 = 1.0t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.0t: Δ_s=0.052320, A=3.1392, C=0.482060, 耗时=433s
+
+[运行] 缺陷强度 = 1.2t ...
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+  缺陷=1.2t: Δ_s=0.030031, A=1.8019, C=0.482524, 耗时=447s
+
+============================================================
+[游戏一·L60补全] 全部完成
+数据已保存至: D:\luoxuejian000\wulihuaxue\data\game1_L60_log.csv
+============================================================
+
+L=60 完整数据集:
+  缺陷 0.5t:  A=5.7385
+  缺陷 0.8t:  ?
+  缺陷 1.0t:  ?
+  缺陷 1.2t:  ?
+  缺陷 1.5t:  A=0.8277
+
+D:\luoxuejian000\wulihuaxue>
