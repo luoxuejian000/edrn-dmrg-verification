@@ -1,0 +1,934 @@
+Microsoft Windows [版本 10.0.26200.8655]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\Lenovo>copy C:\Users\Lenovo\falsify_valley_position_v2.py D:\luoxuejian000\wulihuaxue\预言菜单二周期练\菜单二修改后论文及附录\寻找关系先于实体\
+已复制         1 个文件。
+
+C:\Users\Lenovo>cd /d D:\luoxuejian000\wulihuaxue\预言菜单二周期练\菜单二修改后论文及附录\寻找关系先于实体
+
+D:\luoxuejian000\wulihuaxue\预言菜单二周期练\菜单二修改后论文及附录\寻找关系先于实体>python falsify_valley_position_v2.py
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\optimization.py:332: UserWarning: Couldn't load compiled cython code. Code will run a bit slower.
+  warnings.warn("Couldn't load compiled cython code. Code will run a bit slower.")
+
+=== N=6 ===
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.000, fine=0.022222
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.125, fine=0.018113
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.250, fine=0.020459
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.375, fine=0.026959
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.500, fine=0.034628
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.625, fine=0.042190
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.750, fine=0.049204
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.875, fine=0.055535
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.000, fine=0.061176
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.125, fine=0.066170
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.250, fine=0.070581
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.375, fine=0.074477
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.500, fine=0.077924
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.625, fine=0.080980
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.750, fine=0.083699
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.875, fine=0.086125
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.000, fine=0.088299
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.125, fine=0.090253
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.250, fine=0.092017
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.375, fine=0.093613
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.500, fine=0.095064
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.625, fine=0.096387
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.750, fine=0.097596
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.875, fine=0.098706
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=3.000, fine=0.099726
+  >> 谷底位置 s*=0.125, 深度=0.018113
+
+=== N=8 ===
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.000, fine=0.088973
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.125, fine=0.086464
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.250, fine=0.083458
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.375, fine=0.079918
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.500, fine=0.075834
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.625, fine=0.071239
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.750, fine=0.066220
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.875, fine=0.060925
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.000, fine=0.055564
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.125, fine=0.050392
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.250, fine=0.045693
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.375, fine=0.041741
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.500, fine=0.038763
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.625, fine=0.036885
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.750, fine=0.036099
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.875, fine=0.036268
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.000, fine=0.037177
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.125, fine=0.038594
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.250, fine=0.040322
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.375, fine=0.042210
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.500, fine=0.044152
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.625, fine=0.046078
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.750, fine=0.047948
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.875, fine=0.049735
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=3.000, fine=0.051428
+  >> 谷底位置 s*=1.750, 深度=0.036099
+
+=== N=10 ===
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.000, fine=0.042989
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.125, fine=0.038025
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.250, fine=0.034506
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.375, fine=0.033327
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.500, fine=0.034701
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.625, fine=0.037995
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.750, fine=0.042284
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.875, fine=0.046852
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.000, fine=0.051281
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.125, fine=0.055374
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.250, fine=0.059060
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.375, fine=0.062337
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.500, fine=0.065231
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.625, fine=0.067782
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.750, fine=0.070033
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.875, fine=0.072023
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.000, fine=0.073788
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.125, fine=0.075359
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.250, fine=0.076762
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.375, fine=0.078022
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.500, fine=0.079156
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.625, fine=0.080181
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.750, fine=0.081112
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.875, fine=0.081959
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=3.000, fine=0.082733
+  >> 谷底位置 s*=0.375, 深度=0.033327
+
+=== N=12 ===
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.000, fine=0.075407
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.125, fine=0.073426
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.250, fine=0.071004
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.375, fine=0.068097
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.500, fine=0.064694
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.625, fine=0.060832
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.750, fine=0.056616
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=0.875, fine=0.052226
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.000, fine=0.047912
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.125, fine=0.043967
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.250, fine=0.040678
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.375, fine=0.038271
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.500, fine=0.036849
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.625, fine=0.036374
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.750, fine=0.036691
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=1.875, fine=0.037593
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.000, fine=0.038877
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.125, fine=0.040375
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.250, fine=0.041967
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.375, fine=0.043572
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.500, fine=0.045139
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.625, fine=0.046640
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.750, fine=0.048059
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=2.875, fine=0.049390
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config ChainModel:
+['L', 'bc_MPS', 'conserve', 'contradiction_edge', 'contradiction_strength']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\networks\mps.py:1629: UserWarning: unit_cell_width is a new argument for MPS and similar classes. It is optional for now, but will become mandatory in a future release. The default value (unit_cell_width=len(sites)) is correct, iff the lattice is a Chain. For other lattices, it is incorrect. It is used for dipolar charges and correlation_function2.
+  super().__init__(sites, bc, unit_cell_width)
+C:\Users\Lenovo\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenpy\tools\params.py:243: UserWarning: unused options for config DMRG:
+['chi_max', 'verbose']
+  warnings.warn(msg.format(keys=sorted(unused), name=self.name))
+s=3.000, fine=0.050633
+  >> 谷底位置 s*=1.625, 深度=0.036374
+
+=== 趋势报告 ===
+N: [6, 8, 10, 12]
+s*: ['0.125', '1.750', '0.375', '1.625']
+谷底位置变化量: ['1.625', '1.375', '1.250']
+（理论预测：谷底位置应随N平滑变化，趋势可由有限尺寸效应解释）
+（证伪阈值：谷底突然消失，或谷底位置出现无规律的剧烈跳动）
+D:\luoxuejian000\wulihuaxue\预言菜单二周期练\菜单二修改后论文及附录\寻找关系先于实体\falsify_valley_position_v2.py:95: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+D:\luoxuejian000\wulihuaxue\预言菜单二周期练\菜单二修改后论文及附录\寻找关系先于实体>
