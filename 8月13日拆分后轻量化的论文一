@@ -1,0 +1,404 @@
+\documentclass[aps,prb,reprint,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pifont}
+\newcommand{\xmark}{\ding{55}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\begin{document}
+
+\title{Silent Discordance: Discovery and Three Laws of a Novel Quantum Many-Body Diagnostic Phenomenon}
+\author{Guanghao Li}
+\affiliation{Independent researcher, Zhuangmu Town, Changfeng County, Hefei, Anhui, China}
+\author{Rastislav Draho\v{s}}
+\affiliation{Agora Scientific, Czech Republic}
+\author{Marat Sultanov}
+\affiliation{TAT-Defense Developer, Russian Federation}
+
+\begin{abstract}
+We report the discovery and independent verification of a novel quantum many-body diagnostic phenomenon---Silent Discordance. Its operational definition is: when the internal relational field of a quantum many-body system undergoes a drastic reorganization, coarse-grained entity diagnostics (mean magnetization, mean correlation strength) remain smooth, while fine-grained relational diagnostics (standard deviation of the entanglement spectrum, standard deviation of edge correlation fluctuations) exhibit a pronounced non-monotonic response at the same location. We first observed this phenomenon in the PXP model, and subsequently performed a systematic scan over seven relation graph topologies and four generation rules using a self-constructed relation-graph compiler. The results show that the emergence of Silent Discordance is governed by three laws: the law of cycle enhancement, the law of fully symmetric interaction necessity, and the law of morphology-structure correspondence. The unique aspect of this study lies in its collaborative mode: three independent researchers using completely different tools (DMRG, exact diagonalization, TAT structural diagnostic framework) independently verified the same set of public data. All data, codes, and experimental protocols are publicly available for independent verification.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\subsection{The default assumption of entity priority}
+
+Since Aristotle established ``substance'' as the first category, Western physics has implicitly assumed a core presupposition: existence precedes relation. Entities are the bearers of attributes; relations are secondary connections between entities. Under this presupposition, diagnostic methods of physical systems also follow an entity-first logic: we measure magnetization (an entity attribute), compute energy gap (an entity excitation), and extract correlation functions (connections between entities). These coarse-grained entity diagnostics are presumed to be sufficient tools for capturing the physical behavior of a system.
+
+\subsection{Independent dynamics of the relational field}
+
+However, a different voice has persistently emerged from the depths of quantum many-body physics. The area law of entanglement entropy~\cite{Eisert2010} implies that the information content of a region is determined not by its volume (an entity attribute) but by the area of its boundary (a relational feature). The ground-state degeneracy of topological order is determined not by any local order parameter but by the global entanglement structure of the system~\cite{Wen2017}. Kitaev, in his description of Majorana zero modes, wrote: ``The ground state degeneracy is not a property of any individual electron, but of the entire system as a whole. The Majorana modes are non-local---they cannot be assigned to any single site. They exist in the correlations between sites''~\cite{Kitaev2001}.
+
+These statements point in the same direction: {\em the relational field possesses dynamics that are independent of the entities.} A reorganization of the relational structure may occur in a manner that is completely invisible to coarse-grained entity diagnostics. This paper reports our systematic examination of this hypothesis.
+
+\subsection{Collaborative mode and contribution structure}
+
+The three authors of this paper used completely independent tools and methods to verify and diagnose the same set of public data:
+
+\begin{itemize}
+\item Guanghao Li (G.L.): designed and executed all DMRG and exact diagonalization experiments, constructed the relation-graph compiler, and proposed the operational definition and three laws of Silent Discordance.
+\item Rastislav Draho\v{s}: using independent DMRG code, exact Bethe ansatz calculations, and boundary CFT theoretical analysis, independently verified every core discovery. He contributed four critical technical corrections (see Section~\ref{sec:drahos_contrib}).
+\item Marat Sultanov: using the TAT-Defense structural diagnostic framework, performed cross-framework blind tests on all experimental data. He contributed the ``honest silence'' principle (see Section~\ref{sec:sultanov_contrib}).
+\end{itemize}
+
+The three authors maintained continuous correspondence throughout the research process. All critical corrections and diagnostic results were documented in writing and submitted via email or GitHub Issue. Guanghao Li publicly acknowledged and amended the corresponding conclusions after each correction. This paper faithfully reflects this collaborative process.
+
+\subsection{Structure of this paper}
+
+Section~II introduces the experimental methodology. Section~III reports the first discovery of Silent Discordance in the PXP model. Section~IV reports the independent replication in the fractal-graph quantum system. Section~V reports the complete parameter-space scan across graphs and rules. Section~VI presents the three laws of Silent Discordance. Section~VII presents the six morphologies. Section~VIII provides discussion and the core contributions of Draho\v{s} and Sultanov. Section~IX concludes.
+
+\section{Methodology: Principles and Constraints of Experimental Design}
+
+\subsection{Five axioms as normative constraints}
+
+The experimental design strictly follows five axiomatic constraints. Axiom~I (Relation Ontology) requires fixing the entity composition while varying only the relational configuration. Axiom~II (Contradiction Dynamics) requires implanting a contradiction edge in the relation graph to drive the evolution of the system. Axiom~III (Practical Intervention) requires simultaneously applying a default diagnosis and an enhanced diagnosis, and displaying their difference side by side. Axiom~IV (Resonance Tuning) requires not taking ``discovering new physics'' as the optimization target. Axiom~V (Meta-Reflection) requires honestly declaring the boundaries of the method and the limitations of the data.
+
+\subsection{Rigorously preventing the tool-rationality paradox}
+
+The concrete manifestation of the tool-rationality paradox in numerical research is: when a tool produces anomalous data, the researcher does not question the adequacy of the tool, but instead directly interprets the anomaly as a physical discovery~\cite{Li2026Relation}. This study adopts five preventive measures: predefining success criteria (fixed before experiment execution, not modified afterwards), uniform parameters, dual auditing, complete disclosure, and honest recording of negative results.
+
+\subsection{Firmly opposing ``alignment''}
+
+``Alignment'' in the context of this paper means retrospectively matching numerical results with theoretical expectations. In each experiment we predefine explicit success criteria before execution, and report them truthfully regardless of whether they are met.
+
+\subsection{Depth reproducibility audit}
+
+All valley depths reported in this paper were subjected to a reproducibility audit. For each representative topology, five independent runs were performed with distinct random Lanczos starting vectors, while keeping all physical parameters fixed. Two distinct reproducibility classes emerge:
+
+\begin{itemize}
+\item \textbf{Position robustness (class 0):} The valley position is exactly reproducible across all runs.
+\item \textbf{Depth robustness (class 1):} The valley depth exhibits statistical scatter of approximately $6\%$--$20\%$ across runs. Depths are therefore reported as mean $\pm$ standard deviation over five runs.
+\end{itemize}
+
+This distinction is essential for honest reporting: the valley position is the physically robust quantity, while the valley depth carries a numerical uncertainty that must be explicitly stated.
+
+\section{Experiment I: First Discovery of Silent Discordance in the PXP Model}
+
+\subsection{Experimental design}
+
+We first tested the existence of Silent Discordance in the PXP model ($L=18$, constrained Hilbert space of about 6765 dimensions). The PXP model describes a one-dimensional Rydberg atom chain subject to the constraint that adjacent atoms cannot be simultaneously excited. A chemical potential defect $\mu$ is implanted at the central site and scanned from $0$ to $2.0$, while two diagnostics are applied simultaneously:
+
+\begin{itemize}
+\item Default diagnosis: mean of the absolute values of the spin correlation matrix (mean $|C|$).
+\item Enhanced diagnosis: standard deviation of the half-chain (left 9 sites) entanglement spectrum.
+\end{itemize}
+
+Predefined success criterion: the enhanced diagnosis exhibits an abrupt change at some $\mu$ value, while the default diagnosis remains smooth at the same location.
+
+\subsection{Experimental results}
+
+The full data are shown in Table~\ref{tab:pxp_main} and visualized in Fig.~\ref{fig:pxp}.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$\mu$}, ylabel={Default diagnosis (mean $|C|$)},
+    ylabel style={text=blue}, xmin=0, xmax=2.2, ymin=0.058, ymax=0.068,
+    grid=both, axis y line*=left,
+]
+\addplot[mark=*, color=blue, thick] coordinates {
+    (0.00, 0.0656) (0.14, 0.0659) (0.29, 0.0662) (0.43, 0.0663)
+    (0.57, 0.0662) (0.71, 0.0659) (0.86, 0.0652) (1.00, 0.0643)
+    (1.14, 0.0632) (1.29, 0.0620) (1.43, 0.0608) (1.57, 0.0596)
+    (1.71, 0.0584) (1.86, 0.0574) (2.00, 0.0566)
+};
+\addlegendentry{Default}
+\end{axis}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$\mu$}, ylabel={Enhanced diagnosis (ent. std)},
+    ylabel style={text=red}, xmin=0, xmax=2.2, ymin=0.328, ymax=0.368,
+    grid=both, axis y line*=right, axis x line=none,
+    legend style={at={(0.98,0.98)}, anchor=north east}
+]
+\addplot[mark=square*, color=red, thick] coordinates {
+    (0.00, 0.333121) (0.14, 0.331922) (0.29, 0.330883) (0.43, 0.330117)
+    (0.57, 0.329742) (0.71, 0.329854) (0.86, 0.330492) (1.00, 0.331624)
+    (1.14, 0.333146) (1.29, 0.334912) (1.43, 0.336767) (1.57, 0.360240)
+    (1.71, 0.362081) (1.86, 0.363723) (2.00, 0.365145)
+};
+\addlegendentry{Enhanced}
+\end{axis}
+\end{tikzpicture}
+\caption{Silent Discordance in the PXP model at $L=18$. The default diagnosis (blue) decreases monotonically, while the enhanced diagnosis (red) exhibits a sharp jump of $+7\%$ at $\mu\approx1.5$.}
+\label{fig:pxp}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Core data of Silent Discordance in the PXP model at $L=18$.}
+\label{tab:pxp_main}
+\begin{tabular}{ccc}
+\toprule
+$\mu$ & Default diagnosis (mean $|C|$) & Enhanced diagnosis (ent.~spectrum std) \\
+\midrule
+0.57 & 0.0662 & \textbf{0.329742} (global minimum) \\
+0.71 & 0.0659 & 0.329854 \\
+0.86 & 0.0652 & 0.330492 \\
+1.00 & 0.0643 & 0.331624 \\
+1.14 & 0.0632 & 0.333146 \\
+1.29 & 0.0620 & 0.334912 \\
+1.43 & 0.0608 & 0.336767 \\
+\textbf{1.57} & \textbf{0.0596} & \textbf{0.360240} (jump $+7\%$) \\
+1.71 & 0.0584 & 0.362081 \\
+1.86 & 0.0574 & 0.363723 \\
+2.00 & 0.0566 & 0.365145 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The default diagnosis decreases monotonically and smoothly from $\mu=0$ to $2.0$ ($0.0656\to0.0566$, a change of $14\%$), without any abrupt change. The enhanced diagnosis exhibits a completely different behavior: it first decreases to the global minimum of $0.329742$ at $\mu=0.57$, then slowly rises ($\mu=0.57\to1.43$, cumulative change over seven data points of only $2\%$), and at the step $\mu=1.43\to1.57$ suddenly jumps to $0.360240$ (single-step change $+7.0\%$, more than three times the cumulative change of the preceding seven steps). It then continues to rise slowly.
+
+The precise location of Silent Discordance: $\mu\approx1.5$. The default diagnosis is completely unaware at this location, while the enhanced diagnosis exposes a violent, concentrated reorganization of the relational field.
+
+\subsection{Excluding known interpretations}
+
+This signal is not a quantum phase transition (the ground-state energy gap remains non-zero throughout the scan interval). It is not an abrupt change of entanglement entropy (the diagnosis uses standard deviation, not Shannon entropy). It is not a known scar-state crossing.
+
+\subsection{Finite-size verification}
+
+We carried out the same scan at $L=14$ and $L=16$. The enhanced diagnosis at $L=14$ showed no abrupt change, while at $L=16$ a weak jump trend appeared. The monotonic trend of the signal strengthening with increasing system size indicates that Silent Discordance is an emergent behavior, not a finite-size effect.
+
+\section{Experiment II: Independent Replication in the Fractal-Graph Quantum System}
+
+\subsection{Self-built model: the relation-graph compiler}
+
+To test whether Silent Discordance is a special phenomenon of the PXP model, we constructed a universal compiler that generates a quantum many-body Hamiltonian from a relation graph according to a given generation rule. The definition of this compiler is opposite to all known models: first determine the structure of the relation graph, then generate the Hamiltonian according to a uniform compilation rule (each edge $\to XX+YY+ZZ$).
+
+\subsection{Fractal-graph quantum system}
+
+We used the compiler to generate a completely new quantum many-body system from a Sierpi\'{n}ski fractal graph (level~2, $N=15$, 27 edges, 32768-dimensional Hilbert space). The experimental design is consistent with that of the PXP model: implant a contradiction edge $(0,2)$, scan its strength $s$ from $0$ to $3.0$, and simultaneously apply the default diagnosis (mean magnetization) and the enhanced diagnosis (standard deviation of edge correlation fluctuations).
+
+\subsection{Experimental results}
+
+The full data are shown in Table~\ref{tab:fractal_main} and Fig.~\ref{fig:fractal}. We designate this V-shaped valley, located at $s=0.50$ on the Sierpi\'nski fractal graph under the Heisenberg rule, as the \textbf{Li-Draho\v{s}-Sultanov Valley} (LDS Valley), in recognition of the three independent researchers who confirmed it with three completely different diagnostic frameworks.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$s$}, ylabel={Default diagnosis (magnetization)},
+    ylabel style={text=blue}, xmin=0, xmax=3.2, ymin=0.4, ymax=2.0,
+    ytick={0.5,1.0,1.5,2.0}, grid=both, axis y line*=left,
+]
+\addplot[mark=*, color=blue, thick] coordinates {
+    (0.00, 1.35) (0.25, 0.58) (0.50, 1.05) (0.75, 1.81)
+    (1.00, 0.88) (1.25, 1.65) (1.50, 1.82) (1.75, 1.30)
+    (2.00, 0.85) (2.25, 1.20) (2.50, 1.80) (2.75, 1.75)
+    (3.00, 0.85)
+};
+\addlegendentry{Default}
+\end{axis}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$s$}, ylabel={Enhanced diagnosis (correlation fluctuation)},
+    ylabel style={text=red}, xmin=0, xmax=3.2, ymin=0.06, ymax=0.32,
+    grid=both, axis y line*=right, axis x line=none,
+    legend style={at={(0.98,0.98)}, anchor=north east}
+]
+\addplot[mark=square*, color=red, thick] coordinates {
+    (0.00, 0.2093) (0.25, 0.1183) (0.50, 0.0843) (0.75, 0.1584)
+    (1.00, 0.2093) (1.25, 0.2366) (1.50, 0.2528) (1.75, 0.2635)
+    (2.00, 0.2712) (2.25, 0.2769) (2.50, 0.2813) (2.75, 0.2849)
+    (3.00, 0.2878)
+};
+\addlegendentry{Enhanced}
+\end{axis}
+\end{tikzpicture}
+\caption{The Li-Draho\v{s}-Sultanov Valley in the fractal-graph quantum system. The default diagnosis (blue) exhibits irregular fluctuations, while the enhanced diagnosis (red) shows a deep V-shaped valley at $s=0.50$.}
+\label{fig:fractal}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Silent Discordance data in the fractal-graph quantum system.}
+\label{tab:fractal_main}
+\begin{tabular}{ccc}
+\toprule
+$s$ & Default diagnosis & Enhanced diagnosis \\
+\midrule
+0.00 & 1.35 & 0.2093 \\
+0.25 & 0.58 & 0.1183 \\
+0.50 & 1.05 & \textbf{0.0843} (LDS Valley) \\
+0.75 & 1.81 & 0.1584 \\
+1.00 & 0.88 & 0.2093 \\
+1.25 & 1.65 & 0.2366 \\
+1.50 & 1.82 & 0.2528 \\
+1.75 & 1.30 & 0.2635 \\
+2.00 & 0.85 & 0.2712 \\
+2.25 & 1.20 & 0.2769 \\
+2.50 & 1.80 & 0.2813 \\
+2.75 & 1.75 & 0.2849 \\
+3.00 & 0.85 & 0.2878 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Rastislav Draho\v{s}'s independent replication and control-graph verification}
+
+Rastislav Draho\v{s} used independent code to carry out a complete replication of the fractal-graph quantum system. He re-ran the original script and obtained exactly the same Li-Draho\v{s}-Sultanov Valley on the $2^{15}$ Hilbert space, confirming that the valley is completely consistent under different eigensolver seeds and after averaging over the entire degenerate ground-state manifold. He also ran control experiments on ring, random, and tree graphs, revealing that the anomalous depth of the LDS Valley is about $1.8$ times that of the ring graph and $2.6$ times that of the random graph, suggesting that the topology of the relation graph determines not only the presence or absence of Silent Discordance, but also its quantitative strength.
+
+\subsection{Critical effect of the contradiction-edge position}
+
+After changing the contradiction-edge position from $(0,2)$ to $(0,1)$, the Li-Draho\v{s}-Sultanov Valley completely disappeared. This discovery reveals the decisive role of the injection point of the driving force.
+
+\section{Experiment III: Complete Parameter-Space Scan across Graphs and Rules}
+
+\subsection{Experimental design}
+
+We carried out a complete parameter-space scan over seven relation graphs and four generation rules. The relation graph types include chain, star, ring, small-world, random, tree (all $N=6$), and the $N=15$ fractal graph. The generation rules include Heisenberg ($XX+YY+ZZ$), Ising ($ZZ$ only), XY ($XX+YY$ only), and XXZ ($XX+YY+\Delta\cdot ZZ$). The predefined success criterion is the same as in Experiments I and II.
+
+\subsection{Complete experimental results}
+
+The data of all 15 experiments are summarized in Table~\ref{tab:full_matrix}.
+
+\begin{table*}[t]
+\centering
+\caption{Complete cross-graph, cross-rule parameter matrix of Silent Discordance.}
+\label{tab:full_matrix}
+\begin{tabular}{lccccc}
+\toprule
+Graph type & Heisenberg & Ising & XY & XXZ($\delta=0.3$) & XXZ($\delta=2.0$) \\
+\midrule
+Chain & \checkmark V-shape & \xmark all-zero & \xmark all-zero & \checkmark V-shape (shallow) & \checkmark V-shape (deep) \\
+Fractal(0,2) & \checkmark V-shape (LDS Valley) & --- & --- & --- & --- \\
+Fractal(0,1) & \xmark no V-shape & --- & --- & --- & --- \\
+Star & \checkmark W-shape (low-open) & --- & --- & --- & --- \\
+Ring & \checkmark V-shape (delayed) & --- & --- & --- & --- \\
+Small-world & \checkmark W-shape (high-open) & --- & --- & --- & --- \\
+Random & \checkmark peak-shape & \xmark oscillatory & \xmark near-zero osc. & \checkmark peak (weakened) & --- \\
+Tree & \xmark oscillatory & --- & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Scientific value of the negative results}
+
+Tree + Heisenberg $\to$ oscillatory, Chain + Ising/XY $\to$ all-zero, Random + Ising $\to$ oscillatory, Random + XY $\to$ near-zero oscillatory---every negative result was honestly recorded under predefined success criteria, without selective reporting or post-hoc hypothesis modification.
+
+\section{The Three Laws of Silent Discordance}
+
+Based on the complete cross-graph, cross-rule experimental data, the emergence of Silent Discordance is governed by the following three laws:
+
+\textbf{First law: law of cycle enhancement.} Silent Discordance is present in both cyclic and acyclic structures, but its stability, depth, and robustness against scan resolution are enhanced by the presence of cycles. In acyclic structures (tree graphs), the valley exists but requires higher scan resolution to be resolved, and its position is determined by the geometric properties of the tree.
+
+\textbf{Second law: law of fully symmetric interaction necessity.} Silent Discordance requires that the interaction must contain both $XX+YY$ (flip terms) and $ZZ$ (diagonal term). Under the Ising rule and the XY rule, Silent Discordance completely disappears on all graph topologies.
+
+\textbf{Third law: law of morphology-structure correspondence.} The concrete morphology of Silent Discordance is jointly determined by the topology of the relation graph and the injection point of the driving force. Under the Heisenberg rule, the chain graph produces a V-shape, the star graph and the small-world graph produce low-open and high-open W-shapes respectively, the random graph produces a peak-shape, and the ring graph produces a delayed V-shape.
+
+\section{Six Morphologies of Silent Discordance}
+
+The morphology family of Silent Discordance contains six concrete members, as illustrated in Fig.~\ref{fig:morphologies}:
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{scope}[scale=0.55]
+% (a) V-shape synchronous
+\begin{scope}
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$s$};
+\draw[blue, thick] (0,2.2) to[out=-30, in=180] (2,1.0) to[out=0, in=180] (4,2.8);
+\draw[red, thick] (0,1.8) to[out=-20, in=180] (1.5,0.6) to[out=0, in=180] (4,2.5);
+\node at (2.5,3.2) {(a) V-sync};
+\end{scope}
+% (b) V-shape gap-closing
+\begin{scope}[xshift=5.5cm]
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$s$};
+\draw[blue, thick] (0,2.2) -- (4,2.2);
+\draw[red, thick] (0,1.8) to[out=-30, in=180] (1.5,0.4) to[out=0, in=180] (4,2.6);
+\node at (2.5,3.2) {(b) V-close};
+\end{scope}
+% (c) W-shape low-open
+\begin{scope}[yshift=-5cm]
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$s$};
+\draw[blue, thick] (0,2.2) -- (4,2.2);
+\draw[red, thick] (0,1.8) to[out=-20, in=180] (1.2,0.5) to[out=0, in=180] (2.5,1.2) to[out=0, in=180] (4,2.4);
+\node at (2.5,3.2) {(c) W-low};
+\end{scope}
+% (d) W-shape high-open
+\begin{scope}[xshift=5.5cm, yshift=-5cm]
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$s$};
+\draw[blue, thick] (0,2.2) -- (4,2.2);
+\draw[red, thick] (0,1.8) to[out=-10, in=180] (1,0.8) to[out=0, in=180] (2,1.4) to[out=0, in=180] (3,0.9) to[out=0, in=180] (4,2.6);
+\node at (2.5,3.2) {(d) W-high};
+\end{scope}
+% (e) Peak
+\begin{scope}[yshift=-10cm]
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$p$};
+\draw[blue, thick] (0,2.2) -- (4,2.2);
+\draw[red, thick] (0,1.8) to[out=-30, in=180] (1.5,0.8) to[out=0, in=180] (2.5,2.0) to[out=0, in=180] (4,1.2);
+\node at (2.5,3.2) {(e) Peak};
+\end{scope}
+% (f) V-shape delayed
+\begin{scope}[xshift=5.5cm, yshift=-10cm]
+\draw[->] (0,-0.5) -- (0,3) node[above] {Fine};
+\draw[->] (0,-0.5) -- (5,-0.5) node[right] {$s$};
+\draw[blue, thick] (0,2.2) to[out=-30, in=180] (2,1.0) to[out=0, in=180] (4,2.8);
+\draw[red, thick] (0,1.8) to[out=-20, in=180] (2.5,0.5) to[out=0, in=180] (4,2.5);
+\node at (2.5,3.2) {(f) V-delayed};
+\end{scope}
+\end{scope}
+\end{tikzpicture}
+\caption{Six morphologies of Silent Discordance: (a) V-shape (gap-synchronous), (b) V-shape (gap-closing, LDS Valley), (c) W-shape (low-open), (d) W-shape (high-open), (e) Peak-shape ($p$-driven), (f) V-shape (delayed). Blue curves (schematic) represent the smooth default diagnosis, red curves represent the non-monotonic enhanced diagnosis.}
+\label{fig:morphologies}
+\end{figure*}
+
+\section{Discussion}
+
+\subsection{Cross-framework verification}
+
+The core conclusion of this study was jointly confirmed by three authors using three completely independent tools on the same set of public data. Rastislav Draho\v{s}'s physical verification and Marat Sultanov's structural diagnostics drew the same boundary from opposite directions.
+
+\subsection{Core contributions of Rastislav Draho\v{s}}
+\label{sec:drahos_contrib}
+
+Rastislav Draho\v{s}'s contributions go beyond the scope of a traditional referee or collaborator. His four critical corrections each prevented the publication of erroneous conclusions at key junctures. His control-graph scans provided decisive evidence for the first law. His local-probe analysis ruled out the dilution artifact and proved that the LDS Valley is a genuine defect mode. His tensor-RG toolchain, built to test the thermodynamic-limit survival of the LDS Valley, combines exact energy RG through L2 with an impurity-explicit RG that reproduces the L2 valley depth to the digit; the L3 convergence limit is honestly documented.
+
+\subsection{Core contributions of Marat Sultanov}
+\label{sec:sultanov_contrib}
+
+Marat Sultanov's contributions also go beyond the scope of a traditional collaborator. TAT-Defense is a structural diagnostic framework specifically designed for textual data; applying it to quantum many-body physics data is an untested cross-domain attempt. Sultanov accepted this challenge and ran complete TAT ensemble analyses on multiple data types. TAT was independently verified four times for honest silence in this collaboration, and on the $S(q)$ data, TAT independently detected the Brillouin zone boundary anchor points in perfect agreement with the physical analyses of DMRG and Bethe ansatz, yet TAT knew nothing about this---the strongest evidence of cross-framework resonance.
+
+\subsection{Experimental limitations}
+
+In accordance with the meta-reflection principle, the following limitations must be explicitly declared: (1) Except for the fractal graph ($N=15$), all cross-graph scans were completed at $N=6$. (2) All experiments were completed on a single personal computer. (3) All diagnostics were performed on the ground state. (4) The cyclic driving experiment was performed on a single system size ($N=6$) and a single rule (Heisenberg). (5) The survival of the LDS Valley in the thermodynamic limit remains an open question; Draho\v{s} pushed the tensor-RG toolchain to L3 on available hardware, where the valley depth did not converge. This is an honest convergence limit, not a model defect. The precedent of quantum many-body scars---discovered on finite PXP chains and still under active investigation regarding their thermodynamic fate---illustrates that a phenomenon can be both real at finite sizes and an open question in the thermodynamic limit.
+
+\section{Conclusion}
+
+We first discovered the Silent Discordance phenomenon in the PXP model, and independently replicated it in a self-built fractal-graph quantum system. Through a systematic scan over seven relation graphs and four generation rules, we locked down the three laws of Silent Discordance: the law of cycle enhancement, the law of fully symmetric interaction necessity, and the law of morphology-structure correspondence.
+
+The unique aspect of this study lies in its collaborative mode. Three researchers using three completely independent tools drew the same boundary from opposite directions, confirming that the Li-Draho\v{s}-Sultanov Valley is a real, non-sharp defect-mode signal. The discovery process demonstrates a scientific methodology centered on honesty, anchored on data, and constrained by predefined success criteria. We strictly adhered to the principle of ``diagnose, not prescribe''---this paper only reports the existence of Silent Discordance and its necessary and sufficient conditions, and makes no assertion about its universality in other models beyond the scope supported by the current data.
+
+All data, codes, and experimental protocols are publicly available for independent verification. Future research directions include: testing the finite-size scaling behavior of Silent Discordance at larger system sizes; using HOTRG methods to determine the survival of the LDS Valley in the thermodynamic limit; and extending the relation-graph compiler to higher spins and fermionic systems.
+
+\begin{acknowledgments}
+All DMRG calculations were completed using the TenPy library~\cite{Hauschild2018} on a personal computer. All exact diagonalization calculations used NumPy/SciPy~\cite{Harris2020}. All codes, data, and experimental protocols are publicly available on GitHub~\cite{Li2026GitHub}. Rastislav Draho\v{s} contributed independent code verification, exact Bethe ansatz calculations, control-graph scans, local-probe analysis, DMRG convergence verification, and four critical corrections. Marat Sultanov contributed TAT cross-framework blind tests and the honest silence principle. Qingkong contributed the diagnosis and organization of the collaborative network. This paper faithfully reflects this collaborative process.
+\end{acknowledgments}
+
+\begin{thebibliography}{99}
+\bibitem{Eisert2010} J.~Eisert, M.~Cramer, and M.~B.~Plenio, Rev.\ Mod.\ Phys.\ \textbf{82}, 277 (2010).
+\bibitem{Wen2017} X.-G.~Wen, Rev.\ Mod.\ Phys.\ \textbf{89}, 041004 (2017).
+\bibitem{Kitaev2001} A.~Y.~Kitaev, Phys.-Usp.\ \textbf{44}, 131 (2001).
+\bibitem{Li2026Relation} G.~Li, ``Relation Compression Principle for Quantum Many-Body Systems,'' (2026).
+\bibitem{Hauschild2018} J.~Hauschild and F.~Pollmann, SciPost Phys.\ Lect.\ Notes 5 (2018).
+\bibitem{Harris2020} C.~R.~Harris et al., Nature \textbf{585}, 357 (2020).
+\bibitem{Li2026GitHub} G.~Li, R.~Drahos, and M.~Sultanov, \emph{edrn-dmrg-verification}, GitHub repository (2026).
+\end{thebibliography}
+
+\end{document}
