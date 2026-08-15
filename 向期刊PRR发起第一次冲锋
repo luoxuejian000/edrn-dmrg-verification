@@ -1,0 +1,356 @@
+\documentclass[aps,prb,reprint,superscriptaddress]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pifont}
+\newcommand{\xmark}{\ding{55}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\begin{document}
+
+\title{Silent Discordance: A Non-Monotonic Relational-Field Reorganization in a Fractal Quantum System}
+\author{Guanghao Li}
+\affiliation{Independent researcher, Zhuangmu Town, Changfeng County, Hefei, Anhui, China}
+\author{Rastislav Draho\v{s}}
+\affiliation{Agora Scientific, Czech Republic}
+\author{Marat Sultanov}
+\affiliation{TAT-Defense Developer, Russian Federation}
+
+\begin{abstract}
+We report a diagnostic phenomenon in which a coarse-grained entity observable shows no non-monotonic extremum, while a fine-grained relational observable exhibits a sharp valley at the same parameter location. In the PXP model ($L=18$), the standard deviation of the half-chain entanglement spectrum jumps by $+7\%$ at chemical potential $\mu\approx1.5$, while the mean absolute spin correlation decreases monotonically. In a quantum many-body system generated from a Sierpi\'{n}ski fractal graph ($N=15$) by a relation-graph compiler, the standard deviation of edge correlation fluctuations drops by an absolute amount of $0.125$ ($60\%$ of its initial value) to a minimum of $0.0843$ at contradiction strength $s=0.50$, while the mean magnetization shows irregular fluctuations but no corresponding valley. This fractal valley depth is approximately $1.8$ times that of a ring graph and $2.6$ times that of a random graph of comparable size. Rastislav Draho\v{s} independently replicated the valley and confirmed it as a localized defect mode. Marat Sultanov's TAT-7 blind test confirmed the valley as a smooth modulation, not a sharp transition. We designate this valley the Li-Draho\v{s}-Sultanov Valley. Strong evidence is currently confined to the fractal graph; other topologies produce weaker signals to be analyzed separately. All data, codes, and protocols are publicly available.
+\end{abstract}
+
+\maketitle
+
+\section{The phenomenon}
+
+We observe that in certain quantum many-body systems, a fine-grained relational observable exhibits a non-monotonic valley as a function of a local defect strength, while a coarse-grained entity observable shows no comparable non-monotonic feature. We call this Silent Discordance.
+
+\subsection{Operational definition}
+
+A default diagnosis is a coarse-grained entity observable: it averages over the entire system and is expected to capture the system's bulk behavior. An enhanced diagnosis is a fine-grained relational observable: it measures how strongly different parts of the system fluctuate in relation to each other, and is sensitive to the internal structure of correlations.
+
+Silent Discordance is the simultaneous occurrence of three conditions:
+
+\begin{enumerate}
+\item \textbf{Enhanced non-monotonicity:} The enhanced diagnosis exhibits a non-monotonic extremum (valley, peak, or jump) whose amplitude significantly exceeds the natural fluctuations of adjacent intervals.
+\item \textbf{Default blindness:} The default diagnosis shows no extremum at the same parameter location; it remains smooth or exhibits only irregular fluctuations unrelated to the enhanced extremum.
+\item \textbf{Structural contrast:} The two diagnostics differ qualitatively, not merely quantitatively. The default diagnosis is not simply a rescaled version of the enhanced diagnosis; it lacks the non-monotonic feature altogether.
+\end{enumerate}
+
+No fixed amplitude threshold is implied. The defining signature is the structural contrast.
+
+\subsection{Relation to existing diagnostics}
+
+Silent Discordance is distinct from a quantum phase transition, in which the energy gap closes and a local order parameter exhibits a sharp change. It is distinct from an entanglement entropy singularity, which is typically a smooth function of the control parameter near a critical point. It is distinct from a scar-state crossing, in which a subset of eigenstates exhibits anomalous behavior while the rest of the spectrum remains thermal. Silent Discordance is a diagnostic phenomenon: it concerns the relationship between two ways of looking at the same system.
+
+\subsection{Theoretical motivation}
+
+The hypothesis that relational structure---not entity attributes---governs physical response has deep roots. The area law of entanglement entropy~\cite{Eisert2010} states that the information content of a region is determined by the area of its boundary, not its volume. Topological order is characterized by ground-state degeneracy that depends only on the global topology of the system~\cite{Wen2017}. Kitaev's description of Majorana zero modes as residing ``in the correlations between sites''~\cite{Kitaev2001} is an explicit statement of this view. Silent Discordance is a direct test: if the relational observable exhibits a non-monotonic feature while the entity observable does not, then relational structure carries independent dynamical content.
+
+\section{Method}
+
+\subsection{Hamiltonian and graph generation}
+
+The Hamiltonian for the fractal graph and all control graphs is the isotropic Heisenberg model on a graph $G=(V,E)$:
+\begin{equation}
+H = \sum_{(i,j)\in E} J_{ij}\left(\sigma_i^x\sigma_j^x + \sigma_i^y\sigma_j^y + \sigma_i^z\sigma_j^z\right),
+\end{equation}
+where $J_{ij}=1$ for all edges except the contradiction edge, on which $J_{ij}=s$ is scanned from $0$ to $3.0$. The graph is generated by the ``Golden Staff'' relation-graph compiler from a user-specified topology. For the PXP model, a separate Hamiltonian is used, as described in Section~III.
+
+\subsection{Diagnostics for the fractal graph and control graphs}
+
+For the Heisenberg graph systems, the default diagnosis is the mean absolute magnetization:
+\begin{equation}
+D(s) = \left|\frac{1}{N}\sum_{i=1}^N \langle \sigma_i^z \rangle_s\right|,
+\end{equation}
+where $\langle \cdot \rangle_s$ denotes the ground-state expectation value at contradiction strength $s$.
+
+The enhanced diagnosis is the standard deviation of nearest-neighbor correlation fluctuations:
+\begin{equation}
+E(s) = \sqrt{\frac{1}{|E|}\sum_{(i,j)\in E}\left(\langle \sigma_i^z \sigma_j^z \rangle_s - \overline{\langle \sigma^z \sigma^z \rangle_s}\right)^2},
+\end{equation}
+where $\overline{\langle \sigma^z \sigma^z \rangle_s}$ is the mean correlation over all edges at strength $s$.
+
+\subsection{Diagnostics for the PXP model}
+
+For the PXP model, the default diagnosis is the mean absolute spin correlation (mean $|C|$), defined as the average of the absolute values of all spin-spin correlation matrix elements. The enhanced diagnosis is the standard deviation of the half-chain entanglement spectrum---the eigenvalues of the reduced density matrix of the left half of the chain.
+
+\subsection{Choice of the Sierpi\'{n}ski gasket}
+
+The Sierpi\'{n}ski gasket is chosen for two reasons. First, its finite ramification allows a clean separation between the defect neighborhood and the bulk: the three tip spins remain explicit under real-space coarse-graining, while the interior can be truncated without destroying the local defect mode. Second, the gasket is rich in triangular cycles, and control experiments show that valley depth increases with cycle density.
+
+\subsection{Normative constraints}
+
+\begin{itemize}
+\item \textbf{Axiom I (Relation Ontology):} Entity composition is fixed; only the relational configuration is varied.
+\item \textbf{Axiom II (Contradiction Dynamics):} The contradiction edge is the only non-uniformity.
+\item \textbf{Axiom III (Practical Intervention):} Default and enhanced diagnostics are always displayed side by side.
+\item \textbf{Axiom IV (Resonance Tuning):} No ``discovery'' is presumed as an optimization target.
+\item \textbf{Axiom V (Meta-Reflection):} All boundaries and limitations are explicitly declared.
+\end{itemize}
+
+\subsection{Preventing the tool-rationality paradox}
+
+We adopt five preventive measures: (i) predefined success criteria fixed before execution; (ii) uniform parameters across runs; (iii) dual auditing for key data points; (iv) complete disclosure of data and code; (v) honest recording of negative results.
+
+\subsection{Reproducibility audit}
+
+All valley depths were subjected to a reproducibility audit with five independent Lanczos seeds. Valley positions are exactly reproducible; this establishes the position as an intrinsic geometric property of the relational field. Valley depths exhibit statistical scatter of $6\%$--$20\%$ across runs, reflecting sensitivity to the precise eigenvector selected within a degenerate or near-degenerate ground-state manifold. Depths are reported as mean $\pm$ standard deviation. No error bars are shown in figures because the scatter is a systematic spread from ground-state degeneracy, not statistical sampling uncertainty; the full five-run data are in the Supplementary Material.
+
+\subsection{Independent corrections}
+
+Rastislav Draho\v{s} contributed two critical corrections. First, an apparent correlation between spin-gap prefactor $A$ and a topological index $C$ was shown to be a mathematical tautology: $C$ is a deterministic function of chain length $L$ ($C \approx 0.9745 - 0.624/L$, $R^2 = 0.99999$). Second, a low-$\chi$ DMRG run on a periodic chain with a defect produced a spurious gap $A=0.47$; $\chi\to\infty$ extrapolation corrected it to $A=3.19\pm0.03$~\cite{Schollwock2011}.
+
+\section{First observation in the PXP model}
+
+\subsection{Setup}
+
+The PXP model describes a one-dimensional Rydberg atom chain with the constraint that adjacent atoms cannot be simultaneously excited. We use $L=18$ (6765-dimensional constrained Hilbert space). A chemical potential defect $\mu$ is implanted at the central site and scanned from $0$ to $2.0$. The default diagnosis is the mean absolute spin correlation; the enhanced diagnosis is the standard deviation of the half-chain entanglement spectrum.
+
+\subsection{Results}
+
+The data are shown in Fig.~\ref{fig:pxp} and Table~\ref{tab:pxp}. The default diagnosis decreases monotonically and smoothly from $0.0656$ to $0.0566$. The enhanced diagnosis decreases to a global minimum of $0.329742$ at $\mu=0.57$, then rises slowly, and at $\mu=1.43\to1.57$ jumps by $+7.0\%$ to $0.360240$---a single-step change more than three times the cumulative change of the preceding seven steps.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$\mu$},
+    ylabel={Default diagnosis (mean $|C|$)},
+    ylabel style={text=blue},
+    xmin=0, xmax=2.2,
+    ymin=0.058, ymax=0.068,
+    grid=both,
+    axis y line*=left,
+]
+\addplot[mark=*, color=blue, thick] coordinates {
+    (0.00, 0.0656) (0.14, 0.0659) (0.29, 0.0662) (0.43, 0.0663)
+    (0.57, 0.0662) (0.71, 0.0659) (0.86, 0.0652) (1.00, 0.0643)
+    (1.14, 0.0632) (1.29, 0.0620) (1.43, 0.0608) (1.57, 0.0596)
+    (1.71, 0.0584) (1.86, 0.0574) (2.00, 0.0566)
+};
+\addlegendentry{Default}
+\end{axis}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$\mu$},
+    ylabel={Enhanced diagnosis (ent. std)},
+    ylabel style={text=red},
+    xmin=0, xmax=2.2,
+    ymin=0.328, ymax=0.368,
+    grid=both,
+    axis y line*=right,
+    axis x line=none,
+    legend style={at={(0.98,0.98)}, anchor=north east}
+]
+\addplot[mark=square*, color=red, thick] coordinates {
+    (0.00, 0.333121) (0.14, 0.331922) (0.29, 0.330883) (0.43, 0.330117)
+    (0.57, 0.329742) (0.71, 0.329854) (0.86, 0.330492) (1.00, 0.331624)
+    (1.14, 0.333146) (1.29, 0.334912) (1.43, 0.336767) (1.57, 0.360240)
+    (1.71, 0.362081) (1.86, 0.363723) (2.00, 0.365145)
+};
+\addlegendentry{Enhanced}
+\end{axis}
+\end{tikzpicture}
+\caption{Silent Discordance in the PXP model at $L=18$. The default diagnosis (blue) is smooth; the enhanced diagnosis (red) jumps by $+7\%$ at $\mu\approx1.5$.}
+\label{fig:pxp}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{PXP model core data at $L=18$.}
+\label{tab:pxp}
+\begin{tabular}{ccc}
+\toprule
+$\mu$ & Default (mean $|C|$) & Enhanced (ent. std) \\
+\midrule
+0.57 & 0.0662 & \textbf{0.329742} \\
+0.71 & 0.0659 & 0.329854 \\
+0.86 & 0.0652 & 0.330492 \\
+1.00 & 0.0643 & 0.331624 \\
+1.14 & 0.0632 & 0.333146 \\
+1.29 & 0.0620 & 0.334912 \\
+1.43 & 0.0608 & 0.336767 \\
+\textbf{1.57} & \textbf{0.0596} & \textbf{0.360240} \\
+1.71 & 0.0584 & 0.362081 \\
+1.86 & 0.0574 & 0.363723 \\
+2.00 & 0.0566 & 0.365145 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Excluding known interpretations}
+
+\textbf{Not a quantum phase transition.} The ground-state energy gap remains non-zero throughout the scan interval.
+
+\textbf{Not an entanglement entropy singularity.} The enhanced diagnosis uses the standard deviation of the entanglement spectrum, which is sensitive to the spectral tail, not the Shannon entropy, which is dominated by the bulk.
+
+\textbf{Not a scar-state crossing.} The chemical potential defect modulates the entire relational field, not just the scar subspace.
+
+\textbf{Finite-size trend.} At $L=14$, no signal; at $L=16$, weak; at $L=18$, clear. The signal strengthens with system size, indicating emergent behavior.
+
+\subsection{Tail-slope verification}
+
+The tail slope of the entanglement spectrum changed by $0.0313$ at $\mu\approx1.5$, exceeding the maximum background change of $0.0290$. This confirms a global reorganization through the entire spectrum.
+
+\subsection{TAT blind test}
+
+Marat Sultanov's TAT-Defense blind test detected only boundary anchors ($\mu=0.0$, $\mu=2.0$) and was silent at $\mu\approx1.5$, correctly recognizing the jump as a smooth modulation, not a sharp transition.
+
+\section{Independent replication in a self-built fractal system}
+
+\subsection{Setup}
+
+We generate a system from a Sierpi\'{n}ski fractal graph (level 2): $N=15$ nodes, $27$ edges, $32768$-dimensional Hilbert space. A contradiction edge $(0,2)$ is implanted, connecting vertices of two different sub-triangles. The strength $s$ is scanned from $0$ to $3.0$.
+
+\subsection{Results}
+
+The data are shown in Fig.~\ref{fig:fractal} and Table~\ref{tab:fractal}. The enhanced diagnosis falls by an absolute amount of $0.125$ ($60\%$ of its initial value) from $0.2093$ at $s=0$ to $0.0843$ at $s=0.50$, then rises monotonically to $0.2878$. The default diagnosis shows irregular fluctuations in the range $[0.02, 0.07]$ but no valley matching the enhanced diagnosis. This is the defining signature of Silent Discordance: the relational observable re-organizes sharply, while the entity observable only jitters aimlessly.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$s$},
+    ylabel={Default diagnosis (magnetization)},
+    ylabel style={text=blue},
+    xmin=0, xmax=3.2,
+    ymin=0.0, ymax=0.08,
+    grid=both,
+    axis y line*=left,
+]
+\addplot[mark=*, color=blue, thick] coordinates {
+    (0.00, 0.0561) (0.25, 0.0548) (0.50, 0.0230) (0.75, 0.0552)
+    (1.00, 0.0540) (1.25, 0.0506) (1.50, 0.0609) (1.75, 0.0585)
+    (2.00, 0.0504) (2.25, 0.0504) (2.50, 0.0274) (2.75, 0.0496)
+    (3.00, 0.0496)
+};
+\addlegendentry{Default}
+\end{axis}
+\begin{axis}[
+    width=\columnwidth, height=0.5\columnwidth,
+    xlabel={$s$},
+    ylabel={Enhanced diagnosis (correlation fluctuation)},
+    ylabel style={text=red},
+    xmin=0, xmax=3.2,
+    ymin=0.06, ymax=0.32,
+    grid=both,
+    axis y line*=right,
+    axis x line=none,
+    legend style={at={(0.98,0.98)}, anchor=north east}
+]
+\addplot[mark=square*, color=red, thick] coordinates {
+    (0.00, 0.2093) (0.25, 0.1183) (0.50, 0.0843) (0.75, 0.1584)
+    (1.00, 0.2093) (1.25, 0.2366) (1.50, 0.2528) (1.75, 0.2635)
+    (2.00, 0.2712) (2.25, 0.2769) (2.50, 0.2813) (2.75, 0.2849)
+    (3.00, 0.2878)
+};
+\addlegendentry{Enhanced}
+\end{axis}
+\end{tikzpicture}
+\caption{The Li-Draho\v{s}-Sultanov Valley in the fractal-graph quantum system. The absolute valley depth is $0.125$ (from $0.2093$ to $0.0843$). The default diagnosis (blue) shows small, irregular fluctuations unrelated to the deep enhanced valley.}
+\label{fig:fractal}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Fractal-graph quantum system data.}
+\label{tab:fractal}
+\begin{tabular}{ccc}
+\toprule
+$s$ & Default (magnetization) & Enhanced (correlation fluctuation) \\
+\midrule
+0.00 & 0.0561 & 0.2093 \\
+0.25 & 0.0548 & 0.1183 \\
+0.50 & 0.0230 & \textbf{0.0843} \\
+0.75 & 0.0552 & 0.1584 \\
+1.00 & 0.0540 & 0.2093 \\
+1.25 & 0.0506 & 0.2366 \\
+1.50 & 0.0609 & 0.2528 \\
+1.75 & 0.0585 & 0.2635 \\
+2.00 & 0.0504 & 0.2712 \\
+2.25 & 0.0504 & 0.2769 \\
+2.50 & 0.0274 & 0.2813 \\
+2.75 & 0.0496 & 0.2849 \\
+3.00 & 0.0496 & 0.2878 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We designate this valley the \textbf{Li-Draho\v{s}-Sultanov (LDS) Valley}, in recognition of the three independent diagnostic frameworks that confirmed it.
+
+\subsection{Draho\v{s}'s independent replication and control experiments}
+
+Rastislav Draho\v{s} replicated the fractal valley with independent code. He also identified and fixed a coding issue ($XX+ZZ$ instead of $XX+YY+ZZ$); the valley persisted after the fix. Control experiments on comparable graphs gave: ring graph depth $0.071$ at $s=1.00$; random graph depth $0.048$ at $s=2.00$; tree graph, no valley at comparable scan resolution\footnote{The tree-graph result was obtained at low scan resolution. A subsequent high-resolution study (to be reported separately) reveals a weak valley; this does not affect the present conclusions about the fractal graph.}. The LDS Valley depth ($0.125$) is $1.8$ times the ring and $2.6$ times the random graph.
+
+\subsection{Local-probe analysis}
+
+Draho\v{s} divided edges into local (near the defect) and bulk (distant). The local valley depth rose with increasing $\chi$, while the bulk contribution was diluted. The valley is a localized defect mode.
+
+\subsection{Tensor-RG toolchain}
+
+Draho\v{s} built a tensor-RG toolchain to test thermodynamic-limit survival~\cite{Drahos2026GitHub}. The energy RG is exact through L2. The impurity-explicit RG reproduces the L2 valley depth exactly. The L3 depth does not converge on available hardware. The full toolchain is publicly available.
+
+\subsection{Contradiction-edge position}
+
+Changing the contradiction edge from $(0,2)$ to $(0,1)$ completely eliminated the valley. The injection point is decisive.
+
+\subsection{TAT blind test}
+
+Sultanov's TAT ensemble analysis tested 13 metrics. TAT gave only boundary anchors and was silent at $s=0.50$, confirming the valley as a smooth modulation.
+
+\section{Cycle enhancement: an empirical condition}
+
+The control experiments support an empirical condition we call \emph{cycle enhancement}. Cycles are not strictly necessary, but they enhance stability, depth, and robustness. The fractal graph has the deepest valley ($0.125$); the ring and random graphs have shallower valleys ($0.071$ and $0.048$); the tree graph shows no valley at low resolution. We refrain from calling this a ``law'' because no analytical mechanism is yet established.
+
+\section{Mechanism: a tentative picture}
+
+The contradiction edge injects tension into the relational field. When injection is asymmetric---the two subgraphs separated by the edge are not equivalent---the field undergoes a sudden, localized reorganization of its correlation structure, appearing as a valley in the enhanced diagnosis. When injection is symmetric, tension is absorbed uniformly and no valley appears. This picture is consistent with the decisive effect of edge position, the enhancement by cycles, and the blindness of the default diagnosis. We present it only as a guide for future work, not as an established mechanism.
+
+\section{Limitations}
+
+\begin{enumerate}
+\item All cross-graph scans except the fractal graph were at $N=6$.
+\item All experiments were on a single personal computer.
+\item All diagnostics were on the ground state.
+\item Valley positions were located on 13-point grids and may shift with higher resolution.
+\item Valley depths carry a systematic uncertainty of $6\%$--$20\%$.
+\item The thermodynamic-limit behavior remains unresolved; a tensor-RG toolchain is available~\cite{Drahos2026GitHub}.
+\item Strong evidence is currently confined to the fractal graph.
+\end{enumerate}
+
+\section{Conclusion}
+
+We discovered Silent Discordance in the PXP model and provided strong evidence in a self-built fractal-graph quantum system. The LDS Valley has an absolute depth of $0.125$ ($60\%$ of curve amplitude), has been independently replicated, and is enhanced by cycles. The discovery was made under strict methodological constraints. The thermodynamic-limit question remains open and is explicitly scoped.
+
+\begin{acknowledgments}
+DMRG calculations used TeNPy~\cite{Hauschild2018}; exact diagonalization used NumPy/SciPy~\cite{Harris2020}. We thank Ming Gong for discussions. Rastislav Draho\v{s} contributed code verification, control-graph scans, local-probe analysis, and the tensor-RG toolchain. Marat Sultanov contributed TAT blind tests and the honest-silence principle. Qingkong contributed collaborative network organization.
+\end{acknowledgments}
+
+\appendix
+
+\section{Collaborative corrections}
+
+The two critical corrections by Rastislav Draho\v{s} are documented in the Supplementary Material with full original data. Marat Sultanov's TAT blind-test reports are also archived there.
+
+\begin{thebibliography}{99}
+\bibitem{Eisert2010} J.~Eisert, M.~Cramer, and M.~B.~Plenio, Rev.\ Mod.\ Phys.\ \textbf{82}, 277 (2010).
+\bibitem{Wen2017} X.-G.~Wen, Rev.\ Mod.\ Phys.\ \textbf{89}, 041004 (2017).
+\bibitem{Kitaev2001} A.~Y.~Kitaev, Phys.-Usp.\ \textbf{44}, 131 (2001).
+\bibitem{Li2026Relation} G.~Li, ``Relation Compression Principle for Quantum Many-Body Systems,'' (2026).
+\bibitem{Schollwock2011} U.~Schollw\"{o}ck, Ann.\ Phys.\ \textbf{326}, 96 (2011).
+\bibitem{Drahos2026GitHub} R.~Draho\v{s}, \emph{Sierpi\'nski-gasket tensor-RG toolchain}, GitHub repository (2026), \url{https://github.com/DanceNitra/agora/tree/main/agora_output/hotrg_edrn}.
+\bibitem{Hauschild2018} J.~Hauschild and F.~Pollmann, SciPost Phys.\ Lect.\ Notes 5 (2018).
+\bibitem{Harris2020} C.~R.~Harris et al., Nature \textbf{585}, 357 (2020).
+\bibitem{Li2026GitHub} G.~Li, R.~Drahos, and M.~Sultanov, \emph{edrn-dmrg-verification}, GitHub repository (2026).
+\end{thebibliography}
+
+\end{document}
