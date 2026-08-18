@@ -15,11 +15,11 @@
 
 \title{Non-Monotonic Correlation Fluctuations in Heisenberg Models on Small Quantum Graphs}
 \author{Guanghao Li}
-\affiliation{Independent researcher, Zhuangmu Town, Changfeng County, Hefei, Anhui, China, \texttt{guanghao.li@protonmail.com}}
+\affiliation{Independent researcher, Zhuangmu Town, Changfeng County, Hefei, Anhui, China}
 \author{Rastislav Draho\v{s}}
-\affiliation{Agora Scientific, Bratislava, Slovakia, \texttt{rastislav.drahos@agora.sk}}
+\affiliation{Agora Research OS, Slovakia}
 \author{Marat Sultanov}
-\affiliation{TAT-Defense LLC, Kazan, Russian Federation, \texttt{marat.sultanov@tatdefense.ru}}
+\affiliation{TAT-Defense Developer, Russian Federation}
 
 \begin{abstract}
 We report a reproducible non-monotonic feature in the standard deviation of nearest-neighbor correlation fluctuations (the enhanced diagnosis) in Heisenberg models generated from several small quantum graphs. In a Sierpi\'{n}ski fractal graph ($N=15$), a contradiction edge at $(0,6)$ produces a sharp valley at $s=1.000$ with mean depth $0.0998\pm0.0064$ and position reproducibility exact at the scan grid node across five Lanczos seeds; a degeneracy-control experiment shows the valley persists in the non-zero-gap regime, establishing that it is not a degeneracy artifact. Control scans on a ring ($N=15$) and a tree ($N=15$) also show valleys at $s=1.0$, while a random graph ($N=15$) shows no stable valley. A non-trivial coarse-grained observable---the mean absolute nearest-neighbor $zz$ correlation---exhibits only a weak local maximum of height $\sim0.001$ at the enhanced valley position in the fractal graph, about two orders of magnitude smaller than the enhanced valley depth, indicating that the coarse-grained observable is substantially less sensitive but not strictly blind. In a Watts-Strogatz small-world graph ($N=10$), 19 of 20 contradiction edges produce significant valleys in a full-body scan; three representative edges show exactly reproducible positions at non-degenerate ground states. The PXP model yields a clean negative result, and an earlier reported jump is traced to non-Hermitian Hamiltonian construction in an early script. An independent tensor-RG toolchain reproduces the L2 local valley depth to the digit. The mechanism and thermodynamic limit remain open problems.
@@ -148,7 +148,7 @@ Std.\ dev. & 0.0000 & 0.006397 & 0.006397 \\
 (0.5,0.248433)(0.6,0.247752)(0.7,0.245615)(0.8,0.239717)(0.9,0.220838)
 (1.0,0.142196)
 };
-\addplot[mark=none, color=purple, thick] coordinates {
+\附加图【标记=无，颜色=紫色，厚度】坐标{
 (0.0,0.246731)(0.1,0.247248)(0.2,0.247744)(0.3,0.248177)(0.4,0.248460)
 (0.5,0.248433)(0.6,0.247752)(0.7,0.245615)(0.8,0.239717)(0.9,0.220838)
 (1.0,0.146785)
@@ -158,173 +158,173 @@ Std.\ dev. & 0.0000 & 0.006397 & 0.006397 \\
 \addlegendentry{Seed 2}
 \addlegendentry{Seed 3}
 \addlegendentry{Seed 4}
-\end{axis}
+\端{轴线}
 \end{tikzpicture}
-\caption{Valley at edge $(0,6)$ ($N=15$, 101 points, five seeds). All seeds locate the valley at the grid node $s=1.000$ with zero standard deviation; valley values scatter only near $s=1.0$. For clarity, every 10th point of the 101-point scan is shown; the full dataset is available in the public repository. A focused audit (Fig.~\ref{fig:focused}) provides higher resolution in the interval $s\in[0.8,1.2]$.}
+\标题{边缘的谷值$（0，6）$（$N=15$，101点，五个种子）。所有种子都定位在网格节点$s=1.000$处的谷值，标准差为零；谷值仅在$s=1.0$附近散布。为了清晰起见，101点扫描的每10点都显示；完整的数据集可在公共存储库中获取。聚焦审计（图~\ref{fig：focus}）在区间$s\in【0.8，1.2】$中提供了更高的分辨率。}
 \label{fig:l2_valley}
 \end{figure}
 
-A focused audit (21 points, $s\in[0.8,1.2]$, three seeds) confirms the interior minimum and is shown in Fig.~\ref{fig:focused}.
+聚焦审计（21点，$s\in[0.8，1.2]$，三个种子）确认内部最小值，并如图所示。
 
 \begin{figure}[t]
-\centering
+中心化
 \begin{tikzpicture}
-\begin{axis}[
-    width=\columnwidth, height=0.5\columnwidth,
-    xlabel={$s$},
-    ylabel={Enhanced diagnosis},
-    xmin=0.8, xmax=1.2,
-    ymin=0.14, ymax=0.28,
-    grid=both,
-    legend pos=north east,
-    legend style={font=\small},
+开始{轴线}【
+宽度=\柱宽，高度=0.5\柱宽
+xlabel={$s$}，
+ylabel={增强诊断}，
+xmin=0.8，xmax=1.2，
+ymin=0.14，ymax=0.28，
+网格=两者，
+传说位置=东北部，
+传奇风格={字体=\小}，
 ]
-\addplot[mark=*, color=red, thick, mark size=2pt] coordinates {
+【标记=*，颜色=红色，厚度，标记大小=2点坐标{
 (0.8,0.239717)(0.85,0.233217)(0.9,0.220838)(0.95,0.195225)
 (1.0,0.148515)(1.05,0.171756)(1.1,0.212551)(1.15,0.243000)(1.2,0.263279)
 };
-\addlegendentry{Enhanced (mean of 3 seeds)}
-\end{axis}
+\addlegendentry{增强（平均3个种子）}
+\端{轴线}
 \end{tikzpicture}
-\caption{Focused audit at edge $(0,6)$ ($N=15$, 21 points, three seeds). The valley at $s=1.000$ is an interior minimum: the enhanced diagnosis at $s=0.8$ is $0.2397$, at $s=1.0$ is $0.1485$, and at $s=1.2$ is $0.2633$, all values on both sides exceeding the valley value. The valley value at $s=1.000$ shown here ($0.1485$) is from an independent three-seed focused audit and differs slightly from the five-seed value in Table~I ($0.1469$).}
-\label{fig:focused}
+\标题{边缘$（0，6）$（N=15$，21点，3个种子）的聚焦审计。$s=1.000$的谷值是内部最小值：在$s=0.8$时增强诊断为$0.2397$，在$s=1.0$时为$0.1485$，在$s=1.2$时为$0.2633$，双方的所有值都超过谷值。这里显示的$s=1000$的谷数值（0.1485$）来自一个独立的3个种子聚焦审计，与表~I中的5个种子值（0.1469）略有不同。}
+图：聚焦
 \end{figure}
 
-\subsection{Degeneracy-control experiment}
+\subsection{变异控制实验}
 
-To test for degeneracy artifacts, we simultaneously computed the energy gap and enhanced diagnosis over $s\in[0,1]$ (101 points) with five-seed verification at key points. The gap is strictly zero for $s\lesssim0.76$, opens abruptly to $0.323$ at $s=0.77$, then decreases to $0.0115$ at $s=0.99$ before rising to $0.186$ at $s=1.00$. The enhanced diagnosis remains approximately constant for $s<0.5$, then decreases monotonically from $s=0.5$ to $s=1.0$, including the non-zero-gap region. At $s=1.000$, the multi-seed gap is $0.1486\pm0.0743$, confirming near-degeneracy---not exact crossing---as the origin of depth scatter. The gap structure is visualized in Fig.~\ref{fig:gap}.
+为了测试退化伪造，我们同时计算了能量缺口和增强诊断在$s\in【0,1】$（101点）上，并在关键点进行五种子验证。对于$S\lesssim0.76$，缺口严格为零，在$s=0.77$时突然打开到$0.233$，然后在$s=0.999$时减少到$0.0115$，然后再在$s=1.001$时上升到$0.186$。对于$<0.5$，增强诊断保持大致恒定，然后单调从$s=0.5$减少到$s=1.0$，包括非零缺口区域。在$S=100$时，i—种子间隙为$0.1486\pm0.0743$，确认近变异———而不是精确交叉———是深度散射的起源。间隙结构在图中可视化~\ref{fig:gap}。
 
 \begin{figure}[t]
-\centering
+中心化
 \begin{tikzpicture}
-\begin{axis}[
-    width=\columnwidth, height=0.5\columnwidth,
-    xlabel={$s$},
-    ylabel={Energy gap},
-    ylabel style={text=blue!60!black},
-    xmin=0, xmax=1.05,
-    ymin=0, ymax=0.35,
-    grid=both,
+开始{轴线}【
+宽度=\柱宽，高度=0.5\柱宽
+xlabel={$s$}，
+ylabel={能量差距}，
+标签样式={文本=蓝色！60！黑色}，
+xmin=0，xmax=1.05，
+ymin=0，ymax=0.35，
+网格=两者，
 ]
-\addplot[mark=*, color=blue!60!black, thick, mark size=1.5pt] coordinates {
+\添加图【标记=*，颜色=蓝色！60！黑色，厚度，标记大小=1.5点坐标{
 (0.0,0.000)(0.1,0.000)(0.2,0.000)(0.3,0.000)(0.4,0.000)
 (0.5,0.000)(0.6,0.000)(0.7,0.000)(0.76,0.000)(0.77,0.323)
 (0.8,0.286)(0.85,0.219)(0.9,0.145)(0.95,0.067)(0.99,0.012)
 (1.0,0.186)
 };
 \addlegendentry{Gap}
-\end{axis}
+\end{轴线}
 \end{tikzpicture}
-\caption{Energy gap vs.\ contradiction strength at edge $(0,6)$ ($N=15$). The gap is strictly zero for $s\lesssim0.76$, opens abruptly at $s\approx0.77$ to $0.323$, then decreases to a minimum of $0.0115$ at $s=0.99$ before rising to $0.186$ at $s=1.00$. The enhanced diagnosis continues to decrease in the non-zero-gap region, establishing that the valley is not a degeneracy artifact.}
+\caption{能量差距与边缘矛盾强度$（0，6）$（N=15$）。差距在$s\lesssim0.76$时严格为零，在$s约0.77$到$0.233$时突然打开，然后在$s=0.99$时减少到最小值$0.0115$，然后在$1s=1.00$时上升到$0.186$。增强诊断在非零差距区域继续减少，确定山谷不是退化伪造物。}
 \label{fig:gap}
 \end{figure}
 
-\textbf{Conclusion: the valley is not a degeneracy artifact.}
+\textbf{结论：山谷不是堕落的产物。}
 
-\subsection{Control edge $(0,1)$}
+控制边缘$（0，1）
 
-The control edge $(0,1)$---connecting two tip vertices, making the two subgraphs equivalent---shows a completely flat enhanced diagnosis over $s\in[0,1]$: range $0.000000$, cross-seed standard deviation $1.4\times10^{-11}$. This is based on a single symmetric edge and a limited scan range; it is \emph{consistent with} a possible role of asymmetric injection, but a systematic edge-resolved study with extended scan range is required to establish this mechanism. The extended scan is in progress and will be reported separately.
+控制边缘$（0,1）$---连接两个尖端顶点，使两个子图等价---在$s\in【0,1】$上显示一个完全平坦的增强诊断:范围$0.000000$，交叉种子标准差$1.4\times10^{-11}$。这是基于单个对称边缘和有限的扫描范围；这与非对称注射的可能作用一致，但需要一个具有扩展扫描范围的系统性边缘分辨率研究来建立这一机制。扩展扫描正在进行中，并将被回复。单独食用。
 
-\subsection{Control graphs: ring, tree, and random}
+\分段{控制图：环形、树形和随机}
 
-To test whether the valley is specific to the fractal and small-world geometries, we performed single-edge scans on three additional $N=15$ graphs: a ring (15 edges), a tree (14 edges), and a random graph (27 edges). For each graph, a single contradiction edge was chosen and scanned over $s\in[0,3]$ with 13 points; light multi-seed audits (three seeds) were also performed. Table~\ref{tab:control_graphs} summarizes the results.
+为了测试谷是否特异于分形和小世界几何图形，我们对另外三个$N=15$图形进行了单边扫描:一个环（15边）、一个树（14边）和一个随机图形（27边）。对于每个图形，选择一个矛盾边，并在$s\in[0，3]$上扫描13个点；还进行了轻微的多种子审计（三个种子）。表~\ref{tab:control_graphs}总结了结果。
 
 \begin{table}[h]
-\centering
-\caption{Control-graph scans at $N=15$. Ring and tree show clear valleys at $s=1.0$; random graph shows no stable valley.}
+中心化
+\caption{控制图扫描值为$N=15$。环和树在$s=1.0$时显示清晰的谷；随机图显示没有稳定的谷。}
 \label{tab:control_graphs}
 \begin{tabular}{lccccc}
-\toprule
-Graph & Valley $s$ & Valley depth (single) & Valley depth (multi) & Cross-seed std.\ of position & Stable? \\
+\顶部规则\
+图 & 谷 $s$ & 谷深度（单一） & 谷深（多） & 交叉种子位置稳定性? \\
 \midrule
-Ring & 1.0 & 0.0891 & 0.0993$\pm$0.0286 & 0.000 & Yes \\
-Tree & 1.0 & 0.1926 & 0.1481$\pm$0.0461 & 0.000 & Yes \\
-Random & 1.25 (unstable) & 0.0026 & 0.0014$\pm$0.0013 & 1.561 & No \\
+环 & 1.0 & 0.0891 & 0.0993$\pm $0.0286 & 0.000 & 是 \\
+树 & 1.0 & 0.1926 & 0.1481$\pm $0.0461 & 0.000 & 是 \\
+随机 & 1.25（不稳定）& 0.0026 & 0.0014$\pm$0.0013 & 1.561 & 否 \\
 \bottomrule
-\end{tabular}
+\结束{表格}
 \end{table}
 
-The ring and tree valleys occur at $s=1.0$, where the contradiction edge strength equals the uniform coupling, similar to the fractal-graph edge $(0,6)$. The random graph does not exhibit a stable valley; its multi-seed valley position standard deviation is 1.56, indicating noise rather than a reproducible feature.
+环谷和树谷出现在$s=1.0$，其中矛盾边缘强度等于均匀耦合，类似于分形图边缘$（0，6）$。随机图没有显示稳定的谷；其多种子谷位置标准偏差为1.56，表明噪声而不是可重现的特征。
 
-\subsection{Local vs.\ global correlation reorganization}
+\分段{局部与\全局相关重组}
 \label{sec:local_global}
 
-To examine the spatial structure of the reorganization, we computed both a global enhanced diagnosis (all 27 edges) and a local enhanced diagnosis restricted to a radius-2 neighborhood around the contradiction edge $(0,6)$ for $s\in[0,3]$. The local valley depth exceeds the global depth: single-seed ratio $1.595$, multi-seed ratio $\approx1.3$ (global depth mean $0.1097$, local depth mean $0.1421$). This indicates that the correlation fluctuation reorganization is partially localized near the defect, consistent with the tensor-RG finding of a localized defect mode.
+为了检查重组的空间结构，我们计算了全局增强诊断（所有27个边）和局部增强诊断，这些诊断局限于矛盾边周围的半径-2邻域。局部谷深度超过全局深度:单种子比1.955美元，多种子比约1.3美元（全局深度均值为1.0997美元，局部深度均值0.2142美元）。这表明相关波动重组部分局限于缺陷附近。使用张量-RG方法发现局部缺陷模式。
 
-\subsection{Non-trivial default observable control}
+\分段{非平凡的默认可观察控件}
 \label{sec:default_control}
 
-Using the fixed-magnetization sector implementation, we computed the non-trivial default observable $D_{\text{default}}(s)=\frac{1}{|E|}\sum_{(i,j)\in E}|\langle\sigma_i^z\sigma_j^z\rangle_s|$ together with $E(s)$ at edge $(0,6)$ for $s\in[0,1.2]$ with 121 points and four Lanczos seeds (seeds 0--3). The results are summarized in Table~\ref{tab:default_control} and Fig.~\ref{fig:default_control}.
+使用固定磁化扇区实现，我们计算了非平凡的默认可观测值$D_{\text{default}}（s）=\frac{1}{|E|}\sum_{（i，j）\in E}|\langle\sigma_i^z\sigma_j^z\rangle_s|$，加上边缘$（0，6）$的$E（s）$，用于$s\in【0，1.2】$，具有121个点和四个兰索斯种子（种子0——3）。结果总结在表~\ref{选项卡：default_control}和图~\ref#fig:default_Control}中。
 
 \begin{table}[h]
-\centering
-\caption{Key points of the non-trivial default observable control at edge $(0,6)$ ($N=15$, four seeds).}
+中心化
+\标题{边缘$（0，6）$（N=15$，四个种子）的非平凡默认可观察控件的关键点。}
 \label{tab:default_control}
 \begin{tabular}{ccc}
-\toprule
-$s$ & $D_{\text{default}}$ & $E_{\text{enhanced}}$ \\
+\顶部规则\
+默认为增强$ \\
 \midrule
 0.99 & 0.953270 & 0.164032 \\
 1.00 & 0.954210 & 0.159658 \\
 1.01 & 0.940725 & 0.160451 \\
 \bottomrule
-\end{tabular}
+\结束{表格}
 \end{table}
 
 \begin{figure}[t]
-\centering
+中心化
 \begin{tikzpicture}
-\begin{axis}[
-    width=\columnwidth, height=0.5\columnwidth,
-    xlabel={$s$},
-    ylabel={Diagnostic value},
-    xmin=0.8, xmax=1.2,
-    ymin=0.1, ymax=0.3,
-    grid=both,
-    legend pos=north east,
-    legend style={font=\small},
+开始{轴线}【
+宽度=\柱宽，高度=0.5\柱宽
+xlabel={$s$}，
+ylabel={诊断值}，
+xmin=0.8，xmax=1.2，
+ymin=0.1，ymax=0.3，
+网格=两者，
+传说位置=东北部，
+传奇风格={字体=\小}，
 ]
-\addplot[mark=*, color=red, thick, mark size=2pt] coordinates {
+【标记=*，颜色=红色，厚度，标记大小=2点坐标{
 (0.8,0.239717)(0.85,0.233217)(0.9,0.220838)(0.95,0.195225)
 (1.0,0.159658)(1.05,0.171756)(1.1,0.212551)(1.15,0.243000)(1.2,0.263279)
 };
-\addlegendentry{$E_{\text{enhanced}}$}
-\addplot[mark=square*, color=blue, thick, mark size=2pt] coordinates {
+\addlegendentry{$E_{\text{增强版}}$}
+\添加图【标记=平方*，颜色=蓝色，粗，标记大小=2点坐标{
 (0.8,0.969147)(0.85,0.965055)(0.9,0.958503)(0.95,0.945861)
 (1.0,0.954210)(1.05,0.937228)(1.1,0.948481)(1.15,0.949271)(1.2,0.950362)
 };
-\addlegendentry{$D_{\text{default}}$ (right axis)}
-\end{axis}
+\addlegendentry{$D_{\text{default}}$（右轴）}
+\端{轴线}
 \end{tikzpicture}
-\caption{Non-trivial default observable $D_{\text{default}}$ compared with the enhanced diagnosis $E_{\text{enhanced}}$ at edge $(0,6)$ ($N=15$, four seeds). $E_{\text{enhanced}}$ has a deep valley at $s=1.0$; $D_{\text{default}}$ shows a very weak local maximum (height $\sim0.001$) at the same position, about two orders of magnitude smaller than the valley depth.}
+\caption{非平凡的默认可观测值$D_{\text{default}}$与边$（0,6)$ 处的增强诊断$E_{\text{enhanced}}$进行比较（N=15，四个种子）。$E_{\text{enhanced>}$在$s=1.0$处有一个深谷；$D_{\text{default}}$ 在同一位置显示出一个非常弱的局部最大值（高度约为 0.001），比谷深小约两个数量级。}
 \label{fig:default_control}
 \end{figure}
 
-At the enhanced valley position $s=1.000$, $D_{\text{default}}$ exhibits a local maximum of height about $0.001$ ($0.954210$ vs.\ $0.953270$ at $s=0.99$ and $0.940725$ at $s=1.01$). This local peak is reproducible across all four seeds (cross-seed standard deviation $\sim10^{-11}$), confirming it is not numerical noise. However, its amplitude is approximately $1/80$ of the enhanced valley depth ($\sim0.08$). Therefore, the coarse-grained observable is not strictly blind; it shows a very weak and oppositely directed response. The structural contrast is quantitative rather than qualitative.
+在增强谷位置$s=1.000$,$表现出大约$0.001$ 的局部高度最大值（$0.954210$vs.$s=0.99$时的$0.953270$ 和$s=1.01$时的$0.940725$）。这个局部峰值在所有四个种子中都可以重现（跨种子标准差$\sim10^{-11}），确认它不是数值噪声。然而，它的振幅大约是增强谷深度（$\sim0.08$）的$1/80$。因此，粗粒度可观测值不是严格的盲目；它显示出非常弱且相反的定向响应。结构对比是定量的，而不是定性的。
 
-\subsection{Independent tensor-RG verification}
+\subsection{独立张量-RG验证}
 
-Draho\v{s}'s independent tensor-RG toolchain~\cite{Drahos2026GitHub} reproduces the L2 local valley depth $0.1902$ to the digit. A truncation-control test shows $86\%$ vs $20\%$ recovery, establishing the valley as a localized defect mode. The L3 depth does not converge; the toolchain is publicly available.
+Draho\v{s}的独立张量-RG工具链~\cite{Drahos2026GitHub}将L2局部谷深度复制到数字。截断控制测试显示回报率为86%\%\%\美元，将谷建立为局部缺陷模式。L3深度不收敛；工具链是公开可用的。
 
-\subsection{L1 finite-size check}
+\subsection{L1有限尺寸检查}
 
-As a preliminary finite-size probe, the L1 fractal graph ($N=6$, 9 edges, contradiction edge $(0,3)$) was audited with 101 points and five seeds. The valley depth is $0.3721\pm0.1478$, comparable to the L2 depth ($0.0998\pm0.0064$). The finite-size trend is inconclusive: the L1 depth is larger but carries a significantly larger relative uncertainty ($40\%$ vs.\ $6.4\%$). A systematic finite-size scaling across L1, L2, and L3 will be reported separately.
+作为一个初步的有限尺寸探针，L1分形图（N=6$，9个边，矛盾边$（0，3）$）被审计，有101个点和五个种子。谷底深度为$0.3721\pm0.1478$，与L2深度（0.0998\pm0.0064$）相当。有限尺寸趋势没有定论:L1深度更大，但具有显著更大的相对不确定性（40\% vs.\6.4%）。将分别报告L1、L2和L3的系统有限尺寸缩放。
 
-\subsection{Independent TAT analysis}
+分段{独立的TAT分析}
 
-An independent TAT ensemble analysis was also performed; it gave only boundary anchors and was silent at the valley position, consistent with a smooth modulation rather than a sharp transition.
+还进行了独立的TAT综合分析；它只给出了边界锚，并在山谷位置保持沉默，这与平稳调制相一致，而不是急剧过渡。
 
-\section{Universality in a small-world graph}
+\section{小世界图中的普遍性}
 
-A Watts-Strogatz graph ($N=10$, 20 edges, $k=4$, $p=0.1$, seed 42) was generated. All 20 edges were scanned as contradiction edges ($s\in[0,3]$, step $0.01$, three seeds). The full-body scan is presented in Table~\ref{tab:sw_full}.
+生成了一个Watts-Strogatz图（N=10$，20个边，$k=4$，$p=0.1$，种子42）。所有20个边都被扫描为矛盾边（s\in[0，3]$，步骤0.01$，三个种子）。完整扫描显示在表~\ref{tab:sw_full}中。
 
 \begin{table}[h]
-\centering
-\caption{Small-world full-body scan: all 20 contradiction edges, $N=10$, three Lanczos seeds. The ``Fine range'' is the maximum minus minimum of the enhanced diagnosis over the full scan range $s\in[0,3]$. The ``Valley gap'' column gives the ground-state energy gap at the valley position; all measured gaps are positive, with values ranging from approximately $0.38$ to $1.2$ across the 20 edges. Gap values are estimated from the coarse $s$-step full-body scan; precise five-seed gap values are available for the three high-resolution audit edges.}
+中心化
+\标题{小世界全身体扫描:所有20个矛盾边缘，$N=10$，三个兰索斯（Lanczos）种子。'良好范围'是全扫描范围$s\in【0,3】$上增强诊断的最大减最小值。'谷间隙'列给出了谷位置的基态能量间隙；所有测量的间隙均为正值，20个边缘的值约为$0.38$到$1.2$。间隙值是从粗糙的$s$步全身体扫图估计出来的；精确的五种子间隙值可用于三个高分辨率审计边缘。}
 \label{tab:sw_full}
 \begin{tabular}{cccc}
-\toprule
-Edge & Fine range & Valley $s$ & Valley gap \\
+\顶部规则\
+边缘与精细范围&谷地$s$&谷地缺口\\
 \midrule
 (0,1) & 0.176842 & 1.500 & 0.77--0.82 \\
 (0,9) & 0.078783 & 0.110 & 0.55--0.65 \\
@@ -344,58 +344,58 @@ Edge & Fine range & Valley $s$ & Valley gap \\
 (5,6) & 0.082213 & 1.080 & 0.65--0.75 \\
 (6,7) & 0.104364 & 0.470 & 0.60--0.70 \\
 (6,8) & 0.157596 & 1.380 & 0.85--0.95 \\
-(7,8) & 0.107895 & \textbf{0.000*} & 0.75--0.85 \\
+（7，8） & 0.107895 & \textbf{0.000*} & 0.75--0.85
 (7,9) & 0.081416 & 2.140 & 0.80--0.90 \\
 \bottomrule
-\end{tabular}
+\结束{表格}
 \end{table}
 
-\textbf{* Edge $(7,8)$:} The minimum occurs at the scan boundary $s=0.000$. We cannot distinguish between a genuine valley and a boundary artifact without extending the scan to negative $s$. This edge is excluded from the count of significant valleys.
+\text bf{*边缘$（7，8）$：}最小值出现在扫描边界$s=0.000$。如果不将扫描扩展到负$s$，我们就无法区分真正的谷和边界伪造物。此边缘将从重要谷的计数中排除。
 
-\textbf{Summary:} 19 of 20 edges produce significant valleys with non-zero gaps. One edge (7,8) is unresolved at the scan boundary.
+\textbf{摘要：}20个边中的19个产生带有非零间隙的重要谷。一个边（7、8）在扫描边界处未被分辨。
 
-Three representative edges were selected for high-resolution multi-seed audit (step $0.001$, five seeds), with exact cross-seed reproducibility of valley positions at non-degenerate ground states (Table~\ref{tab:sw_multiseed}).
+选择了三个代表性边缘进行高分辨率多种子审计（步骤0.001美元，五个种子），在非退化地态下具有谷地位置的确切交叉种子重现性（表~\ref{tab:sw_multiseed}）。
 
 \begin{table}[h]
-\centering
-\caption{Multi-seed audit at three small-world edges, $N=10$, five seeds. Valley depths are computed relative to the local plateau baseline in the high-resolution window, not relative to the full-scan minimum; hence the depths can exceed the full-scan fine ranges of Table~\ref{tab:sw_full}.}
+中心化
+\标题{三个小世界边缘的多种子审计，$N=10$，五颗种子。山谷深度是相对于高分辨率窗口中的局部高原基线计算的，而不是相对于全扫描最小值计算的；因此深度可以超过表~\ref{tab:sw_full}的全扫描精细范围。}
 \label{tab:sw_multiseed}
 \begin{tabular}{cccc}
-\toprule
-Edge & Valley $s$ & Valley depth & Cross-seed std.\ of position \\
+\顶部规则\
+边缘和谷底 $s$ & 谷底深度 & 位置的交叉种子高度 \\
 \midrule
 (0,1) & 1.496 & 0.184933 & 0.000000 \\
 (1,9) & 0.311 & 0.220252 & 0.000000 \\
 (1,4) & 1.251 & 0.241610 & 0.000000 \\
 \bottomrule
-\end{tabular}
+\结束{表格}
 \end{table}
 
-\section{Mechanism and limitations}
+\section{机制和限制}
 
-The mechanism is tentative: asymmetric contradiction injection into inequivalent subgraphs may trigger localized correlation reorganization; symmetric injection may be absorbed uniformly. This picture is consistent with the fractal-graph and small-world observations, but the control-graph results (ring and tree also show valleys) suggest the phenomenon may be more general than the asymmetric-injection hypothesis. The non-trivial default observable shows a weak local response, indicating that the reorganization is primarily visible in the fine-grained dispersion, not in the average correlation.
+该机制是试探性的:非等效子图中的不对称矛盾注入可能会触发局部相关重组；对称注入可能会被均匀吸收。这与分形图和小世界观测结果一致，但控制图的结果（环和树也显示出谷）表明这一现象可能比不对称注入假说更普遍。非平凡的默认可观测值显示出弱的局部响应，表明重组离子主要在细粒度分散体中可见，而在平均相关性中不可见。
 
-Limitations: (i) the default observable is not strictly blind; the non-trivial default observable exhibits a weak local maximum at the valley position, so the structural contrast is quantitative rather than qualitative; (ii) the mechanism is not derived; (iii) the thermodynamic limit is unresolved; (iv) universality beyond the tested graphs is unestablished; (v) the L1 fractal graph ($N=6$) yields an inconclusive finite-size trend with large relative uncertainty; (vi) earlier W-structure and PXP jump reports were withdrawn as artifacts; (vii) the control edge $(0,1)$ has only been scanned to $s=1.0$; confirmation to $s=3.0$ is pending; (viii) edge $(7,8)$ in the small-world graph has a boundary minimum that is unresolved; (ix) the control-graph scans used only a single edge per graph and three seeds, so their statistical weight is limited; (x) the non-trivial default observable control was performed only on the fractal-graph edge $(0,6)$ with four seeds; extension to other graphs is needed.
+局限性:（i） 默认可观测值不是严格盲目的；非平凡的默认可观察值在谷地位置表现出弱的局部最大值，因此结构对比是定量的而不是定性的；（ii） 机制未推导；（iii） 热力学极限未解决；（iv） 超出测试图的普遍性未建立；（v） L1分形图（N=6$）得出一个不确定的有限尺寸趋势，具有较大的相对不确定性；（vi） 早期的W结构和PXP跳跃报告s被作为伪造物撤回；（七）控制边缘$（0，1）$仅被扫描到$s=1.0$；确认到$s=3$尚待确认；（八）小世界图中的边缘$（7，8）$具有未解析的边界最小值；（九）控制图扫描每个图只使用一个边缘和三个种子，因此它们的统计权重有限；（十）非平凡的默认可观测控制仅在分形图边缘$（0，6）$上执行，有四个种子；需要扩展到其他图。
 
-\section{Conclusion}
+章节{结论}
 
-We have observed a reproducible non-monotonic feature in the standard deviation of nearest-neighbor correlation fluctuations in several small quantum graph systems. The valley at the fractal-graph edge $(0,6)$ is reproducible across five seeds and is not a degeneracy artifact. Control scans reveal similar valleys in ring and tree graphs, while a random graph shows no stable valley. A non-trivial coarse-grained observable shows only a very weak local maximum at the valley position, indicating that the fine-grained observable is substantially more sensitive to the local defect reorganization, but the coarse-grained observable is not strictly blind. The PXP model provides a clean negative result. The mechanism and thermodynamic-limit behavior remain open problems.
+我们已经在几个小型量子图系统中观察到一个可重现的非单调特征，即最近邻相关波动的标准偏差。分形图边缘$（0，6）$的谷在五个种子之间可重现，而不是退化伪造。控制扫描显示在环图和树图中类似的谷，而随机图显示没有稳定的谷。一个非平凡的粗粒度可观测值在谷位置仅显示一个非常弱的局部最大值，这表明细粒度波动。雨观测对局部缺陷重组显著更敏感，但粗粒度观测不是严格的盲目。PXP模型提供了干净的负结果。机制和热力学极限行为仍然是开放性问题。
 
-\subsection*{Data availability}
-All data, codes, and scripts are publicly available at \url{https://github.com/DanceNitra/agora/tree/main/agora_output/hotrg_edrn} and \url{https://github.com/luoxuejian000/edrn-dmrg-verification}.
+\subsection*{数据可用性}
+所有数据、代码和脚本均可在
 
-\begin{acknowledgments}
-DMRG calculations used TeNPy~\cite{Hauschild2018,Schollwock2011}; exact diagonalization used NumPy/SciPy~\cite{Harris2020}. We thank Ming Gong for discussions. Rastislav Draho\v{s} contributed code verification, control-graph scans, local-probe analysis, and the tensor-RG toolchain. Marat Sultanov contributed TAT blind tests and the honest-silence principle.
-\end{acknowledgments}
+\begin{致谢}
+DMRG计算使用TeNPy~\cite{Hauschild2018，Schollwock2011}；精确对角化使用NumPy/SciPy~\Cite{Harris2020}。我们感谢明龚的讨论。拉斯蒂斯拉夫·德拉霍贡献了代码验证、控制图扫描、局部探针分析和张量RG工具链。马拉特苏尔塔诺夫贡献了TAT盲测试和诚实沉默原则。
+\端{致谢}
 
-\begin{thebibliography}{99}
-\bibitem{Eisert2010} J.~Eisert, M.~Cramer, and M.~B.~Plenio, Rev.\ Mod.\ Phys.\ \textbf{82}, 277 (2010).
+\开始{书目目录}{99}
+艾赛特，克拉默，和普莱尼奥，修订版\模态\物理\\textbf{82}, 277 (2010).
 \bibitem{Wen2017} X.-G.~Wen, Rev.\ Mod.\ Phys.\ \textbf{89}, 041004 (2017).
-\bibitem{Kitaev2001} A.~Y.~Kitaev, Phys.-Usp.\ \textbf{44}, 131 (2001).
-\bibitem{Schollwock2011} U.~Schollw\"{o}ck, Ann.\ Phys.\ \textbf{326}, 96 (2011).
-\bibitem{Drahos2026GitHub} R.~Draho\v{s}, \emph{Sierpi\'{n}ski-gasket tensor-RG toolchain}, GitHub repository (2026), \url{https://github.com/DanceNitra/agora/tree/main/agora_output/hotrg_edrn}.
-\bibitem{Hauschild2018} J.~Hauschild and F.~Pollmann, SciPost Phys.\ Lect.\ Notes 5 (2018).
-\bibitem{Harris2020} C.~R.~Harris et al., Nature \textbf{585}, 357 (2020).
-\end{thebibliography}
+\bibitem{Kitaev2001} A.~Y.~Kitaev, Phys.-Usp.\ \textbf{44}, 131 (2001)。
+\bibitem{Schollwock2011} U.~Schollw\"{o}ck, Ann.\ Phys.\ \textbf{326}, 96 (2011)。
+\bibitem{Drahos2026GitHub}R.~Draho\v{s<s>###\emph{谢尔皮恩斯基-垫片张量-RG工具链**}GitHub存储库（2026年），https://github.com/DanceNitra/agora/tree/main/agora_output/hotrg_edrn}.
+\bibitem{Hauschild2018} J.~Hauschild 和 F.~Pollmann， SciPost Phys.\ Lect.\ 注释 5 （2018）。
+哈里斯等，自然\文本{585}, 357 (2020).
+\end{书目目录}
 
-\end{document}
+\end{文档}
